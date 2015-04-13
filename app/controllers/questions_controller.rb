@@ -3,5 +3,16 @@ class QuestionsController < ApplicationController
   
   end
   
+  def new
+    @question = Question.new
+  end 
+  
+  def create
+    if @question.save
+      
+    end
+  end
+  
+  
   
 end
