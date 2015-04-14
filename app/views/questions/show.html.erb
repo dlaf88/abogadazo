@@ -1,0 +1,9 @@
+ 
+  <h2> <%= @question.title %></h2>
+   <p> <%= @question.description %></p>
+   <p> <%= @question.phone %> </p>
+
+<% @answers.each do |answer| %>
+<p> <%= answer.description %> </p>
+<% end %>
+<%= render partial: 'answers/form' %>
