@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.0'
 gem 'simple_form'
+gem 'devise', '~> 3.4.1'
 
 gem 'sqlite3'
 
