@@ -1,6 +1,69 @@
-<div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Abogadazo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+</nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
   
-  "Haz preguntas a Abogados gratis."
+  <div class="container">
+        <h1>Abogadazo</h1>
+        <p>Abogadazo, donde puedes hacer preguntas a Abogados Gratis!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        
+  </div>
+</div> <!-- jumbotron end -->
 
+<div class="container">
+  
+     <div class='row'>
+          <h1> Preguntas hechas </h1>
+               <% @questions.each do |question| %>
+                 
+                   <ul><%= question.description %></ul>
+                 
+               <% end %>
+    </div>
+                   
+      <div style='background-color:#eee'class='row'>
+        <div class='col-md-4'> <%= render partial: "/questions/form", locals: {question: @question} %> </div>
+      </div>
 </div>
+   
+    
+     
+  
+     <hr>
 
+     <footer>
+       
+     </footer>
+
+              </div>
+             
+             
+<!-- /container -->
+
+
+
+ 
