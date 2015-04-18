@@ -5,10 +5,13 @@
 @import "bootstrap";
 
 #jumbo-main{
-   background: url(https://lhwmp.files.wordpress.com/2013/01/latino-family.jpg);
+   background: url(//abzolive2.s3.amazonaws.com/static/media/images/more/iStock_000005992172Medium.jpg);
    background-size: cover;
-   height: 700px;
+   
 }
 h1,h2,h3,p,ul,a{
   font-family: 'Allerta', 'san-serif';
+}
+#white-font{
+  color: white;
 }
