@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<!--nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,14 +20,15 @@
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
         </div><!--/.navbar-collapse -->
-      </div>
-</nav>
+      <!--/div>
+</nav-->
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   
   <div class="container">
-        <h1>Abogadazo</h1>
+        <h1>Haz preguntas a Abogados, gratis!</h1>
+    
         <p>Abogadazo, donde puedes hacer preguntas a Abogados Gratis!</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         
@@ -40,7 +41,7 @@
           <h1> Preguntas hechas </h1>
                <% @questions.each do |question| %>
                  
-                   <ul><%= question.description %></ul>
+                   <ul><%= link_to question.title,question_path(question) %></ul>
                  
                <% end %>
     </div>

@@ -1,9 +1,13 @@
- 
-  <h2> <%= @question.title %></h2>
-   <p> <%= @question.description %></p>
-   <p> <%= @question.phone %> </p>
+<div class='container'>
+    <h2> <%= @question.title %></h2>
+     <p> <%= @question.description %></p>
+     <p> <%= @question.phone %> </p>
+  <h3>Respuestas</h3>
+  <br>
+  <% @answers.each do |answer| %>
 
-<% @answers.each do |answer| %>
-<p> <%= answer.description %> </p>
-<% end %>
-<%= render partial: 'answers/form' %>
+  <p> <%= answer.description %> </p>
+  <% end %>
+
+  <%= render partial: 'answers/form' %>
+</div>

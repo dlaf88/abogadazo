@@ -25,3 +25,4 @@ $(document).ready(function() {
         $('#textarea_feedback_titulo').html(text_remaining_2 + ' caracteres restantes');
     });
 });
+$("#titulo").tooltip()

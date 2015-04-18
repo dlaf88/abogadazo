@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
     @question = Question.new
     @questions = Question.all
     
+    
   end
   
 end

@@ -4,13 +4,14 @@
 <p>
   <%= f.label :title, 'Título' %>
   
-<%= f.text_field :title, {class: "form-control", id: "titulo"} %>
+  <%= f.text_field :title, {class: "form-control", id: "titulo", title: "Enter the title"} %>
   <div id="textarea_feedback_titulo"></div>
+ 
  
    
 </p>
 <p>
-  <%= f.label :description, {id: "label_des"}  %>
+  <%= f.label :description,'Descripción', {id: "label_des"}  %>
   <%= f.text_area :description, {class: "form-control", id: "description"} %>
   <div id="textarea_feedback"></div>
    
