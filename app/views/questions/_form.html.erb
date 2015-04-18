@@ -1,18 +1,24 @@
 <%= simple_form_for(question, html: { class: 'form-horizontal' }) do |f|  %>
 
+
 <p>
   <%= f.label :title, 'Título' %>
-  <%= f.text_field :title, class: "form-control" %>
+  
+<%= f.text_field :title, {class: "form-control", id: "titulo"} %>
+  <div id="textarea_feedback_titulo"></div>
+ 
    
 </p>
 <p>
-  <%= f.label :description  %>
-  <%= f.text_field :description, class: "form-control" %>
+  <%= f.label :description, {id: "label_des"}  %>
+  <%= f.text_area :description, {class: "form-control", id: "description"} %>
+  <div id="textarea_feedback"></div>
    
 </p>
 <p>
   <%= f.label :phone, 'Telefono' %>
-  <%= f.phone_field :phone, class: "form-control" %>
+  <%= f.telephone_field :phone, {class: "form-control", id: "phone"} %>
+  
    
 </p>
 
