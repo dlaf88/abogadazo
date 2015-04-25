@@ -23,4 +23,6 @@ gem 'spring',        group: :development
 gem "figaro"
 gem 'activeadmin'
 gem 'jquery-turbolinks'
+ gem 'carrierwave'
+ gem 'mini_magick'
 
