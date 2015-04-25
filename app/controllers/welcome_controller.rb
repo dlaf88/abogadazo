@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @question = Question.new
     @questions = Question.all
-    @location = request.location.state
+    @article= Article.new
     
     
   end

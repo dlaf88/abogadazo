@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :answers 
     
   end 
+  resources :articles
   
   root 'welcome#index'
 end
