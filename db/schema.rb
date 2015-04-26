@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425175258) do
+ActiveRecord::Schema.define(version: 20150426140436) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -49,6 +49,40 @@ ActiveRecord::Schema.define(version: 20150425175258) do
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"
+
+  create_table "lawyer_profiles", force: true do |t|
+    t.text     "name"
+    t.string   "address"
+    t.text     "state"
+    t.text     "body"
+    t.text     "practices"
+    t.text     "license"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "lawyer_id"
+    t.string   "image"
+  end
+
+  add_index "lawyer_profiles", ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"
+
+  create_table "lawyers", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lawyers", ["email"], name: "index_lawyers_on_email", unique: true
+  add_index "lawyers", ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true
 
   create_table "questions", force: true do |t|
     t.text     "title"
