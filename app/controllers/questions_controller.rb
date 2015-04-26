@@ -18,6 +18,7 @@ class QuestionsController < ApplicationController
   
   def create
     @question = Question.new(params.require(:question).permit(:title, :description, :phone))
+    @question.ipaddress = request.location.city.to_s
     if @question.save
       redirect_to @question, notice: "Question was saved successfully."
     else
