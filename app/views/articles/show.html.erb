@@ -1,18 +1,10 @@
-
-
- <div class='well' align='center'>
-  <h3><b><%= @article.title %></b></h3>
-  </div>
+<hr/>
 <div class='container'>
+  <h3><u><%= @article.title %></u></h3>
   <br>
-  <div align='center'>
-    <iframe width="600" height="450"
-    src="http://www.youtube.com/embed/gEiT-8yYEQE">
-    </iframe>
-  </div>
   
   <%= simple_format @article.body %>
   
-  <%= image_tag @article.image.tiny %>
+  <%= image_tag @article.image.profile %>
   
 </div>
