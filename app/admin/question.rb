@@ -1,4 +1,5 @@
 ActiveAdmin.register Question do
+  permit_params :title, :description, :phone,:ipaddress
 
 
   # See permitted parameters documentation:
