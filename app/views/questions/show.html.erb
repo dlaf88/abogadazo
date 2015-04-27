@@ -8,6 +8,11 @@
 
   <p> <%= answer.description %> </p>
   <% end %>
+  
+  <% if lawyer_signed_in? && current_lawyer.validated %>
 
   <%= render partial: 'answers/form' %>
+  
+   
+  <% end %>
 </div>
