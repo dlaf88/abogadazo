@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428151959) do
+ActiveRecord::Schema.define(version: 20150428152231) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150428151959) do
     t.integer  "user_id"
     t.string   "image"
     t.string   "video_field"
+    t.boolean  "video",       default: false
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"
