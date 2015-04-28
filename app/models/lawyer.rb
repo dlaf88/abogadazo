@@ -1,5 +1,6 @@
 class Lawyer < ActiveRecord::Base
   has_one :lawyer_profile
+  has_many :answers
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
