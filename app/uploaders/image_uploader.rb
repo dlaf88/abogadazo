@@ -46,6 +46,9 @@ version :tiny do
 version :profile do
      process resize_to_fill: [45, 45]
    end
+version :largeprofile do
+     process resize_to_fill: [264, 264]
+   end
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

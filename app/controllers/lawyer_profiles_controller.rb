@@ -1,17 +1,18 @@
 class LawyerProfilesController < ApplicationController
-  def new
+  before_filter :authenticate_lawyer!, except: [:show]
+ 
+  def new    
     @lawyerprofile = LawyerProfile.new
-    @lawyer = Lawyer.find(params[:lawyer_id])
-    if @lawyer.lawyer_profile
-      redirect_to root_path, notice: "You already have a profile."
-    end 
+    @lawyer = current_lawyer
+      if @lawyer.lawyer_profile
+        redirect_to root_path, notice: "You already have a profile."
+      end      
+    
   end 
   def create
-    @lawyer = Lawyer.find(params[:lawyer_id])
+    @lawyer = current_lawyer
     @lawyerprofile = LawyerProfile.new(params.require(:lawyer_profile).permit(:name,:address,:state,:body,:license,:image))
-    @lawyerprofile.lawyer = @lawyer
-   
-   
+    @lawyerprofile.lawyer = @lawyer   
     
     if @lawyerprofile.save
       redirect_to root_path, notice: "Profile was saved successfully."
@@ -22,9 +23,8 @@ class LawyerProfilesController < ApplicationController
     
   end 
   
-  def show
-    @lawyer = Lawyer.find(params[:lawyer_id])
-    @lawyerprofile = @lawyer.lawyer_profile
+  def show    
+    @lawyerprofile = LawyerProfile.find(params[:id])
   end 
     
     
