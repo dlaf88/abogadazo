@@ -5,8 +5,11 @@
 @import "bootstrap";
 
 #jumbo-main{
-   background: url(//abzolive2.s3.amazonaws.com/static/media/images/more/iStock_000005992172Medium.jpg);
+   background: url(http://s3.amazonaws.com/abzolive1/static/media/images/Fotolia_25289932_873_px_height.jpg);
    background-size: cover;
+   height:1000px;
+  
+  
    
    
 }
@@ -14,11 +17,14 @@ p,h1,h2,h3{
   font-family: 'Lato', 'san-serif';
 }
 #white-font{
-  color: white;
+  color: black;
 }
 p{
   font-size: 18px;
 }
 #footer{
   background-color:#121214;
+}
+h1{
+  font-size: 36px;
 }

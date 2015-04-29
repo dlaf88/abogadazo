@@ -3,10 +3,17 @@
   
 <div class='container'>
   <br>
+  <% if @article.video %>
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="<%= @article.video_field %>"></iframe>
+</div>  
+ <br>
+ <br> 
+  <% end %>
   
   
   <%= simple_format @article.body %>
   
-  <%= image_tag @article.image.profile %>
+  
   
 </div>
