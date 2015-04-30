@@ -5,19 +5,21 @@
 @import "bootstrap";
 
 #jumbo-main{
-   background: url(http://s3.amazonaws.com/abzolive1/static/media/images/Fotolia_25289932_873_px_height.jpg);
-   background-size: cover;
-   height:1000px;
-  
+ background: url('http://abzolive2.s3.amazonaws.com/static/media/images/more/iStock_000005992172Medium.jpg');
+ background-repeat: repeat;
+ background-size:cover;
+ 
   
    
    
 }
+
+
 p,h1,h2,h3{
   font-family: 'Lato', 'san-serif';
 }
 #white-font{
-  color: black;
+  color: white;
 }
 p{
   font-size: 18px;
@@ -28,3 +30,25 @@ p{
 h1{
   font-size: 36px;
 }
+.thumbnail{
+  background-color:#d1cfc5;
+  border-style: none;
+}
+.glyphicon-user{
+  font-size: 30px;
+   align:center;
+  
+}
+.glyphicon-comment{
+  font-size: 30px;
+   align:center;
+  
+}
+.glyphicon-ok{
+  font-size: 30px;
+   align:center;
+  
+}
+
+
+
