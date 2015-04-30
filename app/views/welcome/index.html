@@ -32,7 +32,7 @@
   
 
 <div class="jumbotron" id='jumbo-main' >
-  <h1 align='center'id='white-font'>Haz Preguntas a Abogados,Gratis. </h1>
+  <h1 align='center'id='white-font'style='font-weight:lighter'>Haz Preguntas a Abogados,Gratis. </h1>
   
   	   
        
@@ -47,7 +47,7 @@
     <div class='thumbnail col-md-4'>
         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
         <br>
-        <button class='btn-success btn-md'>Aqui hay mas informacion</button>
+        <button class='btn btn-block btn-md btn-info'>Aqui hay mas informacion</button>
         <br>
       <span>This is what I want to add </span>
         
@@ -55,22 +55,40 @@
     <div class='thumbnail col-md-4'>
         <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
         <br>
-        <button type="button" class='btn-success btn-md'>Haz Tu Pregunta</button>
+        <a type="button" class='btn btn-block btn-md btn-info' href='questions/new'>Haz Tu Pregunta</a>
         <br>
         <span>This is what I want to add </span>
     </div> 
     <div class='thumbnail col-md-4'>
        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
         <br>
-        <button class='btn-success btn-md'>Busca Informacion Legal</button>
+        <button class='btn btn-block btn-md btn-info'>Busca Informacion Legal</button>
         <br>
         <span>This is what I want to add </span>
     </div> 
     
   </div>
- 
 </div>
-
+ 
+<div class='container'align ='center'>
+    <h1>Cómo funciona.</h1>
+    <br>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/a78qgki7iJ8"></iframe>
+    </div>
+</div>
+<div style='background-color:#f1efe8'>
+  <h1 align='center'>Premios y Reconocimientos</h1>
+  <br>
+  <div class='row' align='center'>
+  <div class='col-md-3 col-md-offset-3'><img class='img-responsive'src='http://s3.amazonaws.com/abzolive1/static/logos/CSL_logo_250.jpg'></div>
+  <div class='col-md-3'><img class='img-responsive' src='http://s3.amazonaws.com/abzolive1/static/logos/start_up_ecuador_206.jpg'> </div>
+  
+  </div>
+  <br>
+  
+</div>
+<!--
 <div class="container">
      
   
@@ -87,18 +105,28 @@
         <div class='col-md-4'> <%= render partial: "/questions/form", locals: {question: @question} %> </div>
          
       </div>
-</div>
+</div> -->
+          
+                     
    
     
      
   
      <hr>
 
-     <footer>
+     <footer id='footer'>
+       <div class='container'>
+         <div class='col-md-4'>
+           <h3 style='color:white;font-weight:lighter'>Sobre Nosotros</h3>
+         <p style='color:white'>Abogadazo es una empresa web dedicada a hacer la información legal más accesible a la comunidad Latina en los Estados Unidos. Estamos ubicados en el corazón de Silicon Alley - en la ciudad de Nueva York.<p>
+           <img src='http://s3.amazonaws.com/abzolive1/static/logos/miny.png'>
+         </div>
+         
+       </div>
        
      </footer>
 
-              </div>
+</div>
              
              
 <!-- /container -->
