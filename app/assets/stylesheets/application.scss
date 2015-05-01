@@ -9,11 +9,14 @@
  background: url('http://abzolive2.s3.amazonaws.com/static/media/images/more/iStock_000005992172Medium.jpg');
  background-repeat: repeat;
  background-size:cover;
+ margin-bottom: 0px;
  
   
    
    
 }
+body { overflow-x: hidden;}
+
 
 
 p,h1,h2,h3{
@@ -23,13 +26,13 @@ p,h1,h2,h3{
   color: white;
 }
 p{
-  font-size: 18px;
+  
 }
 #footer{
   background-color:#333;
 }
 h1{
-  font-size: 36px;
+ ;
 }
 .thumbnail{
   background-color:#d1cfc5;
@@ -50,6 +53,10 @@ h1{
    align:center;
   
 }
+#apoyan{
+  margin-top:0px;
+}
+
 
 
 
