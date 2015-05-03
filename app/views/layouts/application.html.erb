@@ -4,50 +4,76 @@
   <title>Abogadazo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- 
+  
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+ 
   
  
   <%= csrf_meta_tags %>
 </head>
  
 <body>
- <!---NAVBAR /-->
-  <div class="navbar">
+ <div class="container-fluid">
+    <!---NAVBAR /-->
+  <div class='container'>
+   <div class="navbar">
+     
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <i class="icon-align-justify"></i>
+         </button>
+         <div class='col-md-10'>
+           <a class='navbar-brand'href='/'>
+             <img class='img-responsive'src="//abzolive2.s3.amazonaws.com/static/media/images/more/squarespace_abogadazo_logo.png">
+           </a> 
+         </div>
+       </div> <!--navbar-header-->
 
-        <div class="container">
-            <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <i class="icon-align-justify"></i>
-                  </button>
-                 <div >
-                <a class='navbar-brand'href='/'><img class='img-responsive'src="//abzolive2.s3.amazonaws.com/static/media/images/more/squarespace_abogadazo_logo.png"></a> 
-                  </div>
-            </div>
-            
-             
-            <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">                            
-                                                
-                      
-                        
-                    </ul>
-            </div><!--/.navbar-collapse -->
-        </div>
-    </div>
 
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+       <div class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">                          
 
-<%= yield %>
-  
+         </ul>
+       </div><!--/.navbar-collapse -->
 
+   </div><!-- navbar -->
+ </div>
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+
+
+
+
+     <div class='row'>
+         <footer id='footer' class='footer'>
+           <div align='left'class='container' >
+             <div class='col-md-4'>
+                 <h3 style='color:white;font-weight:lighter'>Sobre Nosotros</h3>
+               <p style='color:white'>Abogadazo es una empresa web dedicada a hacer la información legal más accesible a la comunidad Latina en los Estados Unidos. Estamos ubicados en el corazón de Silicon Alley - en la ciudad de Nueva York.<p>
+                 <img style='float:right'src='http://s3.amazonaws.com/abzolive1/static/logos/miny.png'>
+             </div>
+             <div style='color:white'class="col-md-4">
+                <h4>Useful Links</h4>
+                 <ul class="list-unstyled">
+                   <li><a href="#">Privacy Policy</a></li>
+                   <li><a href="#">Terms of Service</a></li>
+                   <li><a href="#">Frequently Asked Questions</a></li>
+                 </ul>
+             </div>
+
+           </div>
+
+         </footer>
+   </div>
+    
+</div><!-- container fluid -->
 
 </body>
   

@@ -2,11 +2,9 @@
 
 
 <p>
-  <%= f.label :title, 'Título' %>
   
-  <%= f.text_field :title, {class: "form-control", id: "titulo", title: "Enter the title"} %>
-  <div id="textarea_feedback_titulo"></div>
- 
+  
+  <%= f.input :title,label: "Pregunta de:", collection:["Inmigración","DAPA"], class: "form-control" %>
  
    
 </p>
@@ -23,6 +21,6 @@
    
 </p>
 
-<p><%= f.submit %>
+<p><%= f.submit 'Haz Tu Pregunta', class: 'btn btn-block btn-md btn-info'%>
 
 <% end %>
