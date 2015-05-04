@@ -1,26 +1,30 @@
 <%= simple_form_for(question, html: { class: 'form-horizontal' }) do |f|  %>
 
+<div class='row'>
+  <div class='col-md-8'> 
 
-<p>
+    <%= f.input :title,label: "Pregunta de:", collection:["Inmigración"], class: "form-control" %>
+
+  </div>
+</div>
+
+<div class='row'>
   
+    <%= f.label :description,'Descripción', {id: "label_des"}  %>
+    <%= f.text_area :description, {class: "form-control", id: "description"} %>
+    <div id="textarea_feedback"></div>
+
   
-  <%= f.input :title,label: "Pregunta de:", collection:["Inmigración","DAPA"], class: "form-control" %>
- 
-   
-</p>
-<p>
-  <%= f.label :description,'Descripción', {id: "label_des"}  %>
-  <%= f.text_area :description, {class: "form-control", id: "description"} %>
-  <div id="textarea_feedback"></div>
-   
-</p>
-<p>
+</div>
+
+<div class='row'>
   <%= f.label :phone, 'Telefono' %>
   <%= f.telephone_field :phone, {class: "form-control", id: "phone"} %>
-  
-   
-</p>
-
-<p><%= f.submit 'Haz Tu Pregunta', class: 'btn btn-block btn-md btn-info'%>
+</div>
+<br>
+<div class='row'>
+  <%= f.submit 'Haz Tu Pregunta', class: 'btn btn-block btn-md btn-info'%>
+</div>
+<br>
 
 <% end %>
