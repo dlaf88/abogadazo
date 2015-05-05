@@ -20,9 +20,8 @@
 body { overflow-x: hidden;
 
 
+
 }
-
-
 
 p,h1,h2,h3{
   font-family: 'Lato';
@@ -35,6 +34,7 @@ p{
 }
 #footer{
   background-color: #333;
+  bottom: 0px;
    
   /* Set the fixed height of the footer here */
   
@@ -69,8 +69,12 @@ h1{
   background-color:white;
   border-style: none;
 }
-a:hover{
-  background-color:red;
+a{
+  color:#3498DB;
 }
+a:hover{
+  color:#34495e;
+}
+
 
 

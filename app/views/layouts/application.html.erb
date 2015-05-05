@@ -35,7 +35,7 @@
          </div>
         </div><!--navbar-header-->
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>            
@@ -53,13 +53,10 @@
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <%= yield %>
-
-
-
-
-     <div class='row'>
-         <footer id='footer' class='footer'>
-           <div align='left'class='container' >
+   
+    <div class='row'>
+         <footer id='footer'>
+           <div class='container' >
              <div class='col-md-4'>
                  <h3 style='color:white;font-weight:lighter'>Sobre Nosotros</h3>
                <p style='color:white'>Abogadazo es una empresa web dedicada a hacer la información legal más accesible a la comunidad Latina en los Estados Unidos. Estamos ubicados en el corazón de Silicon Alley - en la ciudad de Nueva York.<p>
@@ -78,8 +75,26 @@
 
          </footer>
    </div>
+
+<script>
+
+  $(document).ready(function() {
+
+   var docHeight = $(window).height();
+   var footerHeight = $('#footer').height();
+   var footerTop = $('#footer').position().top + footerHeight;
+
+   if (footerTop < docHeight) {
+    $('#footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+   }
+  });
+ </script>
+
+
+     
     
 </div><!-- container fluid -->
+ 
 
 </body>
   
