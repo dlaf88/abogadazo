@@ -17,14 +17,77 @@
   
 </div>
 
-<div class='row'>
-  <%= f.label :phone, 'Telefono' %>
-  <%= f.telephone_field :phone, {class: "form-control", id: "phone"} %>
+
+ 
+ <div class='row'>
+   <div id="formo">
+       <label>¿Cómo nos ponemos en contacto ? </label>
+       <br>
+       <br>
+      <div align='left'>
+        <input class='btn btn-default btn-xs' type='radio' name='dog'value='Email' id='email-button'><span class='glyphicon glyphicon-envelope'> Email</span>
+        <input class='btn btn-default btn-xs' type='radio' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'> Texto </span>
+     </div>
+   </div><!--formo-->
+</div>
+
+<div class='row' id='ello'>
+    
+  <%= f.label :phone, {class: 'label_phone'} %>
+  <%= f.text_field :phone, {class: "form-control"} %>
 </div>
 <br>
 <div class='row'>
   <%= f.submit 'Haz Tu Pregunta', class: 'btn btn-block btn-md btn-info'%>
 </div>
 <br>
+
+ <script>
+  $(function(){
+     $('#ello').hide();
+    $('#email-button').on('click', function(){
+          
+        $('#ello .form-control').unmask()
+        $('#ello').fadeIn()
+        $('#ello .label_phone').empty().text("Email")          
+        
+      
+      
+    })
+    $('#telefono-button').on('click', function(){
+          
+        $('#ello').fadeIn()
+        $('#ello .form-control').mask("(999) 999-9999")
+        $('#ello .label_phone').empty().text("Telefono")
+      
+      
+    })
+     
+   
+    $('#formo input').on('change', function() {
+      var radio_val = $('input[name="myRadio"]:checked', '#formo').val();
+      if (radio_val == 'Telefono'){
+        
+        $('#ello').fadeIn()
+        $('#ello .form-control').mask("(999) 999-9999")
+        $('#ello .label_phone').empty().text(radio_val)
+        
+        
+      }
+      else if (radio_val == 'Email'){
+        $('#ello .form-control').unmask()
+        $('#ello').fadeIn()
+        $('#ello .label_phone').empty().text(radio_val)
+        
+        
+      }
+      
+      
+        
+    });
+  });
+  
+</script>
+
 
 <% end %>
