@@ -1,4 +1,19 @@
 <div class='row'>
+  
+   <% if @question.errors.any? %>
+  <% @question.errors.messages.each do |message| %>
+    <div class='container bg-warning'>
+      <div class="message"><ul><li><%= message.last.last.html_safe %></li></ul></div>
+    </div>
+  <% end %>
+<% end %>
+  
+  
+</div>
+
+
+<div class='row'>
+ 
   <div class='well' align='center'>
     <h3>Haz tu Pregunta.</h3>
   </div>

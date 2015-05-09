@@ -10,27 +10,29 @@
 
 <div class='row'>
   
-    <%= f.label :description,'Descripción', {id: "label_des"}  %>
-    <%= f.text_area :description, {class: "form-control", id: "description"} %>
-    <div id="textarea_feedback"></div>
+    <%= f.label :description,'Descripción:', {id: "label_des"}  %> <div id="textarea_feedback"></div>
+  <%= f.text_area :description, {class: "form-control", id: "description", rows: 10} %>
+    
+    
 
   
 </div>
 
 
- 
+ <br>
  <div class='row'>
    <div id="formo">
+     
        <label>¿Cómo nos ponemos en contacto ? </label>
        <br>
-       <br>
+       
       <div align='left'>
-        <input class='btn btn-default btn-xs' type='radio' name='dog'value='Email' id='email-button'><span class='glyphicon glyphicon-envelope'> Email</span>
-        <input class='btn btn-default btn-xs' type='radio' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'> Texto </span>
+        <button class='btn btn-default btn-md' type='button' name='dog'value='Email' id='email-button'><span class='glyphicon glyphicon-envelope'></span> Email</button>
+        <button class='btn btn-default btn-md' type='button' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'></span> Texto</button>
      </div>
    </div><!--formo-->
 </div>
-
+<br>
 <div class='row' id='ello'>
     
   <%= f.label :phone, {class: 'label_phone'} %>
@@ -87,6 +89,12 @@
     });
   });
   
+</script>
+<script>
+  $(function(){
+    $('#description').attr({ maxLength : 750 });
+    
+  })
 </script>
 
 

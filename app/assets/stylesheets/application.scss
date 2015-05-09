@@ -25,13 +25,15 @@ body { overflow-x: hidden;
 
 p,h1,h2,h3{
   font-family: 'Lato';
+ 
 }
 #white-font{
   color: white;
 }
-p{
-  
+#telefono-button{
+  margin-left:45px;
 }
+
 #footer{
   background-color: #333;
   bottom: 0px;
@@ -75,6 +77,10 @@ a{
 a:hover{
   color:#34495e;
 }
+.btn-block{
+  width:90%;
+}
+
 
 
 

@@ -47,13 +47,30 @@
     </nav>
    <!-- navbar -->
  </div>
-    <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+       <% if flash[:notice] %>
+        <div class="alert alert-success" align='center'>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+           Gracias!
+        </div>
+      <% elsif flash[:error] %>
+        <div class="alert alert-danger" align='center'>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+           Hubo un error. Por favor, inténtalo de nuevo!
+        </div>
+      <% elsif flash[:alert] %>
+        <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:alert] %>
+        </div>
+   <% elsif flash[:message] %>
+        <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:message] %>
+        </div>
+      <% end %>
+
     <%= yield %>
+  
    
     <div class='row'>
          <footer id='footer'>
@@ -62,6 +79,7 @@
                  <h3 style='color:white;font-weight:lighter'>Sobre Nosotros</h3>
                <p style='color:white'>Abogadazo es una empresa web dedicada a hacer la información legal más accesible a la comunidad Latina en los Estados Unidos. Estamos ubicados en el corazón de Silicon Alley - en la ciudad de Nueva York.<p>
                  <img style='float:right'src='http://s3.amazonaws.com/abzolive1/static/logos/miny.png'>
+                 &copy Abogadazo, all rights reserved Diego Lafuente, 2015
              </div>
              <div style='color:white'class="col-md-4 pull-right">
                 <h4>Useful Links</h4>
