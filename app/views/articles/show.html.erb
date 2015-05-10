@@ -2,18 +2,55 @@
 <h3 class='well' align='center'><b><%= @article.title %></b></h3>
   
 <div class='container'>
-  <br>
-  <% if @article.video %>
-  <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="<%= @article.video_field %>"></iframe>
-</div>  
- <br>
- <br> 
-  <% end %>
-  
-  
-  <%= simple_format @article.body %>
-  
-  
-  
-</div>
+    <br>
+    <% if @article.video %>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="<%= @article.video_field %>"></iframe>
+    </div>  
+     <br>
+     <br> 
+    <% end %>
+      <hr/>
+    <div class='row'>
+        <div class='col-md-2'>  
+          
+          <%= image_tag @article.image.author %>          
+          
+          
+        </div>
+        <div class='col-md-8'>
+            <div class='row'>
+            <%= @article.author %>
+             
+            </div>
+            <div class='row'>
+               <%=@article.updated_at.strftime("%M/%d/%Y") %>
+            </div>
+            <div class='row'>            
+              <b>Sobre el Autor</b>
+
+            </div>
+            
+            <div class='row'>
+            Ennui 3 wolf moon sartorial, XOXO lomo chia mumblecore fingerstache health goth brunch. Wayfarers cray DIY cardigan, kogi skateboard banjo Pitchfork dreamcatcher wolf raw denim. Portland Pitchfork retro shabby chic, wayfarers PBR tilde mlkshk synth Odd Future single-origin coffee raw denim.
+            </div>
+        
+        </div>
+        
+    </div>
+
+        <hr>
+      <%= simple_format @article.body %>
+    <div class='row'>
+
+    </div>
+    <hr>
+    <div class='row' align='center'>
+      <h3><b>Tienes más preguntas? Pregúntanos, es gratis!</b></h3>
+      <br>
+      <a  type="button" class='btn btn-lg btn-info' href='/questions/new'>Haz Tu Pregunta</a>
+     
+    </div>
+</div> <!--container-->
+
+<br>
