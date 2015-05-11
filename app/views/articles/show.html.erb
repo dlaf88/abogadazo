@@ -12,13 +12,13 @@
     <% end %>
       <hr/>
     <div class='row'>
-        <div class='col-md-2'>  
+        <div class='col-md-2 col-xs-4'>  
           
-          <%= image_tag @article.image.author %>          
+          <%= image_tag @article.image.author,  :class => "img-responsive" %>          
           
           
         </div>
-        <div class='col-md-8'>
+        <div class='col-md-8 col-xs-8'>
             <div class='row'>
             <%= @article.author %>
              
