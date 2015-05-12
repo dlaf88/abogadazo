@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   resources :lawyer_profiles
 
   
-  root :to => 'welcome#index'
+  root to: "welcome#index"
 end
