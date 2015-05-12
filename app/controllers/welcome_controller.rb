@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
     @question = Question.new
     @questions = Question.all
     @article= Article.new
-    @diego = LawyerProfile.find(19)
+    
     
     
   end
