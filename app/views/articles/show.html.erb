@@ -24,7 +24,7 @@
              
             </div>
             <div class='row'>
-               <%=@article.updated_at.strftime("%M/%d/%Y") %>
+               <%=@article.updated_at.strftime("%m/%d/%Y") %>
             </div>
             <div class='row'>            
               <b>Sobre el Autor</b>
@@ -32,12 +32,12 @@
             </div>
             
             <div class='row'>
-            Ennui 3 wolf moon sartorial, XOXO lomo chia mumblecore fingerstache health goth brunch. Wayfarers cray DIY cardigan, kogi skateboard banjo Pitchfork dreamcatcher wolf raw denim. Portland Pitchfork retro shabby chic, wayfarers PBR tilde mlkshk synth Odd Future single-origin coffee raw denim.
+              <%=@article.about %> 
+        
             </div>
         
         </div>
-        
-    </div>
+  </div>
 
         <hr>
       <%= simple_format @article.body %>

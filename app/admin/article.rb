@@ -1,6 +1,6 @@
 ActiveAdmin.register Article do
 
-  permit_params :title, :author, :body, :image,:video_field,:video
+  permit_params :title, :author, :body, :image,:video_field,:video,:about
 
 
   # See permitted parameters documentation:
