@@ -6,14 +6,20 @@
   <br>
   <% @answers.each do |answer| %>
 
-  <p class='well'> <%= answer.description %></p>
+  <div class='well'> 
+    <div class='row'><%= simple_format answer.description %></div>
+    <br>
+    <div class='row'><b><%= answer.lawyer.lawyer_profile.name %>, Esq.<b></div>
+    <br>
+    <div class='row'><%= image_tag answer.lawyer.lawyer_profile.image.small %></div>
+  </div>
   <% end %>
   
   <% if lawyer_signed_in? && current_lawyer.validated %>
 
   <%= render partial: 'answers/form' %>
   <%= link_to "Lawyer Sign Out", destroy_lawyer_session_path, method: :delete %>
-  <%= image_tag current_lawyer.lawyer_profile.image.profile %>
+  <%= image_tag current_lawyer.lawyer_profile.image.small %>
   
   
    

@@ -1,7 +1,7 @@
 <%= simple_form_for [@question,@question.answers.build], html: { class: 'form-horizontal' } do |f|  %>
 
 <p>
-  <%= f.label :description  %>
+  <%= f.label 'Respuesta de Abogado', :description  %>
   <%= f.text_field :description, class: "form-control" %>
 </p>
 
