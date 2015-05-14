@@ -108,9 +108,10 @@
    }
   });
  </script>
+   <% if Rails.env.production? %>
+<%= render 'layouts/footer' %>
+<% end %>
 
-
-     
     
 </div><!-- container fluid -->
  
