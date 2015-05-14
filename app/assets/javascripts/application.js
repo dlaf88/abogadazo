@@ -20,4 +20,4 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require analytics
+//= require analytics.js
