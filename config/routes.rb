@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end 
   resources :articles
   resources :lawyer_profiles
-
+  
   
   root to: "welcome#index"
 end
