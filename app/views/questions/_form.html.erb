@@ -3,14 +3,14 @@
 <div class='row'>
   <div class='col-md-8'> 
 
-    <%= f.input :title,label: "Pregunta de:", collection:["Inmigración"], class: "form-control" %>
+    <%= f.input :title,label: "Pregunta de: *", collection:["Inmigración"], class: "form-control" %>
 
   </div>
 </div>
 
 <div class='row'>
   
-    <%= f.label :description,'Descripción:', {id: "label_des"}  %> <div id="textarea_feedback"></div>
+    <%= f.label :description,'Descripción: *', {id: "label_des"}  %> <div id="textarea_feedback"></div>
   <%= f.text_area :description, {class: "form-control", id: "description", rows: 10} %>
     
     
@@ -23,7 +23,7 @@
  <div class='row'>
    <div id="formo">
      
-       <label>¿Cómo nos ponemos en contacto ? </label>
+       <label>¿Cómo nos ponemos en contacto ? *</label>
        <br>
        
       <div align='left'>
