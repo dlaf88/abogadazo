@@ -5,6 +5,7 @@ gem 'fog'
 gem 'simple_form'
 gem 'devise', '~> 3.4.1'
 gem 'underscore-rails', '~> 1.8.2'
+gem 'gmaps4rails'
 
  group :production do
    gem 'pg'
