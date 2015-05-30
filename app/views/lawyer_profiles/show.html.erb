@@ -1,5 +1,7 @@
 <hr/>
-<script type="text/javascript" src="https://hpneo.github.io/gmaps/gmaps.js"></script>
+  
+
+
 
 <div class = 'container'>
   <div class='row'>
@@ -10,32 +12,27 @@
       <div class='col-md-8'>
         <h3 style='margin-top:20px; margin-bottom:10px'> About Me</h3>
         
-          <p >
-            Banh mi brunch Godard letterpress dreamcatcher forage. Keffiyeh 90's Shoreditch, tilde hashtag Thundercats Banksy biodiesel cred chambray retro. Cornhole before they sold out letterpress, sustainable taxidermy mlkshk craft beer. Leggings fashion axe master cleanse artisan aesthetic, four dollar toast meh Truffaut flannel lo-fi messenger bag craft beer. Ennui small batch cornhole, twee biodiesel Austin chambray gluten-free slow-carb locavore tattooed narwhal selvage. 90's four dollar toast wolf disrupt bicycle rights. Asymmetrical bitters seitan Shoreditch.
-
-
-          </p>
+           <p> <%= @lawyerprofile.body%> </p>
         <br>
         <h3>Practice Areas</h3>
-        <p> These are the states that I am licensed to practice law. </p>
+        <h3> Licensed in: </h3>
+        <p><%= @lawyerprofile.state %> </p>
       
       </div>
+    <div id='map'></div>
   
   
   
   </div>
   <div class='row'>
-    
-    <h3> <%= @lawyerprofile.state %> </h3>
-    <p> <%= @lawyerprofile.body%> </p>
+  
+   
     <div class='col-md-12'>
-      <p align='left'>
-      This is sample
-      <div id='map'>
       
-      </div>
+      <h3>Contact Information</h3>
+      
         
-      </p>
+      
       
     
     </div>

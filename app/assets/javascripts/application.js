@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require jquery-ui
 //= require maskedinput.js
+//= require underscore
 
 
 //= require_tree .
