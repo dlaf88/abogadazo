@@ -16,6 +16,7 @@
 //= require jquery-ui
 //= require maskedinput.js
 //= require underscore
+//= require gmaps/google
 
 
 //= require_tree .

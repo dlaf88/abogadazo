@@ -1,5 +1,5 @@
 ActiveAdmin.register LawyerProfile do
-  permit_params :name,:address,:state,:body,:license,:image,:lawyer_id
+  permit_params :name,:address,:state,:body,:license,:image,:lawyer_id,:practices,:latitude,:longitude,:phone
 
 
   # See permitted parameters documentation:
