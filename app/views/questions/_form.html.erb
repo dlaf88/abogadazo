@@ -8,17 +8,10 @@
   </div>
 </div>
 
-<div class='row'>
-  
-    <%= f.label :description,'Descripción: *', {id: "label_des"}  %> <div id="textarea_feedback"></div>
-  <%= f.text_area :description, {class: "form-control", id: "description", rows: 10} %>
-    
-    
-
-  
+<div class='row'>  
+  <%= f.label :description,'Descripción: *', {id: "label_des"}  %> <div id="textarea_feedback"></div>
+  <%= f.text_area :description, {class: "form-control", id: "description", rows: 10} %> 
 </div>
-
-
  <br>
  <div class='row'>
    <div id="formo">
@@ -28,7 +21,7 @@
        
       <div align='left'>
         <button class='btn btn-default btn-md' type='button' name='dog'value='Email' id='email-button'><span class='glyphicon glyphicon-envelope'></span> Email</button>
-        <button class='btn btn-default btn-md' type='button' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'></span> Texto</button>
+        <!--<button class='btn btn-default btn-md' type='button' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'></span> Texto</button>-->
      </div>
    </div><!--formo-->
 </div>
@@ -37,8 +30,13 @@
     
   <%= f.label :phone, {class: 'label_phone'} %>
   <%= f.text_field :phone, {class: "form-control"} %>
+  
 </div>
 <br>
+<div class='row' id='terms'>
+  <span><%= f.check_box :terms, {id: 'checkie' }%>Estoy de acuerdo con los <a href='/terms'>términos de servicio</a> </span>
+</div>
+
 <div class='row'>
   <%= f.submit 'Enviar Pregunta', class: 'btn btn-block btn-md btn-info'%>
 </div>

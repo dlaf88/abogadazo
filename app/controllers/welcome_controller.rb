@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @question = Question.new
-    @questions = Question.limit(3)
+    @questions = Question.last(3)
     @article= Article.new
     
     

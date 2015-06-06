@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end 
   resources :articles
   resources :lawyer_profiles
-  
+  get '/terms', to: 'static_pages#terms'
   
   root to: "welcome#index"
 end
