@@ -22,6 +22,14 @@
 </head>
  
 <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
  <div class="container-fluid">
     <!---NAVBAR /-->
   <div class='row'>
@@ -84,8 +92,12 @@
                  <h4 style='color:white;font-weight:lighter'>Sobre Nosotros</h4>
                <p style='color:white'>Abogadazo es una empresa web dedicada a hacer la información legal más accesible a la comunidad Latina en los Estados Unidos. Estamos ubicados en el corazón de Silicon Alley - en la ciudad de Nueva York.</p>
                  <!--<img style='float:right'src='http://s3.amazonaws.com/abzolive1/static/logos/miny.png'>-->
+               <div class="fb-like" data-href="http://www.facebook.com/abogadazo" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
+               </div>
+               <p>
                 Made with &#9825 in NYC.
                  &copy Abogadazo, all rights reserved Diego Lafuente, 2015
+               </p>
              </div>
              <div style='color:white'class="col-md-4 pull-right">
                 <h4>Enlaces útiles</h4>
