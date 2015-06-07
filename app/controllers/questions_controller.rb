@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    @question = Question.new(params.require(:question).permit(:title, :description, :phone,:terms))
+    @question = Question.new(params.require(:question).permit(:title, :description, :phone))
     if request.location != nil
       @question.ipaddress = request.location.city.to_s
     else
