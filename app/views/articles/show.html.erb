@@ -10,6 +10,15 @@
      <br>
      <br> 
     <% end %>
+  <% if @article.image_body_boo %>
+    <div class="row">
+      <img  class='img-responsive col-md-12' src="<%= @article.image_body_field %>">
+      
+    </div>
+  
+     <br>
+     <br> 
+    <% end %>
       <hr/>
     <div class='row'>
         <div class='col-md-2 col-xs-4'>  

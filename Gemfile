@@ -29,11 +29,11 @@ gem 'jquery-ui-rails', '~> 5.0.3'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'spring','~>1.3.6',      group: :development
 gem "figaro"
 gem 'activeadmin'
 gem 'jquery-turbolinks'
- gem 'carrierwave'
- gem 'mini_magick'
+gem 'carrierwave'
+gem 'mini_magick'
 gem "flat-ui-rails"
 
