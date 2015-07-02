@@ -20,6 +20,24 @@
      <br> 
     <% end %>
       <hr/>
+  <div class='row' align='center'>
+      <h3><b>Tienes más preguntas? Pregúntanos, es gratis!</b></h3>
+      <br>
+      <a  type="button" class='btn btn-lg btn-info' href='/questions/new'>Haz Tu Pregunta</a>
+     
+    </div><!--question Tienes mas preguntas row -->
+  
+    
+      <br>
+     
+
+        <hr>
+      <%= simple_format @article.body %>
+    <div class='row'>
+
+    </div>
+    <hr>
+    
     <div class='row'>
         <div class='col-md-2 col-xs-4'>  
           
@@ -46,27 +64,13 @@
             </div>
         
         </div>
-  </div>
-      <br>
-      <div class='row' align='left'>
+  </div><!--about the author-->
+   <div class='row' align='left'>
           <h4><b>Tienes más preguntas? Pregúntame, es gratis!</b></h4>
           
           <a  type="button" class='btn btn-sm btn-success' href='/questions/new'>Haz Tu Pregunta</a>
 
-     </div>
-
-        <hr>
-      <%= simple_format @article.body %>
-    <div class='row'>
-
-    </div>
-    <hr>
-    <div class='row' align='center'>
-      <h3><b>Tienes más preguntas? Pregúntanos, es gratis!</b></h3>
-      <br>
-      <a  type="button" class='btn btn-lg btn-info' href='/questions/new'>Haz Tu Pregunta</a>
-     
-    </div>
+     </div><!--tienes mas preguntas and the author-->
 </div> <!--container-->
 
 <br>
