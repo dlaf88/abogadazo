@@ -1,4 +1,11 @@
-
+<style>
+  @media screen and (max-width: 767px) {
+    h1 {
+       font-size:1.5em;
+    }
+}
+  
+</style>
 <h1 class='well' align='center'><b><%= @article.title %></b></h1>
   
 <div class='container'>
@@ -20,7 +27,7 @@
      <br> 
     <% end %>
       <hr/>
-  <div class='row' align='center'>
+  <!--<div class='row' align='center'>
       <h3><b>Tienes más preguntas? Pregúntanos, es gratis!</b></h3>
       <br>
       <a  type="button" class='btn btn-lg btn-info' href='/questions/new'>Haz Tu Pregunta</a>
@@ -31,7 +38,7 @@
       <br>
      
 
-        <hr>
+        
       <%= simple_format @article.body %>
     <div class='row'>
 
@@ -65,6 +72,7 @@
         
         </div>
   </div><!--about the author-->
+  
    <div class='row' align='left'>
           <h4><b>Tienes más preguntas? Pregúntame, es gratis!</b></h4>
           
