@@ -11,6 +11,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answers = @question.answers
+    @title = 'Pregunta a Abogadazo'
   end 
   
   def edit 
