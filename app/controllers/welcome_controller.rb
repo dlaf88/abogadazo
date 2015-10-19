@@ -7,5 +7,13 @@ class WelcomeController < ApplicationController
     
     
   end
+  def show
+    
+    @question = Question.new
+    @questions = Question.last(3)
+    @article= Article.new
+    
+    
+  end 
   
 end

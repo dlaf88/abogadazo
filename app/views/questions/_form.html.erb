@@ -1,103 +1,17 @@
 
-<%= simple_form_for(question, html: { class: 'form-horizontal' }) do |f|  %>
+<%= simple_form_for(question, html: { class: 'data-fields' }) do |f|  %>
 
-<div class='row'>
-  <div class='col-md-8'> 
-
-    <%= f.input :title,label: "Pregunta de: *", collection:["Inmigración"], class: "form-control" %>
-
-  </div>
-</div>
-
-<div class='row'>  
-  <%= f.label :description,'Descripción: *', {id: "label_des"}  %> <div id="textarea_feedback"></div>
-  <%= f.text_area :description, {class: "form-control", id: "description", rows: 10} %> 
-</div>
- <br>
- <div class='row'>
-   <div id="formo">
-     
-       <label>Email para ponernos en contacto.*</label>
-       <br>
-       
-      <div align='left'>
-        <!--<button class='btn btn-default btn-md' type='button' name='dog'value='Email' id='email-button'><span class='glyphicon glyphicon-envelope'></span> Email</button>-->
-        <!--<button class='btn btn-default btn-md' type='button' name='dog' value='Texto' id='telefono-button'><span  class='glyphicon glyphicon-phone'></span> Texto</button>-->
-     </div> 
-   </div><!--formo-->
-</div>
-<br>
-<div class='row' id='ello'>
-    
-  <span class='glyphicon glyphicon-envelope'></span><%= f.label 'Email',:phone, {class: 'label_phone'} %>
-  <%= f.text_field :phone, {class: "form-control"} %>
+<div class="columns two">
+  <fieldset><%= f.input :title,label: false,collection:["Inmigración"], default: "Inmigración" %></fieldset>
   
+  <fieldset>
+  <%= f.text_field :phone,placeholder: "Ingrese su email" %>
+  </fieldset>
 </div>
-<br>
-
-<div class='row'>
-  <%= f.submit 'Enviar Pregunta', class: 'btn btn-block btn-md btn-info'%>
+<div class="columns two p__relative">
+  <%= f.text_area :description,placeholder:"Cual es su pregunta?" %> 
+  <%= f.submit 'Enviar Pregunta'%>
 </div>
-<div class='row' id='terms'>
-  <span>Yo estoy de acuerdo con los <a href='/terms'>términos de servicio</a></span>
-</div>
-<div class='row'>
-<p>* requerido</p>
-</div>
-<br>
-
- <!--<script>
-  $(function(){
-     $('#ello').hide();
-    $('#email-button').on('click', function(){
-          
-        $('#ello .form-control').unmask()
-        $('#ello').fadeIn()
-        $('#ello .label_phone').empty().text("Email")          
-        
-      
-      
-    })
-    $('#telefono-button').on('click', function(){
-          
-        $('#ello').fadeIn()
-        $('#ello .form-control').mask("(999) 999-9999")
-        $('#ello .label_phone').empty().text("Telefono")
-      
-      
-    })
-     
-   
-    $('#formo input').on('change', function() {
-      var radio_val = $('input[name="myRadio"]:checked', '#formo').val();
-      if (radio_val == 'Telefono'){
-        
-        $('#ello').fadeIn()
-        $('#ello .form-control').mask("(999) 999-9999")
-        $('#ello .label_phone').empty().text(radio_val)
-        
-        
-      }
-      else if (radio_val == 'Email'){
-        $('#ello .form-control').unmask()
-        $('#ello').fadeIn()
-        $('#ello .label_phone').empty().text(radio_val)
-        
-        
-      }
-      
-      
-        
-    });
-  });
-  
-</script>-->
-<script>
-  $(function(){
-    $('#description').attr({ maxLength : 750 });
-    
-  })
-</script>
 
 
 
