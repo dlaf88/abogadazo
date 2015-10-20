@@ -3,9 +3,7 @@ class WelcomeController < ApplicationController
     @question = Question.new
     @questions = Question.last(3)
     @article= Article.new
-    
-    
-    
+
   end
   def show
     

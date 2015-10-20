@@ -1,27 +1,40 @@
-<div class='container'>
-    <h2> <%= @question.title %></h2>
-     <p> <%= @question.description %></p>
-     
-  <h3>Respuestas</h3>
-  <br>
-  <% @answers.each do |answer| %>
-
-  <div class='well' style='font-size:14px'> 
-    <div class='row'><%= simple_format answer.description %></div>
-    <br>
-    <div class='row'><b><%= answer.lawyer.lawyer_profile.name %>, Esq.<b></div>
-    <br>
-    <div class='row'><%= image_tag answer.lawyer.lawyer_profile.image.small %></div>
-  </div>
-  <% end %>
-  
-  <% if lawyer_signed_in? && current_lawyer.validated %>
+	<div class="top">
+				<div class="wrapper">
+					<img src="images/icn/logo-bubble-grey.png" class="logo">
+					<nav>
+						<a href="#">Navigation</a>
+						<a href="#">Navigation</a>
+						<a href="#">Navigation</a>
+					</nav>
+				</div>
+			</div>
+			
+			<div class="content internal">
+				<section>
+					<div class="wrapper">
+						<h2 class="icnquest"><%= @question.title %></h2>
+						<div class="question">
+					  <%= @question.description %>
+						</div>
+ <% @answers.each do |answer| %>
+						<div class="reply">
+					  <%= simple_format answer.description %>
+						</div>
+						<div class="author">
+							<div class="image">
+								<%= image_tag answer.lawyer.lawyer_profile.image.small %>
+							</div>
+							<span><%= answer.lawyer.lawyer_profile.name %></span>
+             <% end %>
+						</div>
+					</div>
+				</section>
+			</div><!-- CONTENT END-->
+ 
+<% if lawyer_signed_in? && current_lawyer.validated %>
 
   <%= render partial: 'answers/form' %>
   <%= link_to "Lawyer Sign Out", destroy_lawyer_session_path, method: :delete %>
   <%= image_tag current_lawyer.lawyer_profile.image.small %>
   
-  
-   
-  <% end %>
-</div>
+<% end %>

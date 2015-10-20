@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require jquery-ui
-//= require prefixfree.min.js
-//= require show_script.js
+
 
 //= require underscore
 //= require gmaps/google
@@ -25,5 +24,6 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require analytics.js
-
+//= require prefixfree.min.js
+//= require show_script.js
 

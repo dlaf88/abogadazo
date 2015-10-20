@@ -1,11 +1,4 @@
-/*
- *= require jquery-ui
- */
 @charset "UTF-8";
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-
 /* ----------------------------
 - Copyright 2014, www.imdevsigner.com All rights reserved.
 - Authors: Ricardo De León
@@ -117,7 +110,7 @@ h1 {
 header {
 	height: 800px;
 	/*background-image: url(../images/bg/bg_abogadazo.jpg);*/
-	background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/bg/iStock_000064834499_Medium.jpg);
+	background-image: url(../images/bg/background-abogadazo.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
@@ -1330,3 +1323,5 @@ footer {
 		padding: 0 40px;
 	}
 }
+/*@import "bootstrap-sprockets";
+@import "bootstrap";*/
