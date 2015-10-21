@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629031602) do
+ActiveRecord::Schema.define(version: 20151021202752) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150629031602) do
     t.datetime "updated_at"
     t.integer  "lawyer_id"
     t.text     "description"
+    t.string   "voice"
   end
 
   add_index "answers", ["lawyer_id"], name: "index_answers_on_lawyer_id"

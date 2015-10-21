@@ -9,6 +9,9 @@
   <div class='well' style='font-size:14px'> 
     <div class='row'><%= simple_format answer.description %></div>
     <br>
+    <% if answer.voice.exists? %>
+    <div><%= answer.voice %> </div>
+    <% end %>
     <div class='row'><b><%= answer.lawyer.lawyer_profile.name %>, Esq.<b></div>
     <br>
     <div class='row'><%= image_tag answer.lawyer.lawyer_profile.image.small %></div>
