@@ -92,20 +92,7 @@
       <br>
   </div>
 </div>
-<div class='row' style='margin-top: 20px'>
-  <h3 align='center'>Preguntas hechas por usarios</h3>
-  <br>
-  <div class='col-md-4 col-md-offset-4'>
-     <ol>
-    <%@questions.each do |question|%>
-   
-       <li><%= link_to truncate(question.description, :length => 150),question %></li>
-       <br>
-    
-   <% end %>
-       </ol>
-  </div>
-  
+
    
   
     
