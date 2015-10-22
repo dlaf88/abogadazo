@@ -9,8 +9,8 @@
   <div class='well' style='font-size:14px'> 
     <div class='row'><%= simple_format answer.description %></div>
     <br>
-    <% if answer.voice.exists? %>
-    <div><%= answer.voice %> </div>
+    <% if answer.voice.present? %>
+    <div><%= answer.voice.html_safe %> </div>
     <% end %>
     <div class='row'><b><%= answer.lawyer.lawyer_profile.name %>, Esq.<b></div>
     <br>

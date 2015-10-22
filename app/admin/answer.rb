@@ -1,5 +1,5 @@
 ActiveAdmin.register Answer do
-  permit_params :description
+  permit_params :description,:voice
 
 
   # See permitted parameters documentation:
