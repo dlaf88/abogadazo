@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.1)
+    Ziggeo (1.01)
     actionmailer (4.1.0)
       actionpack (= 4.1.0)
       actionview (= 4.1.0)
@@ -299,6 +300,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Ziggeo
   activeadmin
   bootstrap-sass (~> 3.3.4.1)
   carrierwave

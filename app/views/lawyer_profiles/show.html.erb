@@ -1,70 +1,39 @@
-<hr/>
-  
-<div class = 'container'>
-  <div class='row'>
-     
-      <div class='col-md-4'>
-        <h1 > <%= @lawyerprofile.name %> </h1>
-        <%= image_tag @lawyerprofile.image.largeprofile, options={class: 'img-responsive'} %>
-      </div>
-      <div class='col-md-8'>
-        <h3 style='margin-top:20px; margin-bottom:10px'> About Me</h3>
-        
-           <p> <%= @lawyerprofile.body%> </p>
-        <br>
-        <h3>Practice Areas</h3>
-        <p> <%= @lawyerprofile.practices%> </p>
-        <h3> Licensed in: </h3>
-        <p><%= @lawyerprofile.state %> </p>
-      
-      </div> 
-   
-  </div> <!--row-->
-  
-  
-  
-  <br>
-  <div class='row'>
-  
-   
-    <div class='col-md-12 well'>
-      
-      <h3>Contact Information</h3>
-      <p>39 Smallwood Ave. Belleville, NJ 07109</p>
-      <p><%= number_to_phone(@lawyerprofile.phone, area_code: true)    %></p>
-       <div class='col-md-4'>
-          <div id="map" style='height:200px'></div>
-       </div>
-      
-      
-    
-    </div>
+<%= render partial: "layouts/navigation" %>
+<div class="content internal">
+				<section>
+					<div class="wrapper">
+						
+						<div class="profile-info">
+							<div class="leftside">
+								<div>
+									<div class="image">
+                    <img src="<%= @lawyerprofile.image %>" alt="">
+									</div>
+									<div class="text">
+                    <span class="name"><%= @lawyerprofile.name %></span>
+                    <span class="spec"><%= @lawyerprofile.practices %></span>
+										<ul>
+											<li><a href="#">Facebook</a></li>
+											<li><a href="#">Twitter</a></li>
+											<li><a href="#">Website</a></li>
+										</ul>
+									</div>
+									<h3>Información de contacto</h3>
+									<ul class="contact-info">
+										<li><a href="mailto:diego.lafuente@abogadazo.com">diego.lafuente@abogadazo.com</a></li>
+										<li>(+5) 456 432 323</li>
+									</ul>
+								</div>
+							</div>
+							<div class="rightside">
+								<h3>Sobre Diego</h3>
+                <p><%= @lawyerprofile.body %></p>
+							</div>
+							<div class="cntc-btn">
+								<a href="#" class="button blue">Contactar</a>
+							</div>
+						</div>
 
-  </div>
-          <script>
-            handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-          markers = handler.addMarkers([
-            {
-              "lat":  <%= @lawyerprofile.latitude%>,
-              "lng":  <%= @lawyerprofile.longitude%>,
-              "picture": {
-                "url": "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000",
-                "width":  36,
-                "height": 36
-              },
-              "infowindow": "hello!"
-            }
-          ]);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-          handler.getMap().setZoom(15);
-
-        });
-
-
-
-          </script>
-
-</div>
-<
+					</div>
+				</section>
+			</div><!-- CONTENT END-->

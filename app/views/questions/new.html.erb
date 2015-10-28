@@ -1,14 +1,24 @@
-<div class='row'>
+<%= render partial: "layouts/navigation" %>
+
 <% if @question.errors.any? %>
   <% @question.errors.messages.each do |message| %>
+  <div class='row'>
       <div class='container bg-warning'>
         <div class="message"><ul><li><%= message.last.last.html_safe %></li></ul></div>
       </div>
+  </div>
   <% end %>
 <% end %>
   
-  
-</div>
+	<div class="content internal">
+				<section>
+					<div class="wrapper">
+						<h2>Haz tu pregunta</h2>
+            <%= render partial: "questions/form",locals: {question:@question} %>
+					</div>
+				</section>
+			</div><!-- CONTENT END-->
+
 
 <!--
 <div class='row'>
@@ -31,39 +41,5 @@
   </div>
 </div>
 -->
-<div class="top">
-				<div class="wrapper">
-					<img src="images/icn/logo-bubble-grey.png" class="logo">
-					<nav>
-						<a href="#">Navigation</a>
-						<a href="#">Navigation</a>
-						<a href="#">Navigation</a>
-					</nav>
-				</div>
-			</div>
-			
-			<div class="content internal">
-				<section>
-					<div class="wrapper">
-						<h2>Haz tu pregunta</h2>
-						<form class="data-fields">
-							<div class="columns two">
-								<fieldset>
-									<select>
-										<option>Imigración</option>
-										<option>Imigración</option>
-									</select>
-								</fieldset>
-								<fieldset>
-									<input type="email" placeholder="Ingrese su email">
-								</fieldset>
-							</div>
-							<div class="columns two p__relative">
-								<textarea placeholder="Cual es su pregunta?"></textarea>
-								<input type="submit" value="Enviar">
-							</div>
-							
-						</form>
-					</div>
-				</section>
-			</div><!-- CONTENT END-->
+
+

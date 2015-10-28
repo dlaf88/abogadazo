@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answers = @question.answers
     @title = 'Pregunta a Abogadazo'
+    #@ziggeo = Ziggeo.new("0e19139aa5a50cdb9c584bdae15a2268", "a54079bb4188840a133bdd481c2f9f7f", "d2f02205414d055d3be3ed8b919e6694")
   end 
   
   def edit 
@@ -26,7 +27,8 @@ class QuestionsController < ApplicationController
     @question.ipaddress = request.remote_ip.to_s
     end 
     if @question.save
-      redirect_to @question, notice: "Question was saved successfully."
+      flash[:notice]= "Tu pregunta fue enviada correctamente"
+      render 'welcome/show'
     else
       flash[:error] = "Error creating question. Please try again."
        render :new

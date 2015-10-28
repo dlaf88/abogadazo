@@ -4,9 +4,9 @@
 						<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/logo_white.png" class="logo">
 						<span class="mobile">Navegación</span>
 						<nav class="navigation">
-							<a href="#">Navegación</a>
-							<a href="#">Navegación</a>
-							<a href="#">Navegación</a>
+							<a href="#">Quiénes somos</a>
+							<a href="#">Un ejemplo</a>
+							<a href="#">Haz tu pregunta</a>
 						</nav>
 						<div class="left">
 							<h1>Haz Preguntas a Abogados, Gratis</h1>
@@ -20,7 +20,7 @@
 						</div>
 					</div>
 				</div>
-</header><!-- HEADER END-->
+			</header><!-- HEADER END-->
 			
 			<div class="content">
 				<section id="ask-fold">
@@ -47,85 +47,30 @@
 							<div class="options">
 								<span id="opask" class="active">Haz tu pregunta <span>Lorem ipsum dolor sit amet</span></span>
 								<span id="opfind">Encuentra un abogado <span>Lorem ipsum dolor sit amet</span></span>
-								<span id="opanswers">Algunas respuestas <span>Lorem ipsum dolor sit amet</span></span>
+								<span id="opanswers"> Un Ejemplo <span>Lorem ipsum dolor sit amet</span></span>
 							</div>
 							<div class="content-tab show" id="ask">
-								<form class="data-fields">
-									<div></div>
-									<div class="columns two">
-										<fieldset>
-											<label>Pregunta de:</label>
-											<select>
-												<option>Imigración</option>
-												<option>Imigración</option>
-											</select>
-										</fieldset>
-										<fieldset>
-											<label>Email:</label>
-											<input type="email" placeholder="Ingrese su email">
-										</fieldset>
-									</div>
-									<div class="columns two p__relative">
-										<label>Mensaje:</label>
-										<textarea placeholder="Cual es su pregunta?"></textarea>
-										<input type="submit" value="Enviar">
-									</div>
-									
-								</form>
+                
+                <%= render partial: "questions/form",locals: {question:@question} %>
+                <% if flash[:notice] %>
+                <div>"This worked."</div>
+                <div class="message-sent">
+                  <h3><%= flash[:notice] %></h3>
+									<span>Te avisaremos inmediatamente tenga una respuesta</span>
+									<a href="#" class="message-options otherask">Hacer otra pregunta</a>
+									<a href="#" class="message-options">Ir a ver mi pregunta</a>
+								</div>
+                <% end %>
 							</div>
 							<div class="content-tab" id="find">
 								<span>Encuentra un abogado en tus cercanías que te pueda ayudar en tus dudas judiciales.</span>
-								<form class="data-fields">
-									<div class="columns three">
-										<fieldset>
-											<select>
-												<option>Imigración</option>
-												<option>Imigración</option>
-											</select>
-										</fieldset>
-									</div>
-									<div class="columns three">
-										<fieldset>
-											<select>
-												<option>Rama Judicial</option>
-												<option>Rama Judicial</option>
-											</select>
-										</fieldset>
-									</div>
-									<div class="columns three">
-										<input type="submit" value="Buscar">
-									</div>
-								</form>
+								
 							</div>
 							<div class="content-tab topics" id="answers">
 								<div class="columns two">
-									<div>
-										<span>Articulos:</span>
-										<fieldset class="search">
-											<input type="text" placeholder="Que buscas?">
-										</fieldset>
-										<ul class="articles-links">
-											<li><a href="">3 Acciones que podemos tomar mientras esperamos por DAPA.</a></li>
-											<li><a href="">Cómo un abogado ayudó a Juana ganar su caso de inmigración y como el puede responder su pregunta gratis.</a></li>
-											<li><a href="">Newark dará Identificación (IDs) a personas indocumentadas.</a></li>
-										</ul>
-									</div>
-									<div>
-										<span>Temas:</span>
-										<div class="tags">
-											<a href="#">Imigración</a>
-											<a href="#">Emprendimiento</a>
-											<a href="#">Registro de marca</a>
-											<a href="#">Emprendimiento</a>
-											<a href="#">Imigración</a>
-											<a href="#">Registro de marca</a>
-											<a href="#">Imigración</a>
-											<a href="#">Emprendimiento</a>
-											<a href="#">Registro de marca</a>
-											<a href="#">Imigración</a>
-										</div>
-									</div>
-								</div>
+									
+							  </div>
+								
 							</div>
 						</div>
 					</div>
@@ -163,6 +108,4 @@
 						</ul>
 					</div>
 				</section>
-			<!-- CONTENT END-->
-			
-			
+			</div><!-- CONTENT END-->
