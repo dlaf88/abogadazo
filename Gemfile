@@ -6,6 +6,7 @@ gem 'simple_form'
 gem 'devise', '~> 3.4.1'
 gem 'underscore-rails', '~> 1.8.2'
 gem 'gmaps4rails'
+gem 'email_validator', '~> 1.6'
 
  group :production do
    gem 'pg'
