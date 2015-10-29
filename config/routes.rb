@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :lawyer_profiles
   get '/terms', to: 'static_pages#terms'
+  get '/about', to: 'static_pages#about'
   root to: "welcome#show"
 end
