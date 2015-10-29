@@ -36,5 +36,6 @@ gem 'activeadmin'
 gem 'jquery-turbolinks'
 gem 'carrierwave'
 gem 'mini_magick'
-gem "flat-ui-rails"
+gem "Ziggeo"
+
 

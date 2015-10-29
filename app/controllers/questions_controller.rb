@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @answers = @question.answers
     @title = 'Pregunta a Abogadazo'
+    #@ziggeo = Ziggeo.new("0e19139aa5a50cdb9c584bdae15a2268", "a54079bb4188840a133bdd481c2f9f7f", "d2f02205414d055d3be3ed8b919e6694")
   end 
   
   def edit 

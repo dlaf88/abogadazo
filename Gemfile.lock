@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.1)
+    Ziggeo (1.01)
     actionmailer (4.1.0)
       actionpack (= 4.1.0)
       actionview (= 4.1.0)
@@ -83,7 +84,6 @@ GEM
       thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    flat-ui-rails (0.0.2)
     fog (1.29.0)
       fog-atmos
       fog-aws (~> 0.0)
@@ -302,6 +302,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  Ziggeo
   activeadmin
   bootstrap-sass (~> 3.3.4.1)
   carrierwave
@@ -309,7 +310,6 @@ DEPENDENCIES
   devise (~> 3.4.1)
   email_validator (~> 1.6)
   figaro
-  flat-ui-rails
   fog
   geocoder (~> 1.2.8)
   gmaps4rails

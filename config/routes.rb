@@ -3,12 +3,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, ActiveAdmin::Devise.config
   resources :questions do
-    resources :answers 
-    
+    resources :answers     
   end 
   resources :articles
   resources :lawyer_profiles
   get '/terms', to: 'static_pages#terms'
-  
-  root to: "welcome#index"
+  get '/about', to: 'static_pages#about'
+  root to: "welcome#show"
 end
