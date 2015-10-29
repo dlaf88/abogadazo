@@ -983,6 +983,8 @@ nav {
 	border-radius: 3px;
 	width: 100%;
 	display: block;
+  position: relative;
+  z-index: 6;
   
 }
 	.alert .close {
