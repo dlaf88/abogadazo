@@ -1790,3 +1790,12 @@ footer {
 		padding: 0 40px;
 	}
 }
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+header {
+background-size: cover;
+background-attachment: inherit;
+background-image: url(../images/bg/background-abogadazo.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+}
+}
