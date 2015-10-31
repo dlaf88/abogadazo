@@ -10,10 +10,11 @@
 						</div>
  <% @answers.each do |answer| %>
 						<div class="reply">
-					  <%= simple_format answer.description %>
               <% if answer.voice %>
               <div><%= answer.voice.html_safe %> </div>
               <% end %>
+					  <%= simple_format answer.description %>
+             
 						</div>
 						<div class="author">
 							<div class="image">
