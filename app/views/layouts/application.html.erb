@@ -73,6 +73,9 @@
           <span>Made with in NYC. © Abogadazo, all rights reserved Diego Lafuente, 2015</span>
         </div>
       </div>
+      <% if Rails.env.production? %> <!-- Google Analytics footer -->
+      <%= render partial: 'layouts/footer' %>
+      <% end %>
     </footer><!-- FOOTER END-->
 
  </body>
