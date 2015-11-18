@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :lawyer_profiles
   get '/terms', to: 'static_pages#terms'
   get '/about', to: 'static_pages#about'
+  get '/pay', to: 'static_pages#pay'
   root to: "welcome#show"
 end
