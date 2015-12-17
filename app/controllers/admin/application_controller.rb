@@ -9,7 +9,11 @@ module Admin
     before_filter :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      if account_signed_in? && current_account.type == 'Boss'
+      else 
+        flash[:alert] = "You are not an Admin"
+        redirect_to root_path
+      end 
     end
 
     # Override this value to specify the number of elements to display at a time
