@@ -1,4 +1,6 @@
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 @charset "UTF-8";
 /* ----------------------------
 - Copyright 2014, www.imdevsigner.com All rights reserved.
@@ -287,6 +289,7 @@ header {
 				.process div:last-child:after {
 					display: none;
 				}
+
 			.process div img {
 				display: block;
 				margin: 0 auto;
@@ -983,9 +986,6 @@ nav {
 	border-radius: 3px;
 	width: 100%;
 	display: block;
-  position: relative;
-  z-index: 6;
-  
 }
 	.alert .close {
 		float: right;
@@ -997,31 +997,26 @@ nav {
 	    text-shadow: 0 1px 0 #fff;
 	    filter: alpha(opacity=20);
 	    opacity: .2;
-     
 	}
 	.alert.alert-danger {
 		color: #a94442;
 		background-color: #f2dede;
 		border-color: #ebccd1;
-   
 	}
 	.alert-success {
 	    color: #3c763d;
 	    background-color: #dff0d8;
 	    border-color: #d6e9c6;
-     
 	}
 	.alert-info {
 	    color: #31708f;
 	    background-color: #d9edf7;
 	    border-color: #bce8f1;
-     
 	}
 	.alert-warning {
 	    color: #8a6d3b;
 	    background-color: #fcf8e3;
 	    border-color: #faebcc;
-     
 	}
 
 /* Footer
@@ -1790,12 +1785,4 @@ footer {
 		padding: 0 40px;
 	}
 }
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-header {
-background-size: cover;
-background-attachment: inherit;
-background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/bg/iStock_000064834499_Medium.jpg);
-background-repeat: no-repeat;
-background-position: center center;
-}
-}
+@import "bootstrap-social"

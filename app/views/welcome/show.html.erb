@@ -7,7 +7,13 @@
 							<a href="/about">Quiénes somos</a>
               
 							<a href="/questions/new">Haz tu pregunta</a>
-              <a href="">Algunas Preguntas</a>
+              <a href="/apply">Attorneys Apply Here</a>
+              <% if account_signed_in? %>
+                
+                <%= link_to "Sign Out", destroy_account_session_path, :method => :delete %>
+              <% else %>
+                <a href="/accounts/sign_in">Login</a>
+              <% end %>
 						</nav>
 						<div class="left">
 							<h1>Haz Preguntas a Abogados, Gratis</h1>
@@ -48,20 +54,12 @@
 							<div class="options">
 								<span id="opask" class="active">Haz tu pregunta</span>
 								<span id="opfind">Encuentra un abogado</span>
-								<span id="opanswers">Algunas Preguntas<span>Preguntas hechas por usuarios reales.</span></span>
+								<span id="opanswers">Noticias Interesantes<span>Interesantes</span></span>
 							</div>
 							<div class="content-tab show" id="ask">
                 
                 <%= render partial: "questions/form",locals: {question:@question} %>
-                <% if flash[:notice] %>
-                <div>"This worked."</div>
-                <div class="message-sent">
-                  <h3><%= flash[:notice] %></h3>
-									<span>Te avisaremos inmediatamente tenga una respuesta</span>
-									<a href="#" class="message-options otherask">Hacer otra pregunta</a>
-									<a href="#" class="message-options">Ir a ver mi pregunta</a>
-								</div>
-                <% end %>
+                
 							</div>
 							<div class="content-tab" id="find">
 								<span>Encuentra un abogado local que te pueda ayudar con tus dudas judiciales.</span>
@@ -109,3 +107,4 @@
 					</div>
 				</section>
 			</div><!-- CONTENT END-->
+

@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021202752) do
+ActiveRecord::Schema.define(version: 20151216233746) do
+
+  create_table "accounts", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "type"
+    t.string   "provider"
+    t.string   "uid"
+  end
+
+  add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true
+  add_index "accounts", ["provider"], name: "index_accounts_on_provider"
+  add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
+  add_index "accounts", ["uid"], name: "index_accounts_on_uid"
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -72,6 +97,7 @@ ActiveRecord::Schema.define(version: 20151021202752) do
     t.string   "image"
     t.float    "longitude"
     t.float    "latitude"
+    t.string   "attorney_id"
   end
 
   add_index "lawyer_profiles", ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"

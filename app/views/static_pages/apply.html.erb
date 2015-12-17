@@ -1,0 +1,45 @@
+<%= render partial: "layouts/navigation" %>
+<br>
+
+<div class='content internal about'>
+  
+ <div class='container' align='center'>
+   <h1>Get ready to Grow Your Firm</h1>
+   <h2>With Abogadazo your Latino Market Presence will Skyrocket!</h2>
+  
+   <% if account_signed_in? %>
+     <div class='row'>
+       <div class='col-md-5'>
+         <h2> Create a New Profile</h2>
+          <a type="button" href='lawyer_profiles/new'class="btn btn-success btn-block">Create Your Profile</a>
+       </div>
+       <div class='col-md-2'>
+         <h2>Or</h2>
+       </div>
+       <div class='col-md-5'>
+         <h2>Search for and Confirm Profile</h2>
+         
+         <a type="button" href='/'class="btn btn-success btn-block">Find Your Profile</a>
+       </div>
+     </div>
+   <% else %>
+   <div class='row'> <!-- row -->
+     <div class='col-md-5' >
+       <h1>Sign Up</h1>
+       <a href='accounts/sign_up' class='button blue gonext'> Sign Up</a>
+     </div>
+     <div class='col-md-2'>
+         <h1>Or</h1>
+       </div>
+     <div class='col-md-5' >
+       <h1>Sign In</h1>
+       <a href='accounts/sign_in' class='button blue gonext'> Sign In</a>
+     </div>
+   </div>
+   <% end %>
+   <br>
+   
+     
+   
+   
+</div><!-- end of container class -->
