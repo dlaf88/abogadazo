@@ -6,7 +6,7 @@ class LawyerProfilesController < ApplicationController
     if current_account.lawyer_profile # checks to see if you already have a profile path
       redirect_to lawyer_profile_path(current_account.lawyer_profile.id)
     else 
-    @lawyerprofile = LawyerProfile.new(:name => current_account.first_name.to_s + " "+current_account.last_name.to_s )
+    @lawyerprofile = LawyerProfile.new(:name => current_account.first_name.to_s + " "+current_account.last_name.to_s ) #sets up instance to allow the profile to have
     @lawyer = current_account
     end
   end 

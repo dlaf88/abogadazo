@@ -19,6 +19,7 @@ class Attorney < Account
   
 end
 
-class Boss < Account
+class Boss < Attorney
+  
 end 
 
