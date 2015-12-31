@@ -2,3 +2,17 @@
 <%= file_field_tag :file %>
 <%= submit_tag "Import"%>
 <% end %>
+
+<h2> Add import for Law Category</h2>
+<%= form_tag import_law_categories_path, multipart: true do%>
+<%= file_field_tag :file %>
+<%= submit_tag "Import"%>
+<% end %>
+<h2> Add import for Practice Areas</h2>
+<%= form_tag import_practice_areas_path, multipart: true do%>
+<%= file_field_tag :file %>
+<%= submit_tag "Import"%>
+<% end %>
+
+
+

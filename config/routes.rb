@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   #resources :articles
   resources :questions
   resources :lawyer_profiles
+  resources :law_categories do
+    collection {post :import}
+  end 
+  resources :practice_areas do
+    collection {post :import}
+  end 
   get '/terms', to: 'static_pages#terms'
   get '/about', to: 'static_pages#about'
   get '/pay', to: 'static_pages#pay'

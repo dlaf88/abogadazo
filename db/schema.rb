@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230230013) do
+ActiveRecord::Schema.define(version: 20151231140638) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -98,6 +98,12 @@ ActiveRecord::Schema.define(version: 20151230230013) do
     t.float    "longitude"
   end
 
+  create_table "law_categories", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lawyer_profiles", force: :cascade do |t|
     t.text     "name"
     t.string   "address",     limit: 255
@@ -135,6 +141,16 @@ ActiveRecord::Schema.define(version: 20151230230013) do
 
   add_index "lawyers", ["email"], name: "index_lawyers_on_email", unique: true
   add_index "lawyers", ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true
+
+  create_table "practice_areas", force: :cascade do |t|
+    t.integer  "attorney_profile_id"
+    t.integer  "law_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "practice_areas", ["attorney_profile_id"], name: "index_practice_areas_on_attorney_profile_id"
+  add_index "practice_areas", ["law_category_id"], name: "index_practice_areas_on_law_category_id"
 
   create_table "questions", force: :cascade do |t|
     t.text     "title"

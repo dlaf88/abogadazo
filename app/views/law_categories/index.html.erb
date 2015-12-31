@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Law Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @law_categories.each do |law_category| %>
+      <tr>
+        <td><%= law_category.title %></td>
+        <td><%= link_to 'Show', law_category %></td>
+        <td><%= link_to 'Edit', edit_law_category_path(law_category) %></td>
+        <td><%= link_to 'Destroy', law_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Law category', new_law_category_path %>

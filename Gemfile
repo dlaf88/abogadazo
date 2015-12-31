@@ -33,6 +33,10 @@ gem 'omniauth-facebook'
 gem "font-awesome-rails"
 gem "administrate", "~> 0.1.2"
 gem 'searchkick'
+gem "elasticsearch", ">= 1.0.15"
+gem 'faraday_middleware-aws-signers-v4'
+gem 'patron'
+
 
 
 

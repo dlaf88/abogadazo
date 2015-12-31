@@ -5,7 +5,12 @@ class AttorneyProfilesController < ApplicationController
   # GET /attorney_profiles.json
   def index
     location_array = Geocoder.coordinates(params[:location])
-    @attorney_profiles = AttorneyProfile.search params[:q],boost_by_distance: {field: :location, origin: {lat:location_array[0].to_f, lon: location_array[1].to_f}}
+    if params[:q].blank?
+      q ="*"
+    else 
+      q = params[:q]
+    end 
+    @attorney_profiles = AttorneyProfile.search params[:q],boost_by_distance: {field: :location, origin: {lat:location_array[0].to_f, lon: location_array[1].to_f}},fields: [:law_categories,:first_name,:last_name,:firm_name]
   end
 
   # GET /attorney_profiles/1
