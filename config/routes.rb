@@ -16,18 +16,18 @@ Rails.application.routes.draw do
   resources :questions
   resources :lawyer_profiles
   resources :law_categories do
-    collection {post :import}
+    #collection {post :import}
   end 
   resources :practice_areas do
-    collection {post :import}
+    #collection {post :import}
   end 
   get '/terms', to: 'static_pages#terms'
   get '/about', to: 'static_pages#about'
   get '/pay', to: 'static_pages#pay'
   root to: "welcome#show"
   get'/apply', to: 'static_pages#apply'
-  get'import', to: 'welcome#import'
+  #get'import', to: 'welcome#import'
   resources :attorney_profiles do
-    collection {post :import}
+    #collection {post :import}
   end 
 end
