@@ -1,0 +1,40 @@
+<%= render partial: "layouts/navigation" %>
+<div class="content internal">
+				<section>
+					<div class="wrapper">
+						
+						<div class="profile-info">
+							<div class="leftside">
+								<div>
+									<div class="image">
+                    <img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/bg/blank-profile-picture-973460_1280.png" alt="">
+									</div>
+									<div class="text">
+                    <span class="name"><%= @attorneyprofile.first_name%> <%= @attorneyprofile.middle_name unless blank?%> <%=@attorneyprofile.last_name %></span>
+                    <span class="spec"><%= @attorneyprofile.firm_address %></span>
+										
+									</div>
+									<h3>Información de contacto</h3>
+									<ul class="contact-info">
+                    <li><span class="spec"><%= @attorneyprofile.office_phone %></span><li>
+                    <li><li><span class="spec"><%= @attorneyprofile.firm_address %></span><li>
+									</ul>
+								</div>
+							</div>
+							<div class="rightside">
+								<h3>Sobre <%= @attorneyprofile.first_name %></h3>
+                
+							</div>
+							<div class="cntc-btn">
+								<a href="#" class="button blue">Contactar</a>
+							</div>
+              <div>
+
+</div>
+						</div>
+
+					</div>
+				</section>
+			</div><!-- CONTENT END-->
+
+

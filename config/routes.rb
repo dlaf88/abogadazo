@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   get '/pay', to: 'static_pages#pay'
   root to: "welcome#show"
   get'/apply', to: 'static_pages#apply'
+  get'import', to: 'welcome#import'
+  resources :attorney_profiles do
+    collection {post :import}
+  end 
 end

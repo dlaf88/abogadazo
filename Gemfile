@@ -32,6 +32,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'omniauth-facebook'
 gem "font-awesome-rails"
 gem "administrate", "~> 0.1.2"
+gem 'searchkick'
 
 
 

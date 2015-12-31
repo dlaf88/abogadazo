@@ -23,7 +23,11 @@
 						</div>
 						<div class="right">
 							<!-- <img src="images/misc/video.jpg"> -->
-							<iframe width="514" height="290" src="https://www.youtube.com/embed/pQSTz8H-nhU" frameborder="0" allowfullscreen></iframe>
+              <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
+              <%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Ejemplo: Inmigracion' %>
+              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive?' %>
+              <%= submit_tag "Search Near", :name => nil, :class => 'btn btn-default' %>
+              <% end %>
 						</div>
 					</div>
 				</div>
