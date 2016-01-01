@@ -25,7 +25,7 @@
 							<!-- <img src="images/misc/video.jpg"> -->
               <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
               <%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Ejemplo: Inmigracion' %>
-              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive?' %>
+              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive en New Jersey?' %>
               <%= submit_tag "Search Near", :name => nil, :class => 'btn btn-default' %>
               <% end %>
 						</div>
