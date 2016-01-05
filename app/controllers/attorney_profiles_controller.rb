@@ -4,13 +4,16 @@ class AttorneyProfilesController < ApplicationController
   # GET /attorney_profiles
   # GET /attorney_profiles.json
   def index
-    location_array = Geocoder.coordinates(params[:location])
-    if params[:q].blank?
-      q ="*"
-    else 
-      q = params[:q]
+   if  params[:q].blank? 
+     params[:q] = "*"
+   end 
+    if params[:location].blank?
+      params[:location] = 'New Jersey'
     end 
-    @attorney_profiles = AttorneyProfile.search params[:q],boost_by_distance: {field: :location, origin: {lat:location_array[0].to_f, lon: location_array[1].to_f}},fields: [:law_categories,:first_name,:last_name,:firm_name]
+    location_array = Geocoder.coordinates(params[:location])
+    
+    @attorney_profiles = AttorneyProfile.search params[:q],boost_by_distance: {field: :location, origin: {lat:location_array[0].to_f, lon: location_array[1].to_f}},fields: [:law_categories,:first_name,:last_name,:firm_name], page: params[:page], per_page: 15
+   
   end
 
   # GET /attorney_profiles/1
