@@ -36,7 +36,7 @@ gem 'searchkick'
 gem "elasticsearch", ">= 1.0.15"
 gem 'faraday_middleware-aws-signers-v4'
 gem 'patron'
-gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 
 
 
