@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     :omniauth_callbacks => 'accounts/omniauth_callbacks'
     }
   #devise_for :lawyers
-  #resources :articles
+  resources :articles
   resources :questions
   resources :lawyer_profiles
   resources :law_categories do
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/terms', to: 'static_pages#terms'
   get '/about', to: 'static_pages#about'
   get '/pay', to: 'static_pages#pay'
+  get '/map', to: 'welcome#maps'
   root to: "welcome#show"
   get'/apply', to: 'static_pages#apply'
   #get'import', to: 'welcome#import'
