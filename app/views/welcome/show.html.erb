@@ -23,11 +23,8 @@
 						</div>
 						<div class="right">
 							<!-- <img src="images/misc/video.jpg"> -->
-              <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
-              <%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Ejemplo: Inmigracion' %>
-              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive en New Jersey?' %>
-              <%= submit_tag "Search Near", :name => nil, :class => 'btn btn-default' %>
-              <% end %>
+              <iframe width="514" height="290" src="https://www.youtube.com/embed/pQSTz8H-nhU" frameborder="0" allowfullscreen></iframe>
+              
 						</div>
 					</div>
 				</div>
@@ -67,17 +64,16 @@
 							</div>
 							<div class="content-tab" id="find">
 								<span>Encuentra un abogado local que te pueda ayudar con tus dudas judiciales.</span>
-                <% @lawyers.each do |lawyer| %>
-								<div class="tagslawyer">
-                  <a href="<%= url_for(lawyer_profile_path(lawyer)) %>">
-										<span class="image">
-                      <img src=<%= lawyer.lawyer_profile.image %> alt="">
-										</span>
-                    <span class="name"><%= lawyer.lawyer_profile.name %></span>
-									</a>
-									
-								</div>
-                <% end %>
+                <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
+                <fieldset>
+              <%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Ejemplo: Inmigracion' %>
+                </fieldset>
+                <fieldset>
+              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive en New Jersey?' %>
+                </fieldset>
+                
+                <%= submit_tag "Search Near", :name => nil, :class => 'blue button' %>
+              <% end %>
 							</div>
               <% @questions.each do |question| %>
 							<div class="content-tab topics" id="answers">
