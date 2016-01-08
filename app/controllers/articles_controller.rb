@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end 
   
   def create
-    @article = Article.new(params.require(:article).permit(:title, :body, :author,:image,:image_body_field,:image_body_boo,:video,:video_field))
+    @article = Article.new(articles_params)
     
     if @article.save
       redirect_to @article 
@@ -22,9 +22,23 @@ class ArticlesController < ApplicationController
     end
       
   end 
+  def edit
+  end 
+  def update
+    if @law_category.update(articles_params)
+      redirect_to @article, notice: 'Article was successfully updated.' 
+        
+      else
+        render :edit 
+        
+      end
+  end 
   
   def index
     @articles = Article.limit(3)
   end 
-  
+  private
+  def articles_params
+    params.require(:article).permit(:title, :body, :author,:image,:image_body_field,:image_body_boo,:video,:video_field)
+  end 
 end
