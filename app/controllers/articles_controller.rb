@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end 
   
   def create
-    @article = Article.new(params.require(:article).permit(:title, :body, :author,:image))
+    @article = Article.new(params.require(:article).permit(:title, :body, :author,:image,:image_body_field,:image_body_boo,:video,:video_field))
     
     if @article.save
       redirect_to @article 
