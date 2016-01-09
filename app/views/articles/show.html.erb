@@ -16,9 +16,10 @@
       <% end %>
       <%= simple_format @article.body %>
       
-
-      
-
+       <div>
+         <h3>Ayudenos, Den nos un like en Facebook.</h3>
+       <div class="fb-like" data-href="https://www.facebook.com/abogadazo" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      </div>
       <div class="about-author">
         <div>
         
@@ -30,11 +31,12 @@
           <p><%=@article.about %></p>
         </div>
       </div>
-
+ 
     </div>
     
   
   </section>
+  
   <div class ="container">
     <div id="disqus_thread"></div>
     <script>
