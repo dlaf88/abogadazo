@@ -27,11 +27,7 @@
 //= require analytics.js
 //= require prefixfree.min.js
 //= require show_script.js
-
-$( document ).ready(function() {
-    
-});
-
+//= require tinymce
 
 
 

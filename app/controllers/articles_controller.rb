@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
- 
+  before_action :authenticate_admin, only: [:edit,:create,:new,:update]
   def new
     @article = Article.new
   end 
@@ -19,13 +19,14 @@ class ArticlesController < ApplicationController
     else
       flash[:error] = "Error creating Article. Please try again."
        render :new
-    end
-      
+    end      
   end 
   def edit
+    @article = Article.find(params[:id])
   end 
   def update
-    if @law_category.update(articles_params)
+    @article = Article.find(params[:id])
+    if @article.update(articles_params)
       redirect_to @article, notice: 'Article was successfully updated.' 
         
       else
@@ -39,6 +40,6 @@ class ArticlesController < ApplicationController
   end 
   private
   def articles_params
-    params.require(:article).permit(:title, :body, :author,:image,:image_body_field,:image_body_boo,:video,:video_field)
+    params.require(:article).permit(:title, :body, :author,:image,:image_body_field,:image_body_boo,:video,:video_field,:bootsy_image_gallery_id)
   end 
 end

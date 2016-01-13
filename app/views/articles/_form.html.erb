@@ -1,10 +1,19 @@
-<%= simple_form_for [@article], html: { class: 'form-horizontal' } do |f|  %>
+<div class='container'>
+  <%= simple_form_for (@article) do |f| %>
+  <%= f.input :title%>
+  <%= f.input :image_body_field %>
+  <%= f.input :image_body_boo %>
 
-<p>
-  <%= f.label :body  %>
-  <%= f.text_field :body, class: "form-control" %>
-</p>
-
-<p><%= f.submit %></p>
-
-<% end %>
+  <%= f.input :video_field%>
+  <%= f.input :video%>
+  
+  
+ 
+  <%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
+  <%= tinymce %>
+  
+  <%= f.submit :class => ' btn btn-primary btn-block' %>
+  
+  <br>
+  <%end%>
+</div>
