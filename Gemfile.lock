@@ -65,10 +65,6 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bootsy (2.2.1)
-      carrierwave (~> 0.10)
-      mini_magick (~> 4.3)
-      remotipart (~> 1.2)
     bourbon (4.2.6)
       sass (~> 3.4)
       thor (~> 0.19)
@@ -330,7 +326,6 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
-    remotipart (1.2.1)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     sass (3.4.20)
@@ -363,8 +358,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
-    tinymce-rails (4.3.2)
-      railties (>= 3.1.1)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -375,6 +368,9 @@ GEM
     underscore-rails (1.8.3)
     warden (1.2.4)
       rack (>= 1.0)
+    wysiwyg-rails (2.0.5)
+      font-awesome-rails (~> 4.4, >= 4.4.0.0)
+      railties (>= 3.2, < 5.0)
     xml-simple (1.1.5)
 
 PLATFORMS
@@ -384,7 +380,6 @@ DEPENDENCIES
   Ziggeo
   administrate (~> 0.1.2)
   bootstrap-sass (~> 3.3.6)
-  bootsy
   carrierwave
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.1)
@@ -413,10 +408,10 @@ DEPENDENCIES
   simple_form
   spring (~> 1.3.6)
   sqlite3
-  tinymce-rails
   turbolinks
   uglifier (>= 1.3.0)
   underscore-rails (~> 1.8.2)
+  wysiwyg-rails
 
 BUNDLED WITH
    1.10.5

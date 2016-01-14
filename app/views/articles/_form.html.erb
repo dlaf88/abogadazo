@@ -1,6 +1,8 @@
 <div class='container'>
   <%= simple_form_for (@article) do |f| %>
   <%= f.input :title%>
+  <%= f.input :author%>
+  <%= f.input :about%>
   <%= f.input :image_body_field %>
   <%= f.input :image_body_boo %>
 
@@ -9,11 +11,18 @@
   
   
  
-  <%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 150 %>
-  <%= tinymce %>
+  <%= f.text_area :body, :class => "editor", :rows => 150 %>
+  
   
   <%= f.submit :class => ' btn btn-primary btn-block' %>
   
   <br>
   <%end%>
 </div>
+<script>
+  $(function() {
+    $('.editor').froalaEditor({
+      height: 800
+    })
+  });
+</script>

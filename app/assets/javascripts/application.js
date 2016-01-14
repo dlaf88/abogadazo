@@ -27,7 +27,11 @@
 //= require analytics.js
 //= require prefixfree.min.js
 //= require show_script.js
-//= require tinymce
+//= require froala_editor.min.js
+//= require plugins/lists.min.js
+//= require plugins/paragraph_format.min.js
+//= require plugins/paragraph_style.min.js
+//= require plugins/quote.min.js
 
 
 

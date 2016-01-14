@@ -37,7 +37,6 @@ gem "elasticsearch", ">= 1.0.15"
 gem 'faraday_middleware-aws-signers-v4'
 gem 'patron'
 gem 'kaminari', '~> 0.16.3'
-gem 'bootsy'
-gem 'tinymce-rails'
+gem "wysiwyg-rails"
 
 
