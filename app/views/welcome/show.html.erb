@@ -55,7 +55,7 @@
 							<div class="options">
 								<span id="opask" class="active">Haz tu pregunta</span>
 								<span id="opfind">Encuentra un abogado</span>
-								<span id="opanswers">Noticias Interesantes<span>Interesantes</span></span>
+								<span id="opanswers">Noticias Interesantes</span>
 							</div>
 							<div class="content-tab show" id="ask">
                 
@@ -75,14 +75,15 @@
                 <%= submit_tag "Search Near", :name => nil, :class => 'blue button' %>
               <% end %>
 							</div>
-              <% @articles.each do |article| %>
+              
 							<div class="content-tab topics" id="answers">
 									<ul class="articles-links">
+                    <% @articles.each do |article| %>
                     <li><%= link_to(truncate(article.title, length: 45),article_path(article)) %></li>
-							
+							      <% end %>
 								</ul>
 							</div>
-              <% end %>
+              
 						</div>
 					</div>
 				</section>
