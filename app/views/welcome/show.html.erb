@@ -75,10 +75,10 @@
                 <%= submit_tag "Search Near", :name => nil, :class => 'blue button' %>
               <% end %>
 							</div>
-              <% @questions.each do |question| %>
+              <% @articles.each do |article| %>
 							<div class="content-tab topics" id="answers">
 									<ul class="articles-links">
-                    <li><%= link_to(truncate(question.description, length: 45),question_path(question)) %></li>
+                    <li><%= link_to(truncate(article.title, length: 45),article_path(article)) %></li>
 							
 								</ul>
 							</div>
