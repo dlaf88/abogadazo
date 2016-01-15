@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
     session.delete(:lawyer_lead) if session[:lawyer_lead] #clear hash from apply
     @lawyers = Lawyer.last(3)
     @question = Question.new
-    @questions = Question.last(3)
+    @questions = Article.last(3)
     @article= Article.new
     
     
