@@ -182,6 +182,7 @@ h1 {
 	 	-moz-transition: all 0.3s linear;
 	 	-webkit-transition: all 0.3s linear;
 	 	-o-transition: all 0.3s linear;
+	 	color: #ffffff !important;
  	}
 
 
@@ -461,6 +462,20 @@ header {
 		#tabs .content-tab.show {
 			display: block;
 		}
+		#tabs .findlayer {
+			overflow: hidden;
+		}
+		#tabs .findlayer fieldset {
+			width: 50%;
+			float: left;
+			padding-right: 30px;
+		}
+			#tabs .findlayer fieldset:last-of-type {
+				padding-right: 0;
+			}
+			#tabs .findlayer input[type="submit"] {
+				float: right;
+			}
 
 		/* Search */
 		#tabs .content-tab .search {
