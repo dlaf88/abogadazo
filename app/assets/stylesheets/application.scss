@@ -1197,6 +1197,39 @@ footer {
 		float: right;
 	}
 
+	/* Pagination */
+	nav.pagination {
+	  width: 100%;
+	  text-align: center;
+	  margin-top: 40px;
+	}
+	nav.pagination span {
+	  margin-right: 5px;
+	}
+	nav.pagination span a {
+	  color: #000;
+	  text-decoration: none;
+	  border-radius: 3px;
+	  padding: 5px;
+	  font-size: 14px;
+	  text-align: center;
+	  text-align: center;
+    float:none;
+	}
+	nav.pagination span a:hover {
+	    background: #3E82B6;
+	    padding: 5px;
+	    color: #ffffff;
+	}
+	nav.pagination span.current {
+	  background: #3E82B6;
+	  color: #ffffff;
+	  padding: 5px;
+	  border-radius: 3px;
+	  font-size: 14px;
+	  text-align: center;
+	}
+
 
 /* Smartphones (landscape) ———– */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
@@ -1414,8 +1447,13 @@ footer {
 			margin: 0 auto;
 			float: none;
 		}
+		
 		.profile-info .leftside .text {
 			margin-bottom: 30px;
+			margin-left: 0;
+			float: none;
+			text-align: center;
+			width: 100%;
 		}
 	.profile-info .leftside,
 	.profile-info .rightside {
@@ -1679,8 +1717,10 @@ footer {
 		}
 		.profile-info .leftside .text {
 			margin-bottom: 30px;
+			margin-left: 0;
 			float: none;
 			text-align: center;
+			width: 100%;
 		}
 		.profile-info .leftside .text ul li {
 			display: inline-block;
@@ -1899,8 +1939,10 @@ footer {
 		}
 		.profile-info .leftside .text {
 			margin-bottom: 30px;
+			margin-left: 0;
 			float: none;
 			text-align: center;
+			width: 100%;
 		}
 		.profile-info .leftside .text ul li {
 			display: inline-block;

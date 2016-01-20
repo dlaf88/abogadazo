@@ -62,7 +62,7 @@
                 <%= render partial: "questions/form",locals: {question:@question} %>
                 
 							</div>
-							<div class="content-tab" id="find">
+							<div class="content-tab findlayer" id="find">
 								<span>Encuentra un abogado local que te pueda ayudar con tus dudas judiciales.</span>
                 <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
                 <fieldset>
