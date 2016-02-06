@@ -1,5 +1,5 @@
 class QuestionNotifier < ApplicationMailer
-  default :from => 'diego@abogadazo.com'
+  default :from => 'diego@abogadazo.com',:host => 'www.abogadazo.com'
 
   def inform_mail(question)
     @question = question
