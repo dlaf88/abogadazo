@@ -27,6 +27,7 @@ class QuestionsController < ApplicationController
     @question.ipaddress = request.remote_ip.to_s
     end 
     if @question.save
+      QuestionNotifier.inform_mail(@question).deliver
       redirect_to @question, notice: "Question was saved successfully."
     else
       flash[:error] = "Error creating question. Please try again."
