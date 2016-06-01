@@ -21,17 +21,17 @@ class QuestionsController < ApplicationController
   
   def create
     @question = Question.new(params.require(:question).permit(:title, :description, :phone))
-    if request.location != nil
-      @question.ipaddress = request.location.city.to_s
-    else
-    @question.ipaddress = request.remote_ip.to_s
-    end 
+   #if request.location != nil
+   #  @question.ipaddress = request.location.city.to_s
+   # else
+   # @question.ipaddress = request.remote_ip.to_s
+   # end 
     if @question.save
       QuestionNotifier.inform_mail(@question).deliver
-      redirect_to @question, notice: "Question was saved successfully."
+      redirect_to @question, notice: "Muchas gracias por su pregunta. Estaremos en contacto"
     else
-      flash[:error] = "Error creating question. Please try again."
-       render :new
+      flash[:error] = "Hubo un error. Por favor intente de nuevo."
+      render :new
     end
       
   end 
