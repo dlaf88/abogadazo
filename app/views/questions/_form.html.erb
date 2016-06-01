@@ -12,6 +12,7 @@
 <div class="columns two p__relative">
   <%= f.text_area :description,placeholder:"Cual es su pregunta?" %> 
   <%= f.submit 'Enviar Pregunta'%>
+  <%= f.invisible_captcha :subtitle %>
 </div>
 
 

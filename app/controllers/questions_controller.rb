@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  
+  invisible_captcha only: [:create, :update], honeypot: :subtitle
   def index
     @questions=Question.all
   end 
