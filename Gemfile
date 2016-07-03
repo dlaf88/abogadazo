@@ -40,5 +40,5 @@ gem 'kaminari', '~> 0.16.3'
 gem 'wysiwyg-rails', '~> 2.3', '>= 2.3.2'
 gem 'invisible_captcha'
 gem 'sidekiq'
-gem 'bourbon'
+
 
