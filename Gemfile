@@ -39,4 +39,5 @@ gem 'patron'
 gem 'kaminari', '~> 0.16.3'
 gem "wysiwyg-rails"
 gem 'invisible_captcha'
+gem 'sidekiq'
 

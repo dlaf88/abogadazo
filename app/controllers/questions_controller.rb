@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
    # @question.ipaddress = request.remote_ip.to_s
    # end 
     if @question.save
-      QuestionNotifier.inform_mail(@question).deliver
+      AlertEmailJob.perform_later(@question.id)     
       redirect_to @question, notice: "Muchas gracias por su pregunta. Estaremos en contacto"
     else
       flash[:error] = "Hubo un error. Por favor intente de nuevo."
