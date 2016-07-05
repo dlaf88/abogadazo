@@ -10,26 +10,25 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//
+//
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require turbolinks
 //= require jquery.turbolinks
 //= require jquery-ui
+//= require bootstrap-sprockets
 //= require underscore
 //= require gmaps/google
+//= require analytics.js
+//= require prefixfree.min.js
+//= require show_script.js
 //= require froala_editor.min.js
 //= require plugins/lists.min.js
 //= require plugins/paragraph_format.min.js
 //= require plugins/paragraph_style.min.js
 //= require plugins/quote.min.js
-//= require bootstrap-sprockets
-//= require turbolinks
-//= require analytics.js
-//= require prefixfree.min.js
-//= require show_script.js
-
-
+//= require_tree .
 
 
 
