@@ -12,12 +12,11 @@
 //
 //
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require jquery2
 //= require jquery.turbolinks
-//= require jquery-ui
 //= require bootstrap-sprockets
+//= require jquery_ujs
+//= require jquery-ui
 //= require underscore
 //= require gmaps/google
 //= require analytics.js
@@ -28,7 +27,5 @@
 //= require plugins/paragraph_format.min.js
 //= require plugins/paragraph_style.min.js
 //= require plugins/quote.min.js
-//= require_tree .
-
-
-
+//= require_tree . 
+//= require turbolinks
