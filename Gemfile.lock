@@ -311,6 +311,7 @@ GEM
     patron (0.7.0)
     pg (0.18.4)
     pkg-config (1.1.7)
+    puma (3.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -438,6 +439,7 @@ DEPENDENCIES
   omniauth-facebook
   patron
   pg
+  puma
   rails (= 4.2.0)
   rails_12factor
   sass-rails (>= 3.2)
