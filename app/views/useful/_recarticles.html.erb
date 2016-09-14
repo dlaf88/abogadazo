@@ -1,0 +1,12 @@
+<% @articles.each do |article| %>
+
+ 
+    <a class="post" href="<%= url_for(article)%>">
+      <div class="image" style="background-image: url(<%= article.image_body_field %>);">
+
+      </div>
+      <span class="title"><%= truncate(article.title,length: 50) %></span>            
+    </a>
+
+
+<% end %>

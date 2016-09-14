@@ -5,11 +5,10 @@
 						<span class="mobile">Navegación</span>
 						<nav class="navigation">
 							<a href="/about">Quiénes somos</a>
-              
-							<a href="/questions/new">Haz tu pregunta</a>
-              <a href="/apply">Attorneys Apply Here</a>
+
+							<a href="/questions/new">Haz tu pregunta</a>             
               <% if account_signed_in? %>
-                
+
                 <%= link_to "Sign Out", destroy_account_session_path, :method => :delete %>
               <% else %>
                 <a href="/accounts/sign_in">Login</a>
@@ -18,37 +17,44 @@
 						<div class="left">
 							<h1>Haz Preguntas a Abogados, Gratis</h1>
 							<span class="caption-text">Abogadazo tiene el objetivo de cambiar como la Comunidad Latina en los Estados Unidos recibe ayuda legal. Más información juridica es la base para tomar mejores decisiones legales.</span>
-							<a href="#" class="button blue gonext">Preguntar</a>
-							<span class="caption-btn">Haz tu pregunta a un abogado ahora.</span>
+							<a href="tel:862-596-2782" class="button blue gonext">Llámanos</a>
+							<span class="caption-btn">Te podemos asesorar de mejor manera.</span>
 						</div>
 						<div class="right">
 							<!-- <img src="images/misc/video.jpg"> -->
               <iframe width="514" height="290" src="https://www.youtube.com/embed/pQSTz8H-nhU" frameborder="0" allowfullscreen></iframe>
-              
+
 						</div>
 					</div>
 				</div>
 			</header><!-- HEADER END-->
-			
+
 			<div class="content">
 				<section id="ask-fold">
 					<div class="wrapper">
 						<div class="process">
-							<div>
-								<span><span class="number">1</span>Haz tu pregunta</span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/ask.png" alt="">
+							<div style="text-align: left;">
+								<!--<span><span class="number">1</span>Llámanos</span>-->
+                <span>Llámenos</span>
+                <span class="copy-steps">Completamente grátis <br>al número <b>862-596-2782</b></span>
+								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_llamanos.png" alt="">
 							</div>
-							<div>
-								<span><span class="number">2</span>Obtén una respuesta</span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/answer.png" alt="">
+							<div style="text-align: center;">
+								<!--<span><span class="number">2</span>Déjenos saber su caso</span>-->
+                <span>Déjenos saber su caso</span>
+                <span class="copy-steps">Cuéntenos que sucedió, con detalles y uno<br> de nuestros abogados le dirá si tiene un caso.</span>
+								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_dejanossaber.png" alt="">
 							</div>
-							<div>
-								<span><span class="number">3</span>Contacta un abogado</span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/lawyer.png" alt="">
+							<div style="text-align: right;">
+								<!--<span><span class="number">3</span>Sepa como proceder</span>-->
+                <span>Sepa como proceder</span>
+                <span class="copy-steps">Sabiendo si tiene un caso real,<br> uno de nuestros abogados se<br> hará cargo de su caso.</span>
+								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_comoproceder.png" alt="">
 							</div>
 						</div>
 					</div>
 				</section>
+        <!--
 				<section class="bggrey">
 					<div class="wrapper">
 						<div id="tabs">
@@ -58,9 +64,9 @@
 								<span id="opanswers">Noticias Interesantes</span>
 							</div>
 							<div class="content-tab show" id="ask">
-                
+
                 <%= render partial: "questions/form",locals: {question:@question} %>
-                
+
 							</div>
 							<div class="content-tab findlayer" id="find">
 								<span>Encuentra un abogado local que te pueda ayudar con tus dudas judiciales.</span>
@@ -71,22 +77,30 @@
                 <fieldset>
               <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive en New Jersey?' %>
                 </fieldset>
-                
+
                 <%= submit_tag "Encuentra Ahora", :name => nil, :class => 'blue button' %>
               <% end %>
 							</div>
-              
+
 							<div class="content-tab topics" id="answers">
 									<ul class="articles-links">
-                    <% @articles.each do |article| %>
-                    <li><%= link_to(truncate(article.title, length: 45),article_path(article)) %></li>
-							      <% end %>
+
 								</ul>
 							</div>
-              
+
 						</div>
 					</div>
 				</section>
+        -->
+        <section class="bloghome">
+          <div class="wrapper">
+            <h1>Articulos Destacados</h1>
+            <div class="thumbnails">
+              <%= render partial: "useful/recarticles",locals: {articles: @articles} %>
+              <!--thumbnails -->
+            </div>
+            </div>
+        </section>
 
 				<section>
 					<div class="wrapper">
@@ -107,7 +121,7 @@
               <li>
 								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/Manos%2BAccelerator%2Blogo.png">
 							</li>
-              
+
 						</ul>
 					</div>
 				</section>

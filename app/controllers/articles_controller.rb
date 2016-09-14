@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
     
     @article = Article.find(params[:id])
     @title = @article.title
+    @articles = Article.where(image_body_boo: true).last(4)
     
   end 
   

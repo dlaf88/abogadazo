@@ -1,8 +1,14 @@
 $( document ).ready(function() {
-    
+
     $("a[href='#']").click(function(event) {
 		 event.preventDefault();
 	});
+  
+  // Show more (Article)
+  $("body").on("click", ".article-actions .showmore", function(){
+    $(".article-wrap").removeClass("cropped");
+    $(this).parents(".article-actions").hide();
+  });
 
 	// Tabs
 	$("body").on("click","#tabs .options > span", function(){
@@ -54,7 +60,7 @@ $( document ).ready(function() {
 		$(this).removeClass("dropped");
 	});
 
-	// Toggle Message into ask question module 
+	// Toggle Message into ask question module
 	$("body").on("click",".askquestionbtn", function(){
 		$(".data-fields").hide();
 		$(".message-sent").show();
@@ -65,5 +71,13 @@ $( document ).ready(function() {
 		$(".data-fields").show();
 		$(".data-fields input[type='text'], .data-fields input[type='email'], .data-fields textarea, .data-fields select").val("");
 	});
+
+  // Menu Mobile NEw
+  $("body").on("click", ".internaltop .internal-mobile-nav", function(){
+    $(".nav-mob-body").addClass("slided");
+  });
+  $("body").on("click", ".nav-mob-body .close-nav", function(){
+    $(".nav-mob-body").removeClass("slided");
+  });
 
 });

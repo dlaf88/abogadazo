@@ -1,25 +1,24 @@
   <section>
-    <div class="wrapper w768">
+    <div class="wrapper w768 article-wrap cropped">
       <h1><%= @article.title %></h1>
       <% if @article.video %>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="<%= @article.video_field %>"></iframe>
-        </div><br><br> 
+        </div><br><br>
       <% end %>
       <% if @article.image_body_boo %>
         <div class="row">
           <img  class='img-responsive col-md-8 col-md-offset-2' src="<%= @article.image_body_field %>">
-        </div><br><br> 
+        </div><br><br>
       <% end %>
       <%= simple_format @article.body %>
-      
        <div>
          <h3>Den nos un like en Facebook.</h3>
        <div class="fb-like" data-href="https://www.facebook.com/abogadazo" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
       </div>
       <div class="about-author">
         <div>
-        
+
         </div>
         <!--<img class='image'src='https://diego-blog.s3.amazonaws.com/uploads/bootsy/image/7/picture_for_blog.jpg'>-->
         <div class="text">
@@ -29,34 +28,30 @@
           <p><%=@article.about %></p>
         </div>
       </div>
- 
-    </div>  
-  
+
+
+     
+
+
+    </div>
+
   </section>
-  
-  <div class ="container">
-    <div id="disqus_thread"></div>
-    <script>
-      /**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
-      
-var disqus_config = function () {
-  this.language = "es_MX";// Replace PAGE_URL with your page's canonical URL variable
-// Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
 
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
+  <div class="article-actions">
+      <a class="showmore">Ver más</a>
+      <a class="call" href="tel:862-596-2782">Lláme Grátis</a>
+  </div>
 
-        s.src = '//abogadazo.disqus.com/embed.js';
+  <section class="bloghome"> <!--DESTACADO SECTION -->
+    <div class="wrapper">
+      <h1>Destacados</h1>
+      <div class="thumbnails">
+        <%= render partial: "useful/recarticles",locals: {articles: @articles} %>
+      </div>
+    </div>
+  </section>
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 </div> <!-- CONTENT END-->
 
 
