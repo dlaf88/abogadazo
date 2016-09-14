@@ -13,7 +13,7 @@
 //
 //
 //= require jquery2
-//= require jquery.turbolinks
+
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui
@@ -28,4 +28,4 @@
 //= require plugins/paragraph_style.min.js
 //= require plugins/quote.min.js
 //= require_tree . 
-//= require turbolinks
+
