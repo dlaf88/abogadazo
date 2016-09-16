@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :redirect_to_root, only: [:index]
   invisible_captcha only: [:create, :update], honeypot: :subtitle
   def index
     @questions=Question.all
@@ -38,7 +39,9 @@ class QuestionsController < ApplicationController
   
   def update
   end 
-  
+  def redirect_to_root
+    redirect_to root_path
+  end 
   
   
   
