@@ -4,12 +4,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end 
   
-  def show
-    
+  def show    
     @article = Article.find(params[:id])
     @title = @article.title
-    @articles = Article.where(image_body_boo: true).last(4)
-    
+    @articles = Article.where(id: [22,19,35,34])
   end 
   
   def create
