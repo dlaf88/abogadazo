@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   def show    
     @article = Article.find(params[:id])
     @title = @article.title
-    @articles = Article.where(id: [22,19,35,34])
+    @articles = Article.where(id: [27,19,35,34])
   end 
   
   def create
