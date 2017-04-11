@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-gem 'rails', '4.2.0'
+gem 'rails', '~> 5.0', '>= 5.0.2'
 gem 'puma'
 gem 'fog'
 gem 'simple_form'
-gem 'devise', '~> 3.4.1'
+gem 'devise', '~> 4.2.1'
 gem 'underscore-rails', '~> 1.8.2'
 gem 'gmaps4rails'
 gem 'email_validator', '~> 1.6'
@@ -16,7 +16,7 @@ gem 'email_validator', '~> 1.6'
  end
 gem 'geocoder', '~> 1.2.8'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'jquery-ui-rails', '~> 5.0.3'
 gem 'turbolinks'
@@ -31,7 +31,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'omniauth-facebook'
 gem "font-awesome-rails"
-gem "administrate", "~> 0.1.2"
+gem "administrate"
 gem 'searchkick'
 gem "elasticsearch", ">= 1.0.15"
 gem 'faraday_middleware-aws-signers-v4'

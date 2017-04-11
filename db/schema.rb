@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(version: 20151231140638) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name",             limit: 255
-    t.string   "last_name",              limit: 255
-    t.string   "type",                   limit: 255
-    t.string   "provider",               limit: 255
-    t.string   "uid",                    limit: 255
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "type"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true
@@ -38,29 +38,14 @@ ActiveRecord::Schema.define(version: 20151231140638) do
   add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
   add_index "accounts", ["uid"], name: "index_accounts_on_uid"
 
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string   "namespace",     limit: 255
-    t.text     "body"
-    t.string   "resource_id",   limit: 255, null: false
-    t.string   "resource_type", limit: 255, null: false
-    t.integer  "author_id"
-    t.string   "author_type",   limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
-
   create_table "answers", force: :cascade do |t|
-    t.string   "text",        limit: 255
+    t.string   "text"
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "lawyer_id"
     t.text     "description"
-    t.string   "voice",       limit: 255
+    t.string   "voice"
   end
 
   add_index "answers", ["lawyer_id"], name: "index_answers_on_lawyer_id"
@@ -68,16 +53,16 @@ ActiveRecord::Schema.define(version: 20151231140638) do
 
   create_table "articles", force: :cascade do |t|
     t.text     "title"
-    t.string   "author",           limit: 255
+    t.string   "author"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "image",            limit: 255
-    t.string   "video_field",      limit: 255
-    t.boolean  "video",                        default: false
+    t.string   "image"
+    t.string   "video_field"
+    t.boolean  "video",            default: false
     t.text     "about"
-    t.string   "image_body_field", limit: 255
+    t.string   "image_body_field"
     t.boolean  "image_body_boo"
   end
 
@@ -106,37 +91,37 @@ ActiveRecord::Schema.define(version: 20151231140638) do
 
   create_table "lawyer_profiles", force: :cascade do |t|
     t.text     "name"
-    t.string   "address",     limit: 255
+    t.string   "address"
     t.text     "state"
     t.text     "body"
     t.text     "practices"
     t.text     "license"
-    t.string   "phone",       limit: 255
+    t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "lawyer_id"
-    t.string   "image",       limit: 255
+    t.string   "image"
     t.float    "longitude"
     t.float    "latitude"
-    t.string   "attorney_id", limit: 255
+    t.string   "attorney_id"
   end
 
   add_index "lawyer_profiles", ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"
 
   create_table "lawyers", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "",    null: false
-    t.string   "encrypted_password",     limit: 255, default: "",    null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "validated",                          default: false
+    t.boolean  "validated",              default: false
   end
 
   add_index "lawyers", ["email"], name: "index_lawyers_on_email", unique: true
@@ -157,21 +142,21 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "phone",       limit: 255
-    t.string   "ipaddress",   limit: 255
+    t.string   "phone"
+    t.string   "ipaddress"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
