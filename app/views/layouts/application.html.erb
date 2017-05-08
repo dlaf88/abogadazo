@@ -3,127 +3,44 @@
 
 <head>
   <% if @title %>
-  <title><%= @title %></title>
-  <% else %>
-  <title>Abogadazo.com</title>
+    <title><%= @title %></title>
+    <% else %>
+    <title>Abogadazo.com</title>
   <% end %>
 
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= render partial: 'layouts/favicon' %>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
-<%= render partial: "layouts/hotjar" %>
-<%= render partial: "layouts/fbpixel" %>
-<%= render partial: "layouts/drift" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= render partial: 'layouts/favicon' %>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
 
-<%= csrf_meta_tags %>
+  <%= render partial: "layouts/hotjar" %>
+  <%= render partial: "layouts/fbpixel" %>
+  <%= render partial: "layouts/drift" %>
+
+  <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=683487285085759";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-  <% if flash.any? %>
-    <% flash.each do |key,value| %>
-    <script>
-      $(function() {
-        BootstrapDialog.show({
-          title: 'Menasaje de Abogadazo',
-          message: '<%= j value %>',
-
-          buttons: [{
-
-          label: 'Close',
-          action: function(dialogItself){
-          dialogItself.close();
-        }
-                             }]
-                             });
-      });
-    </script>
-    <% end %>
-  <% end %>
-
-  <div class="nav-mob-body">
-    <a class="close-nav"></a>
-    <a class="callnow" href="tel:973-440-8037">Llame Ahora</a>
-    <a class="" href="/about">Quiénes somos</a>    
-    <a class="" href="/questions/new">Haz tu pregunta</a>
+  <%= render partial: 'lib/flash_notice' %>
+  <%= render partial: 'layouts/navigation' %>
+  
+  <div class='content internal'>
+      <%= yield %>
   </div>
 
-  <div class="top internaltop">
-    <div class="wrapper">
-      <a href="/" class="logo-cont">
-        <img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/logo-bubble-grey.png" class="logo" ></a>
-      <a class="internal-mobile-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <nav>
-        <a class="callnow" href="tel:973-440-8037">Llame Ahora</a>
-        <a class="rst-navs" href="/about">Quiénes somos</a>        
-        <a class="rst-navs" href="/questions/new">Haz tu pregunta</a>
-      </nav>
-    </div>
-  </div>
+  <%= render partial: 'lib/footer' %>
+  <%= render partial: "layouts/get_site_control" %>
 
+   
 
-
-
-
-
-    <div class='content internal'>
-        <%= yield %>
-    </div>
-
-    <footer>
-      <div class="wrapper">
-        <div class="mini-about">
-          <img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/mini-logo.png">
-          <p>Somos un grupo de abogados sirviendo a la comunidad Latina en Estados Unidos. A través de Abogadazo.com respondemos preguntas, damos recursos, y nos conectamos con la comunidad Latina. Abogadazo.com es ayuda legal más fácil y en nuestro idioma. </p>
-          <br>
-          <p>
-            PUBLICIDAD DE ABOGADO –NO ES UN SERVICIO DE REFERENCIA. Antes de decidirse acerca de un Abogado, debería meditarlo           cuidadosamente. La selección de un Abogado en una importante decisión.          
-          </p>
-        </div>
-        <div class="links">
-          <span>Enlaces de interés</span>
-          <a href="/terms">Terminos de Servicio</a>
-          <a href="">Sobre nosotros</a>
-          <a href="">Blog</a>
-          <a href="/questions/new">Contactenos</a>
-        </div>
-        <div class="social">
-          <a href="https://www.facebook.com/abogadazo"><img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/facebook.png"></a>
-          <a href=""><img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/youtube.png"></a>
-          <a href=""><img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/twitter.png"></a>
-        </div>
-        <div class="re-foot">
-          <span>Made with ♥ in NJ. © Lafuente Law LLC. <%= Time.now.year.to_s %></span>
-        </div>
-      </div>
-      <% if Rails.env.production? %> <!-- Google Analytics footer -->
-      <%= render partial: 'layouts/footer' %>
-      <% end %>
-    </footer><!-- FOOTER END-->
-  <script> 
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/41969/script.js');
-</script>
 
  </body>
 </html>

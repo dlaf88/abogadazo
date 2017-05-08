@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
     @questions = Question.last(3)
     @article= Article.new
     
+    
   end
   def maps
     render :layout => false     
@@ -16,7 +17,7 @@ class WelcomeController < ApplicationController
     @question = Question.new
     @articles = Article.where(id: [27,19,35,34])
     @article= Article.new  
-    
+    render :layout => 'layouts/application'
   end 
   def apply 
     

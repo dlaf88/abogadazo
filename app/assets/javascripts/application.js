@@ -13,14 +13,15 @@
 //
 //
 //= require jquery2
-
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui
+//= require jquery.flexslider
 //= require underscore
 //= require gmaps/google
 //= require analytics.js
 //= require prefixfree.min.js
+//= require welcome.js
 //= require show_script.js
 //= require froala_editor.min.js
 //= require plugins/lists.min.js

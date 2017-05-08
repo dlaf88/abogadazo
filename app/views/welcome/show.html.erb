@@ -1,129 +1,108 @@
-<header>
-				<div class="vcenter">
-					<div class="wrapper">
-						<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/icn/logo_white.png" class="logo">
-						<span class="mobile">Navegación</span>
-						<nav class="navigation">
-							<a href="/about">Quiénes somos</a>
+<section class="fold-cta">
+				<div class="wrapper">
+					<div class="video">
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/pQSTz8H-nhU" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="cta">
+						<a href="#" class="call">
+							<span class="title">Llamar</span>
+							<span class="copy">Completamente grátis al número <b>973-440-8037</b></span>
+						</a>
+						<a href="#" class="question">
+							<span class="title">Ház tu pregunta</span>
+							<span class="copy">Te podemos ayudar de una manera más directa.</span>
+						</a>
+						<a href="#" class="articles">
+							<span class="title">Más articulos</span>
+							<span class="copy">Ayuda legal más fácil y en nuestro idioma.</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- CONTENT -->
+			<section class="legal-topics">
+				<div class="wrapper">
+					<h1>Temas legales</h1>
+					<ul class="topics">
+						<li>
+							<a href="">
+								<span class="icon imigration"></span>
+								<span class="text">Imigración</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="icon imigration"></span>
+								<span class="text">Imigración</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="icon imigration"></span>
+								<span class="text">Imigración</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-							<a href="/questions/new">Haz tu pregunta</a>             
-              <% if account_signed_in? %>
-
-                <%= link_to "Sign Out", destroy_account_session_path, :method => :delete %>
-              <% else %>
-                <a href="/accounts/sign_in">Login</a>
-              <% end %>
-						</nav>
-						<div class="left">
-							<h1>Ayuda legal más fácil y en nuestro idioma</h1>
-							<span class="caption-text">Somos un grupo de abogados sirviendo a la comunidad Latina en Estados Unidos. A través de Abogadazo.com respondemos preguntas, damos recursos, y nos conectamos con la comunidad.</span>
-							<a href="tel:973-440-8037" class="button blue gonext">Llámanos</a>
-							<span class="caption-btn">Te podemos asesorar de mejor manera.</span>
-						</div>
-						<div class="right">
-							<!-- <img src="images/misc/video.jpg"> -->
-              <iframe width="514" height="290" src="https://www.youtube.com/embed/pQSTz8H-nhU" frameborder="0" allowfullscreen></iframe>
-
+			<section class="articles">
+				<div class="wrapper">
+					<h1>Noticias de Interés - <b>Artículos</b></h1>
+					<div class="colum-thumbs">
+						<article class="thumb">
+							<img src="images/misc/article.jpg" alt="">
+							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis neque iure delectus, a quam, corporis explicabo odio odit minus, cupiditate fuga officiis et assumenda tempore debitis aperiam possimus magnam?</p>
+							<a href="post-detail.html" class="button blue">Ver más</a>
+						</article>
+						<article class="thumb">
+							<img src="images/misc/article.jpg" alt="">
+							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis neque iure delectus, a quam, corporis explicabo odio odit minus, cupiditate fuga officiis et assumenda tempore debitis aperiam possimus magnam?</p>
+							<a href="post-detail.html" class="button blue">Ver más</a>
+						</article>
+						<div class="thumb tag-system">
+							<h2>Buscabas otro tema?</h2>
+							<div class="tags">
+								<a href="#">Imigration</a>
+								<a href="#">Social</a>
+								<a href="#">Laboral</a>
+								<a href="#">Tránsito</a>
+								<a href="#">Familia</a>
+								<a href="#">Imigration</a>
+								<a href="#">Social</a>
+								<a href="#">Laboral</a>
+								<a href="#">Tránsito</a>
+								<a href="#">Familia</a>
+								<a href="#">Imigration</a>
+								<a href="#">Social</a>
+								<a href="#">Laboral</a>
+								<a href="#">Tránsito</a>
+								<a href="#">Familia</a>
+							</div>
+							<span class="clearfix"></span>
+							<a href="#" class="readmore">Ver más articulos</a>
 						</div>
 					</div>
 				</div>
-			</header><!-- HEADER END-->
-
-			<div class="content">
-				<section id="ask-fold">
-					<div class="wrapper">
-						<div class="process">
-							<div style="text-align: left;">
-								<!--<span><span class="number">1</span>Llámanos</span>-->
-                <span>Llámenos</span>
-                <span class="copy-steps">Completamente grátis <br>al número <b>973-440-8037</b></span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_llamanos.png" alt="">
-							</div>
-							<div style="text-align: center;">
-								<!--<span><span class="number">2</span>Déjenos saber su caso</span>-->
-                <span>Déjenos saber su caso</span>
-                <span class="copy-steps">Cuéntenos que sucedió, con detalles y uno<br> de nuestros abogados le dirá si tiene un caso.</span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_dejanossaber.png" alt="">
-							</div>
-							<div style="text-align: right;">
-								<!--<span><span class="number">3</span>Sepa como proceder</span>-->
-                <span>Sepa como proceder</span>
-                <span class="copy-steps">Uno de nuestros abogados<br> se hará cargo de su caso.</span>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/graph_comoproceder.png" alt="">
-							</div>
-						</div>
+			</section>
+			
+			<div class="map-location">
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5779336.676006724!2d-99.96766962800842!3d39.76246444034651!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sco!4v1492055747967" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="locations">
+					<h2>Nuestras Oficinas</h2>
+					<div class="mod">
+						<h2>San Francisco, CA</h2>
+						<span>156 2nd Street</span>
+						<span>+5 2563 25532</span>
 					</div>
-				</section>
-        <!--
-				<section class="bggrey">
-					<div class="wrapper">
-						<div id="tabs">
-							<div class="options">
-								<span id="opask" class="active">Haz tu pregunta</span>
-								<span id="opfind">Encuentra un abogado</span>
-								<span id="opanswers">Noticias Interesantes</span>
-							</div>
-							<div class="content-tab show" id="ask">
-
-                <%= render partial: "questions/form",locals: {question:@question} %>
-
-							</div>
-							<div class="content-tab findlayer" id="find">
-								<span>Encuentra un abogado local que te pueda ayudar con tus dudas judiciales.</span>
-                <%= form_tag attorney_profiles_path, :method => :get, :class => 'form-group' do %>
-                <fieldset>
-              <%= text_field_tag :q, params[:q], :class => 'form-control', :placeholder => 'Ejemplo: Inmigracion' %>
-                </fieldset>
-                <fieldset>
-              <%= text_field_tag :location, params[:location],:class => 'form-control',:placeholder => 'Donde Vive en New Jersey?' %>
-                </fieldset>
-
-                <%= submit_tag "Encuentra Ahora", :name => nil, :class => 'blue button' %>
-              <% end %>
-							</div>
-
-							<div class="content-tab topics" id="answers">
-									<ul class="articles-links">
-
-								</ul>
-							</div>
-
-						</div>
+					<div class="mod" style="margin-top: 30px;">
+						<h2>San Francisco, CA</h2>
+						<span>156 2nd Street</span>
+						<span>+5 2563 25532</span>
 					</div>
-				</section>
-        -->
-        <section class="bloghome">
-          <div class="wrapper">
-            <h1>Articulos Destacados</h1>
-            <div class="thumbnails">
-              <%= render partial: "useful/recarticles",locals: {articles: @articles} %>
-              <!--thumbnails -->
-            </div>
-            </div>
-        </section>
-
-				<section>
-					<div class="wrapper">
-						<div class="title">
-							<h1>Nos apoyan</h1>
-							<span>Contamos con el apoyo de:</span>
-						</div>
-						<ul class="sponsor">
-							<li>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/startup.png">
-							</li>
-							<li>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/startup2.png">
-							</li>
-							<li>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/startup3.png">
-							</li>
-              <li>
-								<img src="https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/misc/Manos%2BAccelerator%2Blogo.png">
-							</li>
-
-						</ul>
-					</div>
-				</section>
-			</div><!-- CONTENT END-->
-
+				</div>
+			</div>

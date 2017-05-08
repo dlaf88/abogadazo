@@ -1,69 +1,129 @@
-  <section>
-    <div class="wrapper w768 article-wrap cropped">
-      <h1><%= @article.title %></h1>
-      <% if @article.video %>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="<%= @article.video_field %>"></iframe>
-        </div><br><br>
-      <% end %>
-      <% if @article.image_body_boo %>
-        <div class="row">
-          <img  class='img-responsive col-md-8 col-md-offset-2' src="<%= @article.image_body_field %>">
-        </div><br><br>
-      <% end %>
-      <%= simple_format @article.body %>
-      <hr>
-       <div>
-         <p>
-           <b>AVISO:</b> La información en esta página se pone a su disposición con fines educativos y con el propósito de prover información general. El contenido de esta página no es y no debe ser interpretado como asesoría legal. 
-        </p>
-        <p>
-          <b>RECUERDE QUE CADA CASO ES DIFERENTE:</b> Usted debe consultar con un abogado sobre las circunstancias de su caso. Le invitamos a contactarnos para hablar sobre su caso. 
-         </p>
-       </div>
-       <div>
-         <h3>Den nos un like en Facebook.</h3>
-       <div class="fb-like" data-href="https://www.facebook.com/abogadazo" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-      </div>
-      <div class="about-author">
-        <div>
-
-        </div>
-        <!--<img class='image'src='https://diego-blog.s3.amazonaws.com/uploads/bootsy/image/7/picture_for_blog.jpg'>-->
-        <div class="text">
-          <span class="title">Sobre el autor</span>
-          <span class="name"><%= @article.author %></span>
-          <span><%=@article.updated_at.strftime("%m/%d/%Y") %></span>
-          <p><%=@article.about %></p>
-        </div>
-      </div>
-
-
+ 
+<% if @article.video %>       
+    <%= @article.video_field %>        
+<% end %>          
+     
      
 
+          
+     
+     
 
-    </div>
-
-  </section>
-
-  <div class="article-actions">
-      <a class="showmore">Ver más</a>
-      <a class="call" href="tel:973-440-8037">Lláme Grátis</a>
-  </div>
-
-  <section class="bloghome"> <!--DESTACADO SECTION -->
+<%= render partial: "useful/recarticles",locals: {articles: @articles} %>
+   
+<section class="fold-cta internal-header-post">
     <div class="wrapper">
-      <h1>Destacados</h1>
-      <div class="thumbnails">
-        <%= render partial: "useful/recarticles",locals: {articles: @articles} %>
+      <h1><%= @article.title %></h1>
+    </div>
+  </section>
+
+  <section class="post-content">
+    <div class="wrapper">
+      <div class="content-article">
+        <article class="cropped">
+            <%= image_tag @article.image_body_field %>
+            <%=@article.updated_at.strftime("%m/%d/%Y") %>
+            
+           <%= simple_format @article.body %>        
+        </article>
+        <div class="read-more-post">
+          <a class="button blue more">Ver más</a>
+          <a href="tel:" class="button blue transparent phone">Llámanos</a>
+        </div>
+        <div class="author">
+          <div class="photo"></div>
+          <div class="info">
+            <span class="name">Por: <b><%= @article.author %></b></span>
+            <span class="desc"><%=@article.about %></span>
+          </div>
+          <div class="social">
+            <span class="tag-contact-with-me">Conéctate conmigo:</span>
+            <div class="socials">
+              <a href="#" class="fb"></a>
+              <a href="#" class="tw"></a>
+            </div>
+          </div>
+        </div>
+        <div class="more-tags">
+          <span>Tags:</span>
+          <div class="tags">
+            <a href="#">Imigration</a>
+            <a href="#">Social</a>
+            <a href="#">Laboral</a>
+          </div>
+        </div>
       </div>
+      <sidebar>
+        <div class="module" style="margin-top: 20px;">
+          <div class="social share">
+            <div class="socials">
+              <a href="#" class="fb"></a>
+              <a href="#" class="tw"></a>
+            </div>
+            <span class="tag-contact-with-me">Compartir en:</span>
+          </div>
+        </div>
+        <div class="module">
+          <span class="title-white">Firmas Aliadas</span>
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="images/misc/logo_hacker.png" />
+              </li>
+              <li>
+                <img src="images/misc/logo_hacker.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="module">
+          <div class="tell-history">
+            <span class="title">Cuéntanos tu historia</span>
+            <form action="">
+              <fieldset>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Teléfono">
+                <input type="text" placeholder="Email">
+                <textarea placeholder="Una breve descripción del caso"></textarea>
+                <button>Consulta</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="module">
+          <div class="related-post-sidebar">
+            <span class="title">Artículos Relacionados</span>
+            <a href="#">
+              <div class="post">
+                <div class="image">
+                  <img src="images/misc/article.jpg" alt="">
+                </div>
+                <span class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="post">
+                <div class="image">
+                  <img src="images/misc/article.jpg" alt="">
+                </div>
+                <span class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+              </div>
+            </a>
+            <div class="more-articles">
+              <a href="#" class="readmore">Ver más articulos</a>
+            </div>
+          </div>
+        </div>
+      </sidebar>
+    </div>
+  </section>
+
+  <section class="more-help">
+    <div class="wrapper">
+      <span>Tienes más preguntas?</span>
+      <a href="tel:973-440-8037" class="button blue phone">Llámanos, completamente grátis!</a>
     </div>
   </section>
 
 
-</div> <!-- CONTENT END-->
-
-
-
-
-
+  <!-- CONTENT -->

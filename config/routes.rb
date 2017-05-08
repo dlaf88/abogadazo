@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     :omniauth_callbacks => 'accounts/omniauth_callbacks'
     }
   #devise_for :lawyers
+ 
   resources :articles
   resources :questions
   resources :lawyer_profiles

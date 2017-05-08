@@ -1,28 +1,37 @@
-$(function() {
-    $(".phone").mask("(999) 999-9999");
-   
+$( document ).ready(function() {
+    
+        if ( $('.flexslider').length > 0 ) {
+            $('.flexslider').flexslider({
+            animation: "slide"
+          });
+        }
+
+        // SEARCH
+        $("body").on("click", "header .search .search-cta:not(.dropped)", function(){
+            $(this).addClass("dropped");
+            $(".search-bar").slideDown();
+        });
+
+        $("body").on("click", "header .search .search-cta.dropped", function(){
+            $(this).removeClass("dropped");
+            $(".search-bar").slideUp();
+        });
+
+        // NAV MOBILE
+        $("body").on("click","header .nav-icon-mobile", function(){
+            $("header nav").addClass("slided");
+        });
+
+        $("body").on("click", "header nav .header-nav-mobile .close-nav", function(){
+            $("header nav").removeClass("slided");
+        });
+
+        // Read More Post Detail Function
+        $("body").on("click",".read-more-post .more", function(){
+            $(this).parents(".read-more-post").hide();
+            $(this).parents(".content-article").find("article").removeClass("cropped");
+        });
+
+
+
 });
-
-$(document).ready(function() {
-    var text_max = 750;
-    $('#textarea_feedback').html(text_max + ' caracteres restantes');
-
-    $('#description').keyup(function() {
-        var text_length = $('#description').val().length;
-        var text_remaining = text_max - text_length;
-
-        $('#textarea_feedback').html(text_remaining + ' caracteres restantes');
-    });
-});
-$(document).ready(function() {
-    var text_max_2= 150;
-    $('#textarea_feedback_titulo').html(text_max_2 + ' caracteres restantes');
-
-    $('#titulo').keyup(function() {
-        var text_length_2= $('#titulo').val().length;
-        var text_remaining_2 = text_max_2 - text_length_2;
-
-        $('#textarea_feedback_titulo').html(text_remaining_2 + ' caracteres restantes');
-    });
-});
-$("#titulo").tooltip()
