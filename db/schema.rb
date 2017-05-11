@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231140638) do
+ActiveRecord::Schema.define(version: 20170510034028) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,12 +30,11 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.string   "type"
     t.string   "provider"
     t.string   "uid"
+    t.index ["email"], name: "index_accounts_on_email", unique: true
+    t.index ["provider"], name: "index_accounts_on_provider"
+    t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
+    t.index ["uid"], name: "index_accounts_on_uid"
   end
-
-  add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true
-  add_index "accounts", ["provider"], name: "index_accounts_on_provider"
-  add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
-  add_index "accounts", ["uid"], name: "index_accounts_on_uid"
 
   create_table "answers", force: :cascade do |t|
     t.string   "text"
@@ -46,10 +44,9 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.integer  "lawyer_id"
     t.text     "description"
     t.string   "voice"
+    t.index ["lawyer_id"], name: "index_answers_on_lawyer_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
-
-  add_index "answers", ["lawyer_id"], name: "index_answers_on_lawyer_id"
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
 
   create_table "articles", force: :cascade do |t|
     t.text     "title"
@@ -57,16 +54,13 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
     t.string   "image"
     t.string   "video_field"
-    t.boolean  "video",            default: false
     t.text     "about"
     t.string   "image_body_field"
-    t.boolean  "image_body_boo"
+    t.integer  "law_category_id"
+    t.index ["law_category_id"], name: "index_articles_on_law_category_id"
   end
-
-  add_index "articles", ["user_id"], name: "index_articles_on_user_id"
 
   create_table "attorney_profiles", force: :cascade do |t|
     t.datetime "created_at",     null: false
@@ -104,9 +98,8 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.float    "longitude"
     t.float    "latitude"
     t.string   "attorney_id"
+    t.index ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"
   end
-
-  add_index "lawyer_profiles", ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"
 
   create_table "lawyers", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
@@ -122,20 +115,18 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "validated",              default: false
+    t.index ["email"], name: "index_lawyers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true
   end
-
-  add_index "lawyers", ["email"], name: "index_lawyers_on_email", unique: true
-  add_index "lawyers", ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true
 
   create_table "practice_areas", force: :cascade do |t|
     t.integer  "attorney_profile_id"
     t.integer  "law_category_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.index ["attorney_profile_id"], name: "index_practice_areas_on_attorney_profile_id"
+    t.index ["law_category_id"], name: "index_practice_areas_on_law_category_id"
   end
-
-  add_index "practice_areas", ["attorney_profile_id"], name: "index_practice_areas_on_attorney_profile_id"
-  add_index "practice_areas", ["law_category_id"], name: "index_practice_areas_on_law_category_id"
 
   create_table "questions", force: :cascade do |t|
     t.text     "title"
@@ -144,6 +135,31 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.datetime "updated_at"
     t.string   "phone"
     t.string   "ipaddress"
+  end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.string   "taggable_type"
+    t.integer  "taggable_id"
+    t.string   "tagger_type"
+    t.integer  "tagger_id"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string  "name"
+    t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -159,9 +175,8 @@ ActiveRecord::Schema.define(version: 20151231140638) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

@@ -1,4 +1,5 @@
 class PracticeArea < ActiveRecord::Base
+
   belongs_to :attorney_profile
   belongs_to :law_category
   def self.import(file)

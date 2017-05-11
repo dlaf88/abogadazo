@@ -19,8 +19,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     video_field: Field::String,
     video: Field::Boolean,
     about: Field::Text,
-    image_body_field: Field::String,
-    image_body_boo: Field::Boolean,
+    image_body_field: Field::String
   }
 
   # COLLECTION_ATTRIBUTES
@@ -52,7 +51,6 @@ class ArticleDashboard < Administrate::BaseDashboard
     :video,
     :about,
     :image_body_field,
-    :image_body_boo,
   ]
 
   # Overwrite this method to customize how articles are displayed

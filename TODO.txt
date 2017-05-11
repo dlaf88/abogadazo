@@ -1,0 +1,30 @@
+Articles:
+	get rid of author and make sure it is author_id instead
+		Wait until author table is set up
+		get rid of the about section 
+			this is now going to be part of the author table.
+	X get rid of user_id in the table
+	X get rid of video boolean
+		X make sure to check views for video boolean
+	X leave video_field
+	X get rid of image_body_boo
+		X make sure to check views for image_body_boo
+	X add the tagging system for articles
+	  add the tagging system like I have for 
+
+	  Add friendly_id to articles
+	  	read the friendly_id documentation
+	  	make sure that correct structure is set up in order to have proper rerouting and to not lose SEO
+	xWatch Ryan Bates episode on how to use Jquery to instantly upload photos.
+
+
+Lawyers:
+	come up with correct taxonomy, it is either Lawyer, LawyerProfile, or other
+
+
+Users:
+	set up users as the main devisable app
+
+MISC:
+	add growler notifications
+

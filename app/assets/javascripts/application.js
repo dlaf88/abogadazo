@@ -28,5 +28,8 @@
 //= require plugins/paragraph_format.min.js
 //= require plugins/paragraph_style.min.js
 //= require plugins/quote.min.js
+//= require trix
+//= require tagify
 //= require_tree . 
+//= stub articles_new
 

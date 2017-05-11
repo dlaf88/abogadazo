@@ -1,14 +1,4 @@
  
-<% if @article.video %>       
-    <%= @article.video_field %>        
-<% end %>          
-     
-     
-
-          
-     
-     
-
 <%= render partial: "useful/recarticles",locals: {articles: @articles} %>
    
 <section class="fold-cta internal-header-post">
@@ -46,11 +36,13 @@
         </div>
         <div class="more-tags">
           <span>Tags:</span>
+          
           <div class="tags">
-            <a href="#">Imigration</a>
-            <a href="#">Social</a>
-            <a href="#">Laboral</a>
+          <% @article.tag_list.each do |tag| %>
+            <a href="#"><%= tag %></a>
+          <% end %>
           </div>
+         
         </div>
       </div>
       <sidebar>
