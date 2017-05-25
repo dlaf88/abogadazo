@@ -1,0 +1,14 @@
+<div class='container'>
+    <%= simple_form_for (@attorney) do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :middle_name %>
+    <%= f.input :last_name %>
+    <%= f.input :contact_email %>
+    <%= f.input :phone_number %>
+    <%= f.input :profile_photo %>
+
+    <%= f.submit :class => ' btn btn-primary btn-block' %>
+    
+  <%end%>
+</div>
+

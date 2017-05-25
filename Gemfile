@@ -44,4 +44,5 @@ gem 'sidekiq'
 gem 'bourbon'
 gem 'trix'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 

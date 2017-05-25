@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
     session.delete(:lawyer_lead) if session[:lawyer_lead] #clear hash from apply
     @lawyers = Lawyer.last(3)
     @question = Question.new
-    @articles = Article.where(id: [27,19,35,34])
+    @articles = Article.last(2)
     @article= Article.new  
     render :layout => 'layouts/application'
   end 

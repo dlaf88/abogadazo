@@ -6,35 +6,19 @@
 
 /* General Classes
  ============================================================ */
-h2 {
-    font-size: 18px;
-    display: block;
-    color: #1F1F1F;
-    margin-bottom: 30px;
-    clear: both;
-}
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
 
 .clearfix {
 	display: block;
 	clear: both;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 18px;
+	color: #444444;
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 p { margin-bottom:10px; }
@@ -82,13 +66,13 @@ body {
 	.button.blue {
 		background-color: #2980B9;
 		color: #ffffff;
-		background-image: url(../images/icn/1489265930_ic_keyboard_arrow_right.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489265930_ic_keyboard_arrow_right.png);
 		background-repeat: no-repeat;
 		background-position: 90% 55%;
     background-size: 18px auto;
 	}
 		.button.blue.phone {
-			background-image: url(../images/icn/1489267306_Call01_white.png);
+			background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_white.png);
 			background-repeat: no-repeat;
 			background-position: 94% 50%;
   		background-size: 16px auto;
@@ -100,7 +84,7 @@ body {
 			line-height: 36px;
 		}
 			.button.blue.transparent.phone {
-				background-image: url(../images/icn/1489267306_Call01_blue.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_blue.png);
 				background-repeat: no-repeat;
 				background-position: 88% 50%;
     		background-size: 16px auto;
@@ -109,7 +93,7 @@ body {
 	.button.grey {
 		background-color: #525252;
 		color: #ffffff;
-		background-image: url(../images/icn/1489265930_ic_keyboard_arrow_right.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489265930_ic_keyboard_arrow_right.png);
 		background-repeat: no-repeat;
 		background-position: 90% 55%;
     background-size: 18px auto;
@@ -122,7 +106,7 @@ body {
 		}
 		.button.grey.transparent.phone {
 			/*525252*/
-			background-image: url(../images/icn/1489267306_Call01_grey.png);
+			background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_grey.png);
 			background-repeat: no-repeat;
 			background-position: 88% 50%;
 			background-size: 16px auto;
@@ -131,7 +115,7 @@ body {
 	.button.white {
 		background-color: #ffffff;
 		color: #2980B9;
-		background-image: url(../images/icn/1489265930_ic_keyboard_arrow_right_blue.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489265930_ic_keyboard_arrow_right_blue.png);
 		background-repeat: no-repeat;
 		background-position: 90% 55%;
     background-size: 18px auto;
@@ -143,7 +127,7 @@ body {
 			line-height: 36px;
 		}
 			.button.white.transparent.phone {
-				background-image: url(../images/icn/1489267306_Call01_white.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_white.png);
 				background-repeat: no-repeat;
 				background-position: 88% 50%;
     		background-size: 16px auto;
@@ -155,7 +139,7 @@ body {
 		font-size: 14px;
 		font-weight: 500;
 		color: #666666;
-		background-image: url(../images/icn/1489265930_ic_keyboard_arrow_right_blue.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489265930_ic_keyboard_arrow_right_blue.png);
 		background-repeat: no-repeat;
 		background-position: 55% 20%;
     background-size: 18px auto;
@@ -204,14 +188,14 @@ body {
 		}
 			.socials a.fb {
 				background-color: #3b5998;
-				background-image: url(../images/icn/1492582559_Facebook_Solid_white.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1492582559_Facebook_Solid_white.png);
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: 8px auto;
 			}
 			.socials a.tw {
 				background-color: #55acee;
-				background-image: url(../images/icn/1492582659_Twitter_Solid_white.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1492582659_Twitter_Solid_white.png);
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: 14px auto;
@@ -255,10 +239,20 @@ header {
 	header .wrapper {
 		width: 960px;
 		margin: 0 auto;
+		position: relative;
 	}
 	header .wrapper .logo {
-		width: 180px;
+		/*width: 180px;*/
 	}
+	header .wrapper .sub-logo {
+		color: #277FB8;
+	    font-size: 12px;
+	    font-weight: 500;
+	    position: absolute;
+	    left: 60px;
+	    bottom: -3px;
+	}
+
 	header nav {
 		float: right;
 		position: relative;
@@ -276,7 +270,7 @@ header {
 		width: 30px;
 		height: 30px;
 		display: none;
-		background-image: url(../images/icn/1492841638_editor-list-view-hambuger-menu-glyph.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1492841638_editor-list-view-hambuger-menu-glyph.png);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
@@ -316,6 +310,46 @@ header {
 			left: 0;
 		}
 
+			/* Dropdown */
+			header nav .dropdown-nav {
+				display: inline-block;
+				position: relative;
+			}
+			header nav .dropdown-nav .options {
+				position: absolute;
+				display: none;
+				background: #fff;
+			    box-shadow: 0px 1px 2px #b9b9b9;
+			    z-index: 2;
+			    border-radius: 3px;
+				width: 200px;
+				padding: 10px 0;
+				top: 28px;
+    			left: -29px;
+			}
+			header nav .dropdown-nav > a { padding-bottom: 20px; }
+			header nav .dropdown-nav > a.active:after {
+				bottom: 16px;
+			}
+			header nav .dropdown-nav:hover .options { display: block; }
+			header nav .dropdown-nav .options a {
+				display: block;
+				line-height: 30px;
+				margin-left: 0;
+				padding: 0 20px;
+				text-align: center;
+				text-transform: none;
+			}
+				header nav .dropdown-nav .options a:hover {
+					background-color: #287FB8;
+					color: #FFFFFF;
+				}
+					header nav .dropdown-nav .options a:hover:after {
+						display: none;
+					}
+
+
+
 		header nav .header-nav-mobile {
 			position: absolute;
 	    top: 0;
@@ -329,7 +363,7 @@ header {
 	    width: 30px;
 	    height: 30px;
 	    background-color: #2980B9;
-	    background-image: url(../images/icn/1492210248_icon-close-round.png);
+	    background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1492210248_icon-close-round.png);
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	    background-size: 14px auto;
@@ -349,7 +383,7 @@ header {
     cursor: pointer;
     height: 30px;
     border: 1px solid #ccc;
-    background-image: url(../images/icn/1489266171_icon-111-search.png);
+    background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489266171_icon-111-search.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px auto;
@@ -360,7 +394,7 @@ header {
 		-o-transition: all 0.2s linear;
 	}
 	header .search .search-cta.dropped {
-		background-image: url(../images/icn/1492210248_icon-close-round.png);
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1492210248_icon-close-round.png);
 		background-size: 14px auto;
 		background-color: #2980B9;
 		border-color: #2980B9;
@@ -369,6 +403,30 @@ header {
 		-webkit-transition: all 0.2s linear;
 		-moz-transition: all 0.2s linear;
 		-o-transition: all 0.2s linear;
+	}
+
+	.call-header {
+		overflow: hidden;
+		position: absolute;
+	    right: 80px;
+	    bottom: -40px;
+	}
+	.call-header .text {
+		float: left;
+		font-size: 14px;
+		font-weight: 500;
+		color: #287FB8;
+		line-height: 30px;
+		margin-right: 10px;
+	}
+	.call-header .tel {
+		float: left;
+	    font-size: 14px;
+	    font-weight: 500;
+	    background: #287FB8;
+	    color: #ffffff;
+	    padding: 0 10px;
+	    line-height: 30px;
 	}
 
 
@@ -416,7 +474,7 @@ header {
 
 .fold-cta {
 	padding: 60px 0;
-	background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/landing_page_v2/images/bg/iStock_000064834499_Medium.jpg);
+	background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/bg/family.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -445,7 +503,7 @@ header {
 			display: block;
 			height: calc(100% / 3);
 			position: relative;
-			padding: 23px 0 0 70px;
+			padding: 25px 0 0 70px;
 		}
 			.fold-cta .wrapper .cta a:after {
 				content: "";
@@ -461,19 +519,19 @@ header {
 				}
 
 			.fold-cta .wrapper .cta a.call {
-				background-image: url(../images/icn/1491459851_phone.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1491459851_phone.png);
 				background-repeat: no-repeat;
 		    background-position: 18px 27px;
 		    background-size: 36px auto;
 			}
 			.fold-cta .wrapper .cta a.question {
-				background-image: url(../images/icn/1491459934_question-circle.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1491459934_question-circle.png);
 				background-repeat: no-repeat;
 		    background-position: 18px 27px;
 		    background-size: 36px auto;
 			}
 			.fold-cta .wrapper .cta a.articles {
-				background-image: url(../images/icn/1491459854_news.png);
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1491459854_news.png);
 				background-repeat: no-repeat;
 		    background-position: 18px 27px;
 		    background-size: 36px auto;
@@ -484,7 +542,7 @@ header {
 				font-size: 17px;
 				color: #2980B9;
 				font-weight: 500;
-				margin-bottom: 10px;
+				margin-bottom: 0px;
 			}
 			.fold-cta .wrapper .cta a .copy {
 				display: block;
@@ -494,6 +552,7 @@ header {
 				.fold-cta .wrapper .cta a .copy b {
 					color: #2980B9;
 					font-weight: 600;
+					display: block;
 				}
 
 
@@ -550,13 +609,13 @@ header {
 					width: 50px;
 				}
 					.legal-topics .wrapper .topics li a .icon.imigration {
-						background-image: url(../images/icn/passports-512.png);
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/passports-512.png);
 						background-size: 50px auto;
 						background-repeat: no-repeat;
 						background-position: center center;
 					}
 					.legal-topics .wrapper .topics li a:hover .icon.imigration {
-						background-image: url(../images/icn/passports-512_white.png);
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/passports-512_white.png);
 					}
 
 	/* ARTICLES */
@@ -647,7 +706,7 @@ header {
 		    width: 20px;
 		    height: 20px;
 		    display: inline-block;
-		    background-image: url(../images/icn/a8926a2f0f436edd64e2fd0c85ddbd44_download-this-image-as-location-pin-clipart_366-592.png);
+		    background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/a8926a2f0f436edd64e2fd0c85ddbd44_download-this-image-as-location-pin-clipart_366-592.png);
 		    background-position: center center;
 		    background-size: 12px auto;
 		    background-repeat: no-repeat;
@@ -762,7 +821,7 @@ header {
 	float: left;
 	height: 400px;
 	width: 50%;
-	background-image: url(../images/bg/Hispanic-Community.jpg);
+	background-image: url(/Hispanic-Community.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
@@ -779,7 +838,8 @@ header {
 	float: left;
 	height: 500px;
 	width: 50%;
-	background-image: url(../images/misc/topics.png);
+
+	background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/misc/topics.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 70%;
@@ -826,6 +886,20 @@ header {
 }
 .more-help .wrapper a {}
 
+.more-help .wrapper .qmark {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+
+	background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1491459934_question-circle.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	margin-right: 10px;
+	position: relative;
+    top: 6px;
+}
+
 
 
 /* POST CONTENT */
@@ -855,11 +929,13 @@ header {
 		width: 100%;
 	}
 
+	.post-content .wrapper .content-article .more-tags { position: relative; }
+	
 	.post-content .wrapper .content-article .social {
 		position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+	    right: 0;
+	    top: 50%;
+	    transform: translateY(-50%);
 	}
 		.post-content .wrapper .content-article .social .socials {
 			float: left;
@@ -871,6 +947,24 @@ header {
 	    line-height: 13px;
 	    width: 65px;
 	    float: left;
+		}
+
+		.post-content .wrapper .content-article .social.stock {
+		    float: right;
+		    top: 20px;
+		    transform: translateY(0);
+		}
+			.post-content .wrapper .content-article .social.stock .socials { float: right; }
+			.post-content .wrapper .content-article .social.stock .tag-contact-with-me {
+				float: right;
+				width: 80px;
+    			line-height: 30px;
+			}
+
+		.post-content .wrapper .content-article .terms p {
+			font-size: 12px;
+			color: #777777;
+			font-style: italic;
 		}
 
 	.post-content .wrapper .content-article .more-tags > span {
@@ -988,7 +1082,8 @@ header {
     height: 30px;
 		width: 30px;
 		display: inline-block;
-		background-image: url(../images/icn/arrow_left.png);
+
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/arrow_left.png);
 		background-size: 17px auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1000,7 +1095,8 @@ header {
 		height: 30px;
 		width: 30px;
 		display: inline-block;
-		background-image: url(../images/icn/arrow_right.png);
+
+		background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/arrow_right.png);
 		background-size: 17px auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1050,52 +1146,83 @@ header {
 		}
 
 	/* RELATED POST SIDEBAR */
-	.post-content .wrapper sidebar .module .related-post-sidebar {
+		.post-content .wrapper sidebar .module .related-post-sidebar {
+			background-color: #eeeeee;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar .title {
+			padding: 30px 20px;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar a {
+			display: block;
+			padding-bottom: 20px;
+		}
+			.post-content .wrapper sidebar .module .related-post-sidebar .more-articles {
+				padding: 0 20px 20px 20px;
+			}
+			.post-content .wrapper sidebar .module .related-post-sidebar a.readmore {
+				padding-bottom: 0;
+				display: block;
+			}
+
+		.post-content .wrapper sidebar .module .related-post-sidebar .post {
+			overflow: hidden;
+			padding: 0 20px;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar .post .image {
+			float: left;
+			width: 100px;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar .post .image img {
+			display: block;
+			width: 100%;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar .post .copy {
+			font-size: 15px;
+			padding-left: 15px; 
+			font-weight: 600;
+			color: #2980b9;
+			float: left;
+			width: calc(100% - 115px);
+		}
+
+		.post-content .wrapper sidebar .module .related-post-sidebar.tags {}
+		.post-content .wrapper sidebar .module .related-post-sidebar.tags .tags {
+			padding: 0 20px;
+		}
+		.post-content .wrapper sidebar .module .related-post-sidebar.tags .tags a {
+			padding-bottom: 0;
+		}
+
+	/* DONDE ESTAMOS */
+	.post-content .wrapper sidebar .module .where-be-us {
 		background-color: #eeeeee;
 	}
-	.post-content .wrapper sidebar .module .related-post-sidebar .title {
+	.post-content .wrapper sidebar .module .where-be-us .title {
 		padding: 30px 20px;
 	}
-	.post-content .wrapper sidebar .module .related-post-sidebar a {
-		display: block;
-		padding-bottom: 20px;
-	}
-		.post-content .wrapper sidebar .module .related-post-sidebar .more-articles {
-			padding: 0 20px 20px 20px;
-		}
-		.post-content .wrapper sidebar .module .related-post-sidebar a.readmore {
-			padding-bottom: 0;
+		.post-content .wrapper sidebar .module .where-be-us a {
+			color: #545454;
 			display: block;
+			padding: 0 20px 0 35px;
+			padding-bottom: 20px;
 		}
-
-	.post-content .wrapper sidebar .module .related-post-sidebar .post {
-		overflow: hidden;
-		padding: 0 20px;
-	}
-	.post-content .wrapper sidebar .module .related-post-sidebar .post .image {
-		float: left;
-		width: 100px;
-	}
-	.post-content .wrapper sidebar .module .related-post-sidebar .post .image img {
-		display: block;
-		width: 100%;
-	}
-	.post-content .wrapper sidebar .module .related-post-sidebar .post .copy {
-		font-size: 15px;
-		padding-left: 15px; 
-		font-weight: 600;
-		color: #2980b9;
-		float: left;
-		width: calc(100% - 115px);
-	}
-
-	.post-content .wrapper sidebar .module .related-post-sidebar.tags {}
-	.post-content .wrapper sidebar .module .related-post-sidebar.tags .tags {
-		padding: 0 20px;
-	}
-	.post-content .wrapper sidebar .module .related-post-sidebar.tags .tags a {
-		padding-bottom: 0;
-	}
+			.post-content .wrapper sidebar .module .where-be-us a span {
+				display: block;
+				font-weight: 500;
+			}
+				.post-content .wrapper sidebar .module .where-be-us a span.title {
+					font-size: 18px;
+					font-weight: 600;
+					padding: 0 0 0 25px;
+					background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/icn_location.png);
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+				.post-content .wrapper sidebar .module .where-be-us a span.data {
+					padding-left: 40px;
+				    line-height: 25px;
+				    font-size: 14px;
+				}
 
 /* PAGINATION ==================== */
 .pagination {
@@ -1285,11 +1412,418 @@ header {
 			}
 
 
+
+			/* FOLD PRACTICE AREAS */
+			.fold-area {
+				background-color: #ffffff;
+				padding: 80px 0;
+				overflow: hidden;
+			}
+			.fold-area:nth-child(2n) {
+				background-color: #fafafa;
+			}
+			.fold-area.right {
+				text-align: right;
+			}
+				.fold-area.right p {
+					float: right;
+				}
+				.fold-area.right .button {
+					clear: both;
+    				float: right;
+				}
+
+			.fold-area h1 {
+				color: #267FB8;
+				font-size: 35px;
+				display: block;
+				margin-bottom: 10px;
+			}
+			.fold-area p {
+				font-size: 16px;
+				color: #515151;
+				width: 550px;
+				display: block;
+				margin-bottom: 20px;
+			}
+				.fold-area .wrapper {
+					position: relative;
+				}
+				.fold-area .wrapper:after {
+					content: "";
+				    width: 256px;
+				    height: 215px;
+				    display: inline-block;
+				    background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/areas.png);
+				    position: absolute;
+				    right: 0;
+				    top: -30px;
+				}
+				.fold-area.right .wrapper:after {
+					left: 0;
+					right: auto;
+				}
+
+
+	/* LAWYERS */
+	.lawyers {
+		overflow: hidden;
+	}
+	.lawyers h2 {
+		display: block;
+		font-size: 18px;
+		color: #267FB8;
+	}
+	.lawyers .lawyer-list {
+		overflow: hidden;
+    	margin-top: 40px;
+	}
+	.lawyers .lawyer-list .lawyer {
+		float: left;
+		margin-right: 70px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+		.lawyers .lawyer-list .lawyer:nth-child(5n) {
+			margin-right: 0;
+		}
+	.lawyers .lawyer-list .lawyer .name {
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+		color: #267FB8;
+	}
+	.lawyers .lawyer-list .lawyer .spec {
+		font-size: 14px;
+		color: #444444;
+	}
+	.lawyers .lawyer-list .lawyer .contact-cta {
+		display: block;
+		border: 1px solid #2980B9;
+		border-radius: 2px;
+		color: #2980B9;
+		margin-top: 6px;
+		font-size: 12px;
+		line-height: 25px;
+	}
+		.lawyers .lawyer-list .lawyer .contact-cta:hover {
+			background-color: #2980B9;
+			color: #ffffff;
+		}
+
+	.lawyers .lawyer-list .lawyer .image {
+		width: 136px;
+		height: 145px;
+		background-color: #EFEFEF;
+		border-radius: 3px;
+		display: inline-block;
+	}
+		.lawyers .lawyer-list .lawyer .image img {
+			width: auto;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		/* FIRMAS */
+		.lawyers .lawyer-list.firms {}
+		.lawyers .lawyer-list.firms .lawyer .image {
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+		}
+		.lawyers .lawyer-list.firms .lawyer .image img {
+
+		}
+		.lawyers .lawyer-list.firms {}
+
+
+	/* Lawyer Detail */
+	.lawyerview {
+		background-color: #fafafa;
+	}
+	.lawyerview .wrapper {
+		padding-left: 35%;
+	}
+	.lawyerview h1 {
+		color: #267FB8;
+		font-size: 35px;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.lawyer-detail .wrapper {
+		width: 750px;
+	}
+	.lawyer-detail .left {
+		float: left;
+		width: 50%;
+		padding-right: 68px;
+		position: relative;
+    	top: -195px;
+	}
+		.lawyer-detail:after {
+			content: '';
+		    display: block;
+		    clear: both;
+		}
+		.lawyer-detail .left .image {
+			width: 306px;
+			height: 375px;
+			background-color: #EFEFEF;
+			background-position: center center;
+    		background-repeat: no-repeat;
+			display: inline-block;
+			border-radius: 3px;
+		}
+			.lawyer-detail .left .firm {
+				width: 100%;
+			}
+				.lawyer-detail .left .firm:after {
+					content: '';
+				    display: block;
+				    clear: both;
+				}
+			.lawyer-detail .left .firm span {
+				float: left;
+				font-size: 13px;
+				line-height: 49px;
+				color: #444444;
+			}
+			.lawyer-detail .left .firm img {
+				float: left;
+				width: 70px;
+				height: auto;
+			}
+			.lawyer-detail .left .firm .button {
+				font-size: 13px;
+				padding: 0 10px;
+				line-height: 25px;
+				margin-top: 15px;
+				background-image: none;
+				float: right;
+			}
+
+			.lawyer-detail .left .contact-info {}
+			.lawyer-detail .left .contact-info > span,
+			.lawyer-detail .left .contact-info > a {
+				display: block;
+				margin-top: 15px;
+				font-size: 16px;
+				color: #515151;
+			}
+			.lawyer-detail .left .contact-info .address {
+				padding-left: 25px;
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/icn_location.png);
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+			.lawyer-detail .left .contact-info .tel {
+				padding-left: 25px;
+				background-size: 22px auto;
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_grey.png);
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+			.lawyer-detail .left .contact-info .email {
+				padding-left: 25px;
+				background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/icn_email.png);
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+			.lawyer-detail .left .contact-info .license {}
+			.lawyer-detail .left .contact-info .license .licensetag {
+				display: inline-block;
+				background-color: #ccc;
+				font-size: 12px;
+				color: #fff;
+				font-weight: 500;
+			    padding: 0 10px;
+			    border-radius: 2px;
+			    line-height: 22px;
+			}
+				.lawyer-detail .left .contact-info .license .licensetag.active {
+					background-color: #238C00;
+				}
+
+
+			.lawyer-detail .res-info {
+				width: 100%;
+				clear: both;
+				position: relative;
+    			top: -100px;
+			}
+
+
+	.lawyer-detail .right {
+		float: left;
+		width: 50%;
+	}
+		.lawyer-detail .right p {
+			color: #515151;
+		}
+		.lawyer-detail .right > span {
+			display: block;
+			line-height: 30px;
+		}
+		.lawyer-detail .right .address {
+			padding-left: 25px;
+			background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/icn_location.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+		}
+		.lawyer-detail .right .tel {
+			padding-left: 25px;
+			background-size: 22px auto;
+			background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1489267306_Call01_grey.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+		}
+		.lawyer-detail .right .email {
+			padding-left: 25px;
+			background-image: url(../https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/icn_email.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+			color: #444444;
+		}
+
+
+	/* Lawyer List */
+	.lawyerlist-header {
+		background-color: #fafafa;
+	}
+	.lawyerlist-header h1 {
+		color: #267FB8;
+	    font-size: 25px;
+	    display: block;
+	    margin-bottom: 10px;
+	}
+
+	/* Lawyers in firm page */
+	.lawyersin-firm { position: relative; top: -150px; }
+	.lawyersin-firm .wrapper {
+		width: 760px;
+	}
+	.lawyersin-firm .lawyer-list .lawyer { margin-right: 70px !important; }
+	.lawyersin-firm .lawyer-list .lawyer:nth-child(4n) { margin-right: 0 !important; }
+
+
 /* ==================================== MEDIA QUERIES ==================================== */
 @media only screen and (max-width: 767px) and (min-width: 320px)  {
 
 	.wrapper {
 		width: 100%;
+	}
+
+	.post-content .wrapper .content-article .social.stock {
+		display: none;
+	}
+
+	.post-content .wrapper sidebar .module .where-be-us {
+		margin-top: 20px;
+	}
+
+	.post-content .wrapper .content-article .terms {
+		padding: 0 20px;
+	}
+
+	.lawyerlist-header h1 {
+		text-align: center;
+	}
+
+	.more-help .wrapper .qmark {
+		width: 25px;
+    	margin: 0;
+	}
+
+	.lawyerview .wrapper {
+		width: 100%;
+		padding: 0 20px;
+	}
+		.lawyer-detail .wrapper {
+			padding: 0 20px;
+			width: 100%;
+		}
+		.lawyer-detail .left {
+			width: 100%;
+			padding: 0;
+			float: none;
+			top: -95px;
+		}
+			.lawyer-detail .left .image {
+				width: 100%;
+			}
+
+		.lawyer-detail .right {
+			width: 100%;
+			float: none;
+		}
+
+	.lawyers .wrapper {
+		padding: 0 20px;
+	}
+		.lawyers h2 { text-align: center; }
+		.lawyers .lawyer-list .lawyer {
+			margin-right: 50px !important;
+			margin-bottom: 20px;
+		}
+			.lawyers .lawyer-list .lawyer:nth-child(2n) {
+				margin-right: 0 !important;
+			}
+
+		.lawyers .lawyer-list .lawyer .name {
+			font-size: 15px;
+		}
+		.lawyers .lawyer-list .lawyer .spec { font-size: 12px; }
+
+		.lawyers .lawyer-list .lawyer .image {
+			width: 113px;
+			height: 121px;
+		}
+
+
+	.lawyersin-firm .wrapper {
+		width: 100%;
+	}
+	.lawyersin-firm .lawyer-list .lawyer {
+		margin-right: 50px !important;
+	}
+	.lawyersin-firm .lawyer-list .lawyer:nth-child(2n) {
+		margin-right: 0 !important;
+	}
+
+	.lawyer-detail .res-info {
+		margin-top: 40px;
+	}
+	.lawyer-detail .res-info,
+	.lawyersin-firm {
+		top: 0;
+	}
+
+
+
+	header {
+		padding: 40px 0 60px 0;
+	}
+
+	.fold-area .wrapper {
+		padding: 0 20px;
+	}
+		.fold-area p {
+			width: 100%;
+		}
+
+	header .wrapper .sub-logo {
+		bottom: -5px;
+		font-size: 10px;
+	}
+	.call-header {
+		right: 20px;
+		bottom: -60px;
+	}
+
+	.fold-area .wrapper:after {
+		display: none;
 	}
 
 	/* NAV */
@@ -1572,18 +2106,21 @@ header {
 		max-height: 600px;
 	}
 
-	.post-content .wrapper .content-article article.cropped:after {
+	.read-more-post {
+		position: relative;
+	}
+	.read-more-post:after {
 		content: "";
 		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.99) 66%, rgba(255,255,255,1) 67%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 66%,rgba(255,255,255,1) 67%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 66%,rgba(255,255,255,1) 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 		position: absolute;
-    bottom: -53%;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    display: inline-block;
+	    top: -100px;
+	    left: 0;
+	    width: 100%;
+	    height: 100px;
+	    display: inline-block;
 	}
 
 	.read-more-post {
@@ -1689,9 +2226,53 @@ header {
 		width: 100%;
 		padding: 0 40px;
 	}
+	header nav { margin-right: 15px; }
 	header nav a {
-		margin-left: 20px;
+		margin-left: 10px;
 	}
+
+	header .wrapper .sub-logo {
+		left: 99px;
+	}
+
+	.lawyerlist-header .wrapper {
+		width: 100%;
+	}
+	.lawyerlist-header h1 {
+		text-align: center;
+	}
+
+	.lawyer-detail .wrapper {
+		padding: 0 50px;
+		width: 100%;
+	}
+	.lawyerview .wrapper {
+		padding-left: 50%;
+	}
+	.lawyer-detail .left {
+		padding-right: 25px;
+	}
+		.lawyer-detail .left .firm {
+			padding-right: 0;
+		}
+
+	.lawyers .wrapper {
+		padding: 0 60px;
+		width: 100%;
+	}
+		.lawyers .lawyer-list .lawyer {
+			margin-right: 33px !important;
+		}
+			.lawyers .lawyer-list .lawyer:nth-child(4n) {
+				margin-right: 0 !important;
+			}
+
+	.fold-area .wrapper {
+		padding: 0 50px;
+		width: 100%;
+	}
+	.fold-area .wrapper:after { display: none; }
+
 	.legal-topics .wrapper,
 	.articles .wrapper {
 		width: 100%;

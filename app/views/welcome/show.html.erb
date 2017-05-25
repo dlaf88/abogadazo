@@ -22,7 +22,7 @@
 			<!-- CONTENT -->
 			<section class="legal-topics">
 				<div class="wrapper">
-					<h1>Temas legales</h1>
+					<h1>Áreas Legales</h1>
 					<ul class="topics">
 						<li>
 							<a href="">
@@ -50,18 +50,16 @@
 				<div class="wrapper">
 					<h1>Noticias de Interés - <b>Artículos</b></h1>
 					<div class="colum-thumbs">
+					<% @articles.each do |article| %>
 						<article class="thumb">
-							<img src="images/misc/article.jpg" alt="">
-							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis neque iure delectus, a quam, corporis explicabo odio odit minus, cupiditate fuga officiis et assumenda tempore debitis aperiam possimus magnam?</p>
-							<a href="post-detail.html" class="button blue">Ver más</a>
+							<img src="<%= article.image_body_field %>" alt="">
+							<h2><%= article.title %></h2>
+							<p><%= truncate(strip_tags(article.body),length: 100) %></p>
+							<%= link_to "Ver más", article_path(article), class: 'button blue' %>
+							
 						</article>
-						<article class="thumb">
-							<img src="images/misc/article.jpg" alt="">
-							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis neque iure delectus, a quam, corporis explicabo odio odit minus, cupiditate fuga officiis et assumenda tempore debitis aperiam possimus magnam?</p>
-							<a href="post-detail.html" class="button blue">Ver más</a>
-						</article>
+					<% end %>
+						
 						<div class="thumb tag-system">
 							<h2>Buscabas otro tema?</h2>
 							<div class="tags">

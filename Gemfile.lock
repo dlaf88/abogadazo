@@ -254,6 +254,8 @@ GEM
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     formatador (0.2.5)
+    friendly_id (5.2.1)
+      activerecord (>= 4.0.0)
     geocoder (1.2.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -439,6 +441,7 @@ DEPENDENCIES
   figaro
   fog
   font-awesome-rails
+  friendly_id (~> 5.2, >= 5.2.1)
   geocoder (~> 1.2.8)
   gmaps4rails
   invisible_captcha

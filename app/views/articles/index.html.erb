@@ -10,14 +10,7 @@
       <div class='col-md-8 col-md-offset-2'>
         <h2> <%= link_to article.title, article_path(article) %></h2>
         <br>
-        <% if article.video %>
-        <div class='col-md-4'>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="<%= article.video_field %>"></iframe>
-          </div>
-        </div>
-
-        <% end %>
+      
         <p><%=h truncate(article.body, length: 150) %></p>
       </div>
     </div>

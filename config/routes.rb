@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
 
-  devise_for :accounts, controllers: {
+   devise_for :accounts, controllers: {
     registrations: 'accounts/registrations',
     :omniauth_callbacks => 'accounts/omniauth_callbacks'
     }
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
  
   resources :articles
   resources :questions
+  resources :attorneys
   resources :lawyer_profiles
   resources :law_categories do
     #collection {post :import}

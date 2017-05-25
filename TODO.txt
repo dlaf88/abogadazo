@@ -1,30 +1,79 @@
 Articles:
-	get rid of author and make sure it is author_id instead
-		Wait until author table is set up
-		get rid of the about section 
-			this is now going to be part of the author table.
-	X get rid of user_id in the table
-	X get rid of video boolean
-		X make sure to check views for video boolean
-	X leave video_field
-	X get rid of image_body_boo
-		X make sure to check views for image_body_boo
-	X add the tagging system for articles
-	  add the tagging system like I have for 
+		get rid of author and make sure it is author_id instead
+			Wait until author table is set up
+			get rid of the about section 
+				this is now going to be part of the author table.
+		X get rid of user_id in the table
+		X get rid of video boolean
+			X make sure to check views for video boolean
+		X leave video_field
+		X get rid of image_body_boo
+			X make sure to check views for image_body_boo
+		X add the tagging system for articles
+		  Xadd the tagging system like I have for 
 
-	  Add friendly_id to articles
-	  	read the friendly_id documentation
-	  	make sure that correct structure is set up in order to have proper rerouting and to not lose SEO
-	xWatch Ryan Bates episode on how to use Jquery to instantly upload photos.
+		  XAdd friendly_id to articles
+		  	Xread the friendly_id documentation
+		  	Xmake sure that correct structure is set up in order to have proper rerouting and to not lose SEO
+		xWatch Ryan Bates episode on how to use Jquery to instantly upload photos.
+
+		Add ability to change the title if the title changes for an article.
+
+		video field checking 
+			add the ability to add videos and if there are videos then no primary photo.
+
+	SHOW:
+		XHave the articles sorted by tagging system.
+			here it is best to use the tagging method "find_related_tags"
 
 
-Lawyers:
-	come up with correct taxonomy, it is either Lawyer, LawyerProfile, or other
+
+
+Attorney:
+	Xcome up with correct taxonomy, it is either Lawyer, LawyerProfile, or other
+	decided to use Attorney
+
+	X attributes
+		has_many: licenses
+		X first_name
+		X last_name
+		X middle_name
+		X email
+
+		X--drop email
+				
+		X phone_number
+		X contact_email
+		X profile_photo
+
+License:
+		date_acquired:
+		state:
+		bar_id:
+		attorney_id:
+
+Firm:
+	logo:
+	address:
+	state:
+	office_phone:
+	website_url:
 
 
 Users:
 	set up users as the main devisable app
+	allow users to have facebook login
+		this allows for email - and sign up flow
+
+Forms:
+	Active Model Form - which them
 
 MISC:
 	add growler notifications
 
+DASHBOARD:
+	add ability to edit the articles through a dashboard system.
+
+
+
+merge friendly_id github with master branch

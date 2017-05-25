@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510034028) do
+ActiveRecord::Schema.define(version: 20170511211854) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -59,7 +59,9 @@ ActiveRecord::Schema.define(version: 20170510034028) do
     t.text     "about"
     t.string   "image_body_field"
     t.integer  "law_category_id"
+    t.string   "slug"
     t.index ["law_category_id"], name: "index_articles_on_law_category_id"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
   create_table "attorney_profiles", force: :cascade do |t|
@@ -75,6 +77,29 @@ ActiveRecord::Schema.define(version: 20170510034028) do
     t.string   "licensed_since"
     t.float    "latitude"
     t.float    "longitude"
+  end
+
+  create_table "attorneys", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "contact_email"
+    t.string   "profile_photo"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "law_categories", force: :cascade do |t|

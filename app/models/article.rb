@@ -3,12 +3,14 @@ class Article < ActiveRecord::Base
   mount_uploader :image, RegImageUploader
   mount_uploader :image_body_field, RegImageUploader
   acts_as_taggable
+  extend FriendlyId
+
+  friendly_id :title, use: [:slugged,:history]
+
 
 
 
   #image_body_field is the main image for each article - this was bad name but had to be left due to hassle of changing all pictures in production application.
-  def to_param
-    "#{id} #{title}".parameterize
-  end 
+  
 end
 
