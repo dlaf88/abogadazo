@@ -9,7 +9,7 @@ module Admin
     before_filter :authenticate_admin
 
     def authenticate_admin
-      if account_signed_in? && current_account.type == 'Boss'
+      if user_signed_in? && current_user.type == 'Sudo'
       else 
         flash[:alert] = "You are not an Admin"
         redirect_to root_path

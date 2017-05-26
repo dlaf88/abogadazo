@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable, :omniauth_providers => [:facebook]
   
 	def self.from_omniauth(auth)
@@ -14,3 +14,9 @@ class User < ActiveRecord::Base
 	end
 
 end
+
+
+class Sudo < User
+	#TODO 
+	#I'm going to use SUDO Sper-User-DO becuase Admin module is being used with the Administrate gem
+end 

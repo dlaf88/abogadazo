@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   def authenticate_admin
-      if account_signed_in? && current_account.type == 'Boss'
+      if user_signed_in? && current_user.type == 'Sudo'
       else 
         flash[:alert] = "You are not an Admin"
         redirect_to root_path
