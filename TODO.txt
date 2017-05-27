@@ -1,3 +1,13 @@
+
+Welcome:
+	show:
+		change the locations map
+		Nuestras Oficinas on the bottom.
+		Add the timestamp to the two articles on this page.
+
+
+
+
 Articles:
 		get rid of author and make sure it is author_id instead
 			Wait until author table is set up

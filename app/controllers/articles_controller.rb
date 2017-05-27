@@ -42,10 +42,10 @@ class ArticlesController < ApplicationController
     @tags = ActsAsTaggableOn::Tag.most_used(5)
     if params[:q]
       topic = params[:q]
-      @articles = Article.tagged_with("#{topic}")
+      @articles = Article.tagged_with("#{topic}").page(params[:page]).per(3)
       @category = topic.to_s
     else 
-      @articles = Article.all
+      @articles = Article.all.page(params[:page]).per(3)
     end  
   end 
   private
