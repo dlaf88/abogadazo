@@ -25,7 +25,7 @@
 					<h1>Áreas Legales</h1>
 					<ul class="topics">
 						<li>
-							<a href="">
+							<a href="/articles/?q=inmigración">
 								<span class="icon imigration"></span>
 								<span class="text">Imigración</span>
 							</a>
@@ -61,26 +61,14 @@
 					<% end %>
 						
 						<div class="thumb tag-system">
-							<h2>Buscabas otro tema?</h2>
-							<div class="tags">
-								<a href="#">Imigration</a>
-								<a href="#">Social</a>
-								<a href="#">Laboral</a>
-								<a href="#">Tránsito</a>
-								<a href="#">Familia</a>
-								<a href="#">Imigration</a>
-								<a href="#">Social</a>
-								<a href="#">Laboral</a>
-								<a href="#">Tránsito</a>
-								<a href="#">Familia</a>
-								<a href="#">Imigration</a>
-								<a href="#">Social</a>
-								<a href="#">Laboral</a>
-								<a href="#">Tránsito</a>
-								<a href="#">Familia</a>
-							</div>
+							<h2>Buscabas otro tema?</h2>							
+								<div class="tags">
+								<% @tags.each do |tag| %>
+									<a href="/articles/?q=<%= tag.name %>"><%= tag.name %></a>
+								<% end %>
+								</div>							
 							<span class="clearfix"></span>
-							<a href="#" class="readmore">Ver más articulos</a>
+							<a href="/articles" class="readmore">Ver más articulos</a>
 						</div>
 					</div>
 				</div>

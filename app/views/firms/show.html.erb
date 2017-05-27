@@ -1,0 +1,42 @@
+<section class="lawyerview">
+	<div class="wrapper">
+		<h1><%= @firm.name %></h1>
+		<p>Oficina en <%= @firm.state %></p>
+	</div>
+</section>
+
+<section class="lawyer-detail">
+	<div class="wrapper">
+		<div class="left">
+			<%= image_tag @firm.logo.url, class: 'image' %>
+		</div>
+		<div class="right">
+			<span class="address"><%= @firm.address %></span>
+			<span class="tel">973-440-8037</span>
+		</div>
+		<div class="res-info">
+			<p><%= @firm.description %></p>
+		</div>
+	</div>
+</section>
+<% if @firm.attorneys.any? %>
+	<section class="lawyers lawyersin-firm">
+		<div class="wrapper">
+			<h3>Abogados:</h3>
+			<div class="lawyer-list">
+				<% @firm.attorneys.each do |attorney| %>
+					<div class="lawyer">
+						<a href="<%= attorney_path(attorney) %>">
+							<div class="image">
+								<%= image_tag attorney.profile_photo.url %>
+							</div>
+							<span class="name"><%= attorney.first_name + " " + attorney.last_name %></span>
+						</a>
+						<%=link_to "Contactar", attorney_path(attorney), class: 'contact-cta' %>
+						
+					</div>	
+				<% end %>		
+			</div>
+		</div>
+	</section>
+<% end %>

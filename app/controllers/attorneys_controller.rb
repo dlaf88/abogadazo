@@ -20,7 +20,19 @@ class AttorneysController < ApplicationController
 	    
 	end 
 
+	def edit
+		@attorney = Attorney.find(params[:id])
+	end 
+
 	def update
+		@attorney = Attorney.find(params[:id])
+    if @attorney.update(attorney_params)
+     	 redirect_to @attorney, notice: 'Attorney was successfully updated.' 
+        
+      else
+        render :edit 
+        
+      end
 		
 	end 
 
@@ -28,7 +40,7 @@ class AttorneysController < ApplicationController
 	private
 
 	def attorney_params
-		params.require(:attorney).permit(:first_name,:middle_name,:last_name,:contact_email,:phone_number,:profile_photo)
+		params.require(:attorney).permit(:first_name,:middle_name,:last_name,:contact_email,:phone_number,:profile_photo, :firm_id)
 	end 
 
 end 

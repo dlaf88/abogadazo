@@ -1,5 +1,6 @@
 class Attorney < ApplicationRecord
 	mount_uploader :profile_photo, ProfilePictureUploader
+	belongs_to :firm
 
 
 

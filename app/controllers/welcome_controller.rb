@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
     @question = Question.new
     @questions = Question.last(3)
     @article= Article.new
+   
     
     
   end
@@ -11,7 +12,7 @@ class WelcomeController < ApplicationController
     render :layout => false     
   end 
   def show
-    
+     @tags = ActsAsTaggableOn::Tag.most_used(10)
     session.delete(:lawyer_lead) if session[:lawyer_lead] #clear hash from apply
     @lawyers = Lawyer.last(3)
     @question = Question.new

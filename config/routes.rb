@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     :omniauth_callbacks => 'users/omniauth_callbacks'
     }
   #devise_for :lawyers
- 
+  resources :firms
   resources :articles
   resources :questions
   resources :attorneys

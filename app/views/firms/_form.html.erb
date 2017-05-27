@@ -1,0 +1,17 @@
+<div class='container'>
+    <%= simple_form_for (@firm) do |f| %>
+
+    <%= f.input :logo %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :state, collection: ["New Jersey","New York"]%>
+    <%= f.input :description %>
+    <%= f.input :office_phone %>
+    <%= f.input :website %>
+  
+  
+
+    <%= f.submit :class => ' btn btn-primary btn-block' %>
+    
+  <%end%>
+</div>

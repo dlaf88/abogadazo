@@ -1,7 +1,50 @@
 
-<%= image_tag @attorney.profile_photo.url %>
-<div>
-	<p><%= @attorney.first_name %> <%= @attorney.middle_name %> <%= @attorney.last_name %></p>
-</div>
 
-<%= link_to "My Profile", @attorney %>
+
+<section class="lawyerview">
+	<div class="wrapper">
+		<h1><%= @attorney.first_name %> <%= @attorney.middle_name %> <%= @attorney.last_name %></h1>
+		<br>
+	</div>
+</section>
+
+<section class="lawyer-detail">
+	<div class="wrapper">
+		<div class="left">
+			<%= image_tag @attorney.profile_photo.url, class: 'image' %>
+			<!--
+			<div class="firm">
+				<span>Firma:</span>
+				<img src="images/misc/firma.png">
+				<a href="#" class="button blue">Contactar Ahora</a>
+			</div>
+			-->
+			
+			<div class="contact-info">
+				<span class="address">Street 21 105 C Office 102</span>
+				<span class="tel">3252 25566</span>
+				<a class="email" href="mailto:lawyer@abogadazo.com">lawyer@abogadazo.com</a>
+				<span class="license">Licencia: <span class="licensetag active">Activa</span></span>
+				<%= link_to "My Profile", @attorney %>
+				<span><a href="tel:973-440-8037" class="button blue">Contactar Ahora</a></span>
+			</div>
+		</div>
+		<div class="right">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<h3>Estudios:</h3>
+			<ul>
+				<li>- Lorem Ipsum is simply dummy text.</li>
+				<li>- Lorem Ipsum is simply dummy text of the printing.</li>
+				<li>- Lorem Ipsum is simply.</li>
+			</ul>
+			<h3>Areas Especializadas:</h3>
+			<ul>
+				<li>- Lorem Ipsum is simply dummy text.</li>
+				<li>- Lorem Ipsum is simply dummy text of the printing.</li>
+				<li>- Lorem Ipsum is simply.</li>
+			</ul>
+		</div>
+	</div>
+
+
+</section>

@@ -39,7 +39,14 @@ class ArticlesController < ApplicationController
   end 
   
   def index
-    @articles = Article.limit(3)
+    @tags = ActsAsTaggableOn::Tag.most_used(5)
+    if params[:q]
+      topic = params[:q]
+      @articles = Article.tagged_with("#{topic}")
+      @category = topic.to_s
+    else 
+      @articles = Article.all
+    end  
   end 
   private
   def articles_params

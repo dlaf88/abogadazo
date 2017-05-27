@@ -52,17 +52,17 @@ License:
 		bar_id:
 		attorney_id:
 
-Firm:
-	logo:
-	address:
-	state:
-	office_phone:
-	website_url:
+XFirm:
+	Xlogo:
+	Xaddress:
+	Xstate:
+	Xoffice_phone:
+	Xwebsite_url:
 
 
 Users:
-	set up users as the main devisable app
-	allow users to have facebook login
+	Xset up users as the main devisable app
+	Xallow users to have facebook login
 		this allows for email - and sign up flow
 
 Forms:
@@ -76,4 +76,4 @@ DASHBOARD:
 
 
 
-merge friendly_id github with master branch
+-- to do merge friendly_id github with master branch
