@@ -1,0 +1,25 @@
+<section class="lawyerlist-header">
+	<div class="wrapper">
+		<h1>Nuestro listado de Abogados</h1>
+	</div>
+</section>
+
+<section class="lawyers">
+	<div class="wrapper">
+		<div class="lawyer-list">
+		<% @attorneys.each do |attorney| %>
+			<div class="lawyer">
+				
+					<div class="image">
+						<%= image_tag attorney.profile_photo.url %>
+					</div>
+					<span class="name"><%= attorney.first_name + " " + attorney.last_name %></span>
+					
+				
+				<%= link_to "Contactar", attorney_path(attorney),class: 'contact-cta' %>
+				
+			</div>
+		<% end %>
+		</div>		
+	</div>
+</section>

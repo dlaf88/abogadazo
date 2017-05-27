@@ -27,13 +27,23 @@ class QuestionsController < ApplicationController
    # else
    # @question.ipaddress = request.remote_ip.to_s
    # end 
-    if @question.save
-      AlertEmailJob.perform_later(@question.id)     
-      redirect_to @question, notice: "Muchas gracias por su pregunta. Estaremos en contacto"
-    else
-      flash[:error] = "Hubo un error. Por favor intente de nuevo."
-      render :new
-    end
+   respond_to do |format|
+      if @question.save
+        format.html{      
+          AlertEmailJob.perform_later(@question.id)     
+          redirect_to @question, notice: "Muchas gracias por su pregunta. Estaremos en contacto"
+        }
+        format.js
+      else 
+        format.html{
+          flash[:error] = "Hubo un error. Por favor intente de nuevo."
+          render :new
+        }
+        format.js {render :error}
+      end 
+
+    end       
+    
       
   end 
   

@@ -101,9 +101,14 @@
                   
                   <%= f.text_area :description,placeholder:"Cual es su pregunta?" %> 
                   
-                  <%= f.invisible_captcha :subtitle %>                  
+                  <%= f.invisible_captcha :subtitle %>  
+                  <div class='text-center' id='spinner' hidden=true>
+                      <div class="cp-spinner cp-flip"></div>
+                      <p>Un Momento</p>  
+                  </div>              
+          
                   
-                  <%= f.submit 'Enviar Pregunta' %>
+                  <%= f.submit 'Enviar Pregunta', id: 'question-sent' %>
                   <div class="terms"><p>Yo estoy de acuerdo con los <a href="/terms">términos de servicio</a></p></div>
                 <% end %>
           </div>
@@ -118,6 +123,12 @@
       <a href="tel:973-440-8037" class="button blue phone">Llámanos, completamente grátis!</a>
     </div>
   </section>
+
+  <script type="text/javascript">
+    $('#question-sent').on('click',function(e){
+      $('#spinner').show();
+    })
+  </script>
 
 
   <!-- CONTENT -->
