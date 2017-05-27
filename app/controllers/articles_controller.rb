@@ -5,13 +5,16 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end 
   
-  def show    
+  def show  
+   @question = Question.new  
     @article = Article.friendly.find(params[:id])
     @title = @article.title
     @articles = Article.where(id: [27,19,35,34])
     @related_articles = @article.find_related_tags.limit(2)
     #TODO refactor this code here.
     respond_with_article_or_redirect
+
+   
   end 
   
   def create

@@ -91,15 +91,21 @@
         </div>
           <div class="module">
           <div class="tell-history">
-            <span class="title">Pregúntanos</span>
-            <form action="">
-              <fieldset>
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Email">
-                <textarea placeholder="Una breve descripción del caso"></textarea>
-                <button>Consulta</button>
-              </fieldset>
-            </form>
+            <span class="title">Pregúntenos</span>
+                <%= simple_form_for(@question, html: { class: 'data-fields' },remote: true) do |f|  %>
+                  
+                  <%= f.input :title,label: false,collection:["Proceso de Foreclosure","Inmigracion","Otro"], default: "Procesco de Foreclosure" %>
+                  <%= f.text_field :phone,placeholder: "Email" %>              
+                   
+                  
+                  
+                  <%= f.text_area :description,placeholder:"Cual es su pregunta?" %> 
+                  
+                  <%= f.invisible_captcha :subtitle %>                  
+                  
+                  <%= f.submit 'Enviar Pregunta' %>
+                  <div class="terms"><p>Yo estoy de acuerdo con los <a href="/terms">términos de servicio</a></p></div>
+                <% end %>
           </div>
         </div>
       </sidebar>
