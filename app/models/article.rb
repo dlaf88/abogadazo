@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
   belongs_to :law_category
+  belongs_to :attorney
   mount_uploader :image, RegImageUploader
   mount_uploader :image_body_field, RegImageUploader
   acts_as_taggable

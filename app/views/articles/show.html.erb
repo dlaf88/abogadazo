@@ -13,10 +13,12 @@
         <article class="cropped">
             <%= image_tag @article.image_body_field %>
               <div class="author">
-                <div class="photo"></div>
+                <div class="photo">
+                  <%= image_tag @article.attorney.profile_photo.url %>
+                </div>
                   <div class="info">
-                    <span class="name">Por: <b><%= @article.author %></b></span>
-                    <span class="desc"><%=@article.about %></span>
+                    <span class="name">Escrito por:<b> Abogado <%= @article.attorney.first_name + " " + @article.attorney.last_name %></b></span>
+                    <span class="desc"><%=@article.attorney.description %></span>
                   </div>          
               </div>
               <br>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526034628) do
+ActiveRecord::Schema.define(version: 20170528145227) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -60,8 +60,18 @@ ActiveRecord::Schema.define(version: 20170526034628) do
     t.string   "image_body_field"
     t.integer  "law_category_id"
     t.string   "slug"
+    t.integer  "attorney_id"
     t.index ["law_category_id"], name: "index_articles_on_law_category_id"
     t.index ["slug"], name: "index_articles_on_slug", unique: true
+  end
+
+  create_table "attorney_law_categories", force: :cascade do |t|
+    t.integer  "attorney_id"
+    t.integer  "law_category_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["attorney_id"], name: "index_attorney_law_categories_on_attorney_id"
+    t.index ["law_category_id"], name: "index_attorney_law_categories_on_law_category_id"
   end
 
   create_table "attorney_profiles", force: :cascade do |t|
@@ -89,6 +99,7 @@ ActiveRecord::Schema.define(version: 20170526034628) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "firm_id"
+    t.text     "description"
     t.index ["firm_id"], name: "index_attorneys_on_firm_id"
   end
 

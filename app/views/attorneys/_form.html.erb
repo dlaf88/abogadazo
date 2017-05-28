@@ -6,7 +6,9 @@
     <%= f.input :contact_email %>
     <%= f.input :phone_number %>
     <%= f.input :profile_photo %>
+    <%= f.input :description %>
     <%= f.association :firm %>
+    <%= f.association :law_categories, as: :check_boxes %>
 
     <%= f.submit :class => ' btn btn-primary btn-block' %>
     

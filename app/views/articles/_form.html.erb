@@ -1,9 +1,7 @@
 <div class='container'>
   <%= simple_form_for (@article) do |f| %>
-  <%= f.input :title%>
-  <%= f.input :author%>
-  <%= f.input :about%>
   <%= f.input :image_body_field %>
+  <%= f.input :title%>  
   <%= f.input :tag_list, input_html: {value: f.object.tag_list.to_s} %>
   <%= f.association :law_category %>
 

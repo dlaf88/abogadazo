@@ -21,28 +21,28 @@
 			-->
 			
 			<div class="contact-info">
-				<span class="address">Street 21 105 C Office 102</span>
-				<span class="tel">3252 25566</span>
-				<a class="email" href="mailto:lawyer@abogadazo.com">lawyer@abogadazo.com</a>
+				<span class="address"><%= @attorney.firm.address %></span>
+				<span class="tel"><%= @attorney.firm.office_phone %></span>
 				<span class="license">Licencia: <span class="licensetag active">Activa</span></span>
 				<%= link_to "My Profile", @attorney %>
 				<span><a href="tel:973-440-8037" class="button blue">Contactar Ahora</a></span>
 			</div>
+
 		</div>
 		<div class="right">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-			<h3>Estudios:</h3>
-			<ul>
-				<li>- Lorem Ipsum is simply dummy text.</li>
-				<li>- Lorem Ipsum is simply dummy text of the printing.</li>
-				<li>- Lorem Ipsum is simply.</li>
-			</ul>
-			<h3>Areas Especializadas:</h3>
-			<ul>
-				<li>- Lorem Ipsum is simply dummy text.</li>
-				<li>- Lorem Ipsum is simply dummy text of the printing.</li>
-				<li>- Lorem Ipsum is simply.</li>
-			</ul>
+			<p><%= @attorney.description %></p>
+			<br>
+			<div>
+				<h3>Areas Especializadas:</h3>
+				<ul>
+					<% @attorney.law_categories.each do |category| %>
+						<li><%= category.title %></li>
+					<% end %>
+				</ul>
+
+
+			</div>
+			
 		</div>
 	</div>
 
