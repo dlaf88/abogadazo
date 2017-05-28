@@ -10,11 +10,13 @@ class AttorneysController < ApplicationController
 
 	def new 
 		@attorney = Attorney.new
+		authorize @attorney
 	end 
 
 	def create
 		@attorney = Attorney.new(attorney_params)
-    
+        authorize @attorney
+
 	    if @attorney.save
 	      redirect_to @attorney
 	    else
@@ -26,10 +28,12 @@ class AttorneysController < ApplicationController
 
 	def edit
 		@attorney = Attorney.find(params[:id])
+		authorize @attorney
 	end 
 
 	def update
 		@attorney = Attorney.find(params[:id])
+		authorize @attorney
     if @attorney.update(attorney_params)
      	 redirect_to @attorney, notice: 'Attorney was successfully updated.' 
         

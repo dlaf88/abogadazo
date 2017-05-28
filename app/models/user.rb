@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
 	      end
 	end
 
+	def sudo?
+		self.type == "Sudo" ? true : false
+	end 
+
 end
 
 

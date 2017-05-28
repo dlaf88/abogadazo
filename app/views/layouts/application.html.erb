@@ -24,8 +24,10 @@
   <%= render partial: "layouts/hotjar" %>
   <%= render partial: "layouts/fbpixel" %>
   <%= render partial: "layouts/drift" %>
+  <%= yield :facebook_open %>
 
   <%= csrf_meta_tags %>
+
 </head>
 <body>
   <div id="fb-root"></div>

@@ -1,15 +1,15 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_admin, only: [:edit,:create,:new,:update]
+  before_action :authenticate_admin, only: [:create,:update]
   respond_to :html,:json
   def new
     @article = Article.new
+    authorize @article
   end 
   
   def show  
-   @question = Question.new  
+    @question = Question.new  
     @article = Article.friendly.find(params[:id])
     @title = @article.title
-    @articles = Article.where(id: [27,19,35,34])
     @related_articles = @article.find_related_tags.limit(2)
     #TODO refactor this code here.
     respond_with_article_or_redirect
@@ -18,8 +18,8 @@ class ArticlesController < ApplicationController
   end 
   
   def create
-    @article = Article.new(articles_params)
-    
+    @article = Article.new(articles_params)  
+    authorize @article  
     if @article.save
       redirect_to @article 
     else
@@ -29,9 +29,11 @@ class ArticlesController < ApplicationController
   end 
   def edit
     @article = Article.friendly.find(params[:id])
+    authorize @article
   end 
   def update
     @article = Article.friendly.find(params[:id])
+    authorize @article
     if @article.update(articles_params)
       redirect_to @article, notice: 'Article was successfully updated.' 
         

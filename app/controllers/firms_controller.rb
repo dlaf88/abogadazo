@@ -9,12 +9,13 @@ class FirmsController < ApplicationController
 	end 
 
 	def new  
-	 @firm = Firm.new   
+	 @firm = Firm.new
+	 authorize @firm  
 	end
 
 	def create
 		@firm = Firm.new(firm_params)
-    
+         authorize @firm  
 	    if @firm.save
 	      redirect_to @firm
 	    else
@@ -25,9 +26,11 @@ class FirmsController < ApplicationController
 
 	def edit
     @firm = Firm.find(params[:id])
+     authorize @firm  
   end 
   def update
     @firm = Firm.find(params[:id])
+     authorize @firm  
     if @firm.update(firm_params)
       redirect_to @firm, notice: 'Firm was successfully updated.' 
         

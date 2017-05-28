@@ -8,6 +8,7 @@ gem 'devise', '~> 4.2.1'
 gem 'underscore-rails', '~> 1.8.2'
 gem 'gmaps4rails'
 gem 'email_validator', '~> 1.6'
+gem "pundit"
  group :production do
    gem 'pg'
    gem 'rails_12factor'

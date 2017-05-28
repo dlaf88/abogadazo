@@ -13,13 +13,9 @@ class Account < ActiveRecord::Base
   end
 end
 
-class Attorney < Account
-  has_one :lawyer_profile
-  
-  
-end
 
-class Boss < Attorney
+
+class Boss < Account
   
 end 
 

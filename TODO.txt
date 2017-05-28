@@ -31,6 +31,7 @@ Articles:
 
 		video field checking 
 			add the ability to add videos and if there are videos then no primary photo.
+		
 
 	SHOW:
 		XHave the articles sorted by tagging system.
@@ -83,6 +84,12 @@ MISC:
 
 DASHBOARD:
 	add ability to edit the articles through a dashboard system.
+
+
+VALIDATIONS:
+	add validations for attorney
+	add validations for firm
+	add validations for articles
 
 
 

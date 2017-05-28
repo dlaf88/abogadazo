@@ -1,7 +1,16 @@
- 
-<%= render partial: "useful/recarticles",locals: {articles: @articles} %>
-   
-<section class="fold-cta internal-header-post">
+
+<% if Rails.env.development? %>
+  <% content_for :facebook_open do %>   
+
+      <meta property="og:type"               content="article" />
+      <meta property="og:title"              content= "<%= @article.title %>" />
+      <meta property="og:description"        content= "<%= truncate(@article.body,length: 350)%>"/>
+      <meta property="og:image"              content= "<%= @article.image_body_field %>" />
+  <% end %>
+<%  end %>
+
+
+ <section class="fold-cta internal-header-post">
     <div class="wrapper">
       <h1><%= @article.title %></h1>
     </div>
