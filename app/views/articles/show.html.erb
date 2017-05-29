@@ -88,7 +88,8 @@
             <a href="<%=url_for article %>">
               <div class="post">
                 <div class="image">
-                  <img src="<%= article.image_body_field.url(:two_hundred) %>"" alt="">
+
+                  <img src="<%= article.image_body_field.url %>" alt="">
                 </div>
                 <span class="copy"><%= article.title %></span>
               </div>

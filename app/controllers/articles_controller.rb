@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
       @articles = Article.tagged_with("#{topic}").page(params[:page]).per(3)
       @category = topic.to_s
     else 
-      @articles = Article.all.page(params[:page]).per(3)
+      @articles = Article.last(10).page(params[:page]).per(3)
     end  
   end 
   private
