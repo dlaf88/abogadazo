@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   
   def show  
     @question = Question.new  
-    @article = Article.friendly.find(params[:id])
+    @article = Article.friendly.find(params[:id]) || Article.find(params[:id].to_i)
     @title = @article.title
     @related_articles = @article.find_related_tags.limit(2)
     #TODO refactor this code here.
