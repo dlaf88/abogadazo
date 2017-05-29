@@ -617,6 +617,26 @@ header {
 					.legal-topics .wrapper .topics li a:hover .icon.imigration {
 						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/passports-512_white.png);
 					}
+					.legal-topics .wrapper .topics li a .icon.divorce-papers {
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1496044520__divorce_papers.png);
+						background-size: 50px auto;
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+					.legal-topics .wrapper .topics li a:hover .icon.divorce-papers {
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1496044520__divorce_papers.png);
+					}
+
+						.legal-topics .wrapper .topics li a .icon.naturalization {
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1496044568_198.png);
+						background-size: 50px auto;
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+					.legal-topics .wrapper .topics li a:hover .icon.naturalization {
+						background-image: url(https://s3.amazonaws.com/abogadazo-2/uploads/images/icn/1496044568_198.png);
+					}
+
 
 	/* ARTICLES */
 	.articles {}
