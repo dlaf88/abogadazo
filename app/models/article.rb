@@ -13,5 +13,8 @@ class Article < ActiveRecord::Base
 
   #image_body_field is the main image for each article - this was bad name but had to be left due to hassle of changing all pictures in production application.
   
+  def old_param
+  	"#{self.id}-#{self.title}".parameterize
+  end 
 end
 
