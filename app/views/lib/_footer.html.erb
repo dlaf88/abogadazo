@@ -16,9 +16,8 @@
         <a href="contact.html">Contactenos</a>
       </div>
       <div class="links last">
-        <span>&copy; 2017 Abogadazo LLC</span>
-        <a href="#">Terminos & Condiciones</a>
-        <a href="#">Legal</a>
+        <span>&copy; <%= Time.new.year %> Lafuente Law LLC</span>
+        <a href="/terms">Terminos & Condiciones</a>      
         <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
       </div>
     </div>

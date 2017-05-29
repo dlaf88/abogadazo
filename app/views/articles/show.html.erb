@@ -4,7 +4,7 @@
 
       <meta property="og:type"               content="article" />
       <meta property="og:title"              content= "<%= @article.title %>" />
-      <meta property="og:description"        content= "<%= truncate(@article.body,length: 350)%>"/>
+      <meta property="og:description"        content= "<%= truncate(strip_tags(@article.body),length: 350)%>"/>
       <meta property="og:image"              content= "<%= @article.image_body_field %>" />
   <% end %>
 <%  end %>

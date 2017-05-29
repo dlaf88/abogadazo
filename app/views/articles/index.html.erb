@@ -17,7 +17,7 @@
                
                 <%= image_tag article.image_body_field.url %>
                   <p><%= truncate(strip_tags(article.body),length: 300) %></p>
-                <%= link_to article.title, article_path(article), class: 'button blue' %>
+                <%= link_to "Ver mas", article_path(article), class: 'button blue' %>
               </article>
             <% end %>
             <div class="pagination">

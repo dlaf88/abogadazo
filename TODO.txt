@@ -9,10 +9,10 @@ Welcome:
 
 
 Articles:
-		get rid of author and make sure it is author_id instead
-			Wait until author table is set up
-			get rid of the about section 
-				this is now going to be part of the author table.
+		X get rid of author and make sure it is author_id instead
+			X Wait until author table is set up
+			X get rid of the about section 
+				X this is now going to be part of the author table.
 		X get rid of user_id in the table
 		X get rid of video boolean
 			X make sure to check views for video boolean

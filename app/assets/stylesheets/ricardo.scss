@@ -23,8 +23,8 @@ h3 {
 
 p { margin-bottom:10px; }
 
-a, a:visited { text-decoration: none; }
-	a:hover{ }
+a, a:visited { text-decoration: none !important; }
+	a:hover{ text-decoration: none !important; }
 
 .read-more-post {
 	display: none;
