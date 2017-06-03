@@ -11,15 +11,32 @@
 	display: block;
 	clear: both;
 }
-
-h3 {
-	font-weight: 600;
-	font-size: 18px;
-	color: #444444;
+/* Text Styles */
+h1,h2,h3,h4,h5 {
 	display: block;
-	margin-bottom: 20px;
-	margin-top: 10px;
+	font-weight: 500;
+	margin: 20px 0;
 }
+	h1 {
+    font-size: 32px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		color: #444444;
+		display: block;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	h4 {
+		font-size: 22px;
+	}
+	h5 {
+		font-size: 16px;
+	}
 
 p { margin-bottom:10px; }
 
@@ -1014,6 +1031,7 @@ header {
 			border-radius: 100px;
 			float: left;
 			margin-right: 10px;
+			overflow: hidden;
 		}
 		.post-content .wrapper .content-article .author .info {
 			float: left;
@@ -1045,6 +1063,13 @@ header {
 				border-bottom: 1px solid #ccc;
 				padding-bottom: 50px;
 			}
+
+			.post-content .wrapper .content-article article a:not(.button) {
+				color: #287FB8;
+			}
+				.post-content .wrapper .content-article article a:hover:not(.button) {
+					text-decoration: underline;
+				}
 
 	/* SIDEBAR POST */
 	.post-content .wrapper sidebar {
@@ -1144,6 +1169,7 @@ header {
 			font-weight: 500;
 	    font-size: 13px;
 		}
+		.post-content .wrapper sidebar .module .tell-history form #spinner {}
 		.post-content .wrapper sidebar .module .tell-history form input {
 			width: 100%;
 			background-color: #f8f8f8;
@@ -1728,6 +1754,112 @@ header {
 	.lawyersin-firm .lawyer-list .lawyer { margin-right: 70px !important; }
 	.lawyersin-firm .lawyer-list .lawyer:nth-child(4n) { margin-right: 0 !important; }
 
+
+	.legals {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	
+	/* TABS HOME */
+		.legals .tab-name {
+			float: left;
+			font-size: 16px;
+			margin-right: 30px;
+			line-height: 45px;
+	    padding: 0 20px;
+	    border-radius: 2px 2px 0 0;
+	    cursor: pointer;
+	    position: relative;
+	    border: 1px solid transparent;
+		}	
+			.legals .tab-name:hover {
+				background-color: #fff;
+			}
+			.legals .tab-name.active {
+				color: #287FB8;
+				background-color: #fff;
+				border-color: #ccc;
+				border-bottom: none;
+			}
+			.legals .tab-name.active:after {
+				content: "";
+		    width: 100%;
+		    height: 2px;
+		    background-color: #fff;
+		    display: inline-block;
+		    position: absolute;
+		    left: 0;
+		    bottom: -2px;
+			}
+
+		.legals .tab {
+			display: none;
+			width: 100%;
+			clear: both;
+			background-color: #fff;
+			padding: 20px 20px 10px 20px;
+			border: 1px solid #ccc;
+		}
+		.legals .tab.active {
+			display: block;
+		}
+		.legals .tab .content-tab {
+			overflow: hidden;
+		}
+		.legals .tab .content-tab a {
+			float: left;
+			margin-right: 10px;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			font-size: 14px;
+			padding: 0 20px;
+			color: #999;
+			line-height: 25px;
+			margin-bottom: 10px;
+		}
+			.legals .tab .content-tab a:hover {
+				background-color: #287FB8;
+				border-color: #287FB8;
+				color: #fff;
+			}
+
+	/* Validation for FORM "Cuentanos tu historia" */
+		.post-content .wrapper sidebar .module .tell-history {
+			position: relative;
+		}
+		.overlay-msg {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.7);
+			top: 0;
+			left: 0;
+			display: none;
+			text-align: center;
+		}
+			.overlay-msg span {
+				color: #fff;
+				display: block;
+				position: absolute;
+		    width: 100%;
+		    top: 50%;
+			}
+			.overlay-msg .close-overlay {
+				display: block;
+				color: #ffffff;
+				border: 1px solid #fff;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 50px;
+				position: absolute;
+				top: 20px;
+				right: 20px;
+			}
+				.overlay-msg .close-overlay:hover {
+					background-color: #ffffff;
+					color: #000;
+				}
 
 /* ==================================== MEDIA QUERIES ==================================== */
 @media only screen and (max-width: 767px) and (min-width: 320px)  {
