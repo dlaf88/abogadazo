@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(articles_params)  
     authorize @article  
     if @article.save
+      @article.attorney_id = 1
       redirect_to @article 
     else
       flash[:error] = "Error creating Article. Please try again."
