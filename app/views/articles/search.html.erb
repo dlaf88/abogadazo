@@ -1,0 +1,76 @@
+    <section class="fold-cta internal-header-post">
+        <div class="wrapper">
+          <span class="cat-tag">Categoría</span>
+        
+            <h1>Busqueda</h1>
+          
+        </div>
+      </section>
+
+      <section class="post-content">
+        <div class="wrapper">
+          <div class="content-article category-posts">
+            <% @articles.each do |article| %>
+               <article>
+               
+                <%= image_tag article.image_body_field.url %>
+                  <p><%= truncate(strip_tags(article.body),length: 300) %></p>
+                <%= link_to "Ver mas", article_path(article), class: 'button blue' %>
+              </article>
+            <% end %>
+            <div class="pagination">
+              <span class="pag">Paginación:</span>
+              <%= paginate @articles %>
+            </div>
+          </div>         
+          
+                      
+          
+
+
+          <sidebar>
+            <div class="module" style="margin-top: 20px;">
+              <div class="social share">
+                <div class="socials">
+                  <a href="#" class="fb"></a>
+                  <a href="#" class="tw"></a>
+                </div>
+                <span class="tag-contact-with-me">Compartir en:</span>
+              </div>
+            </div>
+            <div class="module">
+              <div class="related-post-sidebar tags">
+                <span class="title">Buscabas otro tema?</span>
+                
+                 
+                
+              </div>
+            </div>            
+            <div class="module">
+              <div class="tell-history">
+                <span class="title">Cuéntanos tu historia</span>
+                <form action="">
+                  <fieldset>
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Teléfono">
+                    <input type="text" placeholder="Email">
+                    <textarea placeholder="Una breve descripción del caso"></textarea>
+                    <button>Consulta</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            
+          </sidebar>
+        </div>
+      </section>
+
+      <section class="more-help">
+        <div class="wrapper">
+          <span>Tienes más preguntas?</span>
+          <a href="tel:973-440-8037" class="button blue phone">Llámanos, completamente grátis!</a>
+        </div>
+      </section>
+
+
+  

@@ -14,7 +14,10 @@ gem "pundit"
    gem 'rails_12factor'
  end
   group :development do
-   gem 'sqlite3'
+   gem 'pg'
+ end
+  group :test do
+   gem 'pg'
  end
 gem 'geocoder', '~> 1.2.8'
 gem 'uglifier', '>= 1.3.0'

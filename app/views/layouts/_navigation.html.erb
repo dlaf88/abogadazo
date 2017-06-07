@@ -34,8 +34,13 @@
 						<span class="text">Llámenos</span>
 						<a class="tel" href="tel:973-440-8037">973-440-8037</a>
 					</div>
+
 					<div class="search-bar" style="display: none;">
-						<input type="text" placeholder="Búsqueda">
+					<%= form_tag(search_articles_path, method: :get) do %>
+					<%= text_field_tag 'query', '', placeholder: 'Búsqueda'%>
+
+					<% end %>
 					</div>
+					
 				</div>
 			</header><!-- HEADER END-->

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528145227) do
+ActiveRecord::Schema.define(version: 20170607022536) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -30,10 +34,10 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.string   "type"
     t.string   "provider"
     t.string   "uid"
-    t.index ["email"], name: "index_accounts_on_email", unique: true
-    t.index ["provider"], name: "index_accounts_on_provider"
-    t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
-    t.index ["uid"], name: "index_accounts_on_uid"
+    t.index ["email"], name: "index_accounts_on_email", unique: true, using: :btree
+    t.index ["provider"], name: "index_accounts_on_provider", using: :btree
+    t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true, using: :btree
+    t.index ["uid"], name: "index_accounts_on_uid", using: :btree
   end
 
   create_table "answers", force: :cascade do |t|
@@ -44,8 +48,8 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.integer  "lawyer_id"
     t.text     "description"
     t.string   "voice"
-    t.index ["lawyer_id"], name: "index_answers_on_lawyer_id"
-    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["lawyer_id"], name: "index_answers_on_lawyer_id", using: :btree
+    t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
   end
 
   create_table "articles", force: :cascade do |t|
@@ -61,8 +65,11 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.integer  "law_category_id"
     t.string   "slug"
     t.integer  "attorney_id"
-    t.index ["law_category_id"], name: "index_articles_on_law_category_id"
-    t.index ["slug"], name: "index_articles_on_slug", unique: true
+    t.text     "raw_body"
+    t.tsvector "tsv_search"
+    t.index ["law_category_id"], name: "index_articles_on_law_category_id", using: :btree
+    t.index ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
+    t.index ["tsv_search"], name: "index_articles_on_tsv_search", using: :gin
   end
 
   create_table "attorney_law_categories", force: :cascade do |t|
@@ -70,8 +77,8 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.integer  "law_category_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["attorney_id"], name: "index_attorney_law_categories_on_attorney_id"
-    t.index ["law_category_id"], name: "index_attorney_law_categories_on_law_category_id"
+    t.index ["attorney_id"], name: "index_attorney_law_categories_on_attorney_id", using: :btree
+    t.index ["law_category_id"], name: "index_attorney_law_categories_on_law_category_id", using: :btree
   end
 
   create_table "attorney_profiles", force: :cascade do |t|
@@ -100,7 +107,7 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.datetime "updated_at",    null: false
     t.integer  "firm_id"
     t.text     "description"
-    t.index ["firm_id"], name: "index_attorneys_on_firm_id"
+    t.index ["firm_id"], name: "index_attorneys_on_firm_id", using: :btree
   end
 
   create_table "firms", force: :cascade do |t|
@@ -121,10 +128,10 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.string   "sluggable_type", limit: 50
     t.string   "scope"
     t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
   create_table "law_categories", force: :cascade do |t|
@@ -148,7 +155,7 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.float    "longitude"
     t.float    "latitude"
     t.string   "attorney_id"
-    t.index ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id"
+    t.index ["lawyer_id"], name: "index_lawyer_profiles_on_lawyer_id", using: :btree
   end
 
   create_table "lawyers", force: :cascade do |t|
@@ -165,8 +172,8 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "validated",              default: false
-    t.index ["email"], name: "index_lawyers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_lawyers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_lawyers_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "practice_areas", force: :cascade do |t|
@@ -174,8 +181,8 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.integer  "law_category_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.index ["attorney_profile_id"], name: "index_practice_areas_on_attorney_profile_id"
-    t.index ["law_category_id"], name: "index_practice_areas_on_law_category_id"
+    t.index ["attorney_profile_id"], name: "index_practice_areas_on_attorney_profile_id", using: :btree
+    t.index ["law_category_id"], name: "index_practice_areas_on_law_category_id", using: :btree
   end
 
   create_table "questions", force: :cascade do |t|
@@ -195,21 +202,21 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.integer  "tagger_id"
     t.string   "context",       limit: 128
     t.datetime "created_at"
-    t.index ["context"], name: "index_taggings_on_context"
-    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-    t.index ["tag_id"], name: "index_taggings_on_tag_id"
-    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
-    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
-    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
-    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
-    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
-    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+    t.index ["context"], name: "index_taggings_on_context", using: :btree
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id", using: :btree
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type", using: :btree
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type", using: :btree
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
+    t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -226,8 +233,8 @@ ActiveRecord::Schema.define(version: 20170528145227) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end

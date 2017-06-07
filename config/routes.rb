@@ -15,7 +15,11 @@ Rails.application.routes.draw do
     }
   #devise_for :lawyers
   resources :firms
-  resources :articles
+  resources :articles do 
+    collection do 
+      get 'search'
+    end 
+  end 
   resources :questions
   resources :attorneys
   resources :lawyer_profiles

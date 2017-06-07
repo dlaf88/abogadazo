@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable, :omniauth_providers => [:facebook]
   
+ 
+
 	def self.from_omniauth(auth)
 	      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 	        user.email = auth.info.email
@@ -22,5 +24,5 @@ end
 
 class Sudo < User
 	#TODO 
-	#I'm going to use SUDO Sper-User-DO becuase Admin module is being used with the Administrate gem
+	#I'm going to use SUDO Super-User-DO becuase Admin module is being used with the Administrate gem
 end 

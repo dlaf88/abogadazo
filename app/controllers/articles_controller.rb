@@ -27,6 +27,11 @@ class ArticlesController < ApplicationController
        render :new
     end      
   end 
+
+  def search 
+    @articles = Article.search(params[:query]).page(params[:page]).per(3) if params[:query]
+
+  end 
   def edit
     @article = Article.friendly.find(params[:id])
     authorize @article
