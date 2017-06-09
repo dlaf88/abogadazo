@@ -1,12 +1,12 @@
 /*
-- Imdevsigner.com
-- Version: 1.1  
+- Abogadazo.com
+- Version: 2.0  
 - Created by: Ricardo De León
 */
 
-html, body,div,dl,dt,dd,ul,ol,li,
+html, body,div,dl,dt,dd,
 h1,h2,h3,h4,h5,h6,
-form,fieldset,legend,input,button,textarea,p,blockquote,th,td,
+form,fieldset,legend,input,button,textarea,p,th,td,
 span, object, iframe, pre, abbr, address, article, section, header,
 hgroup, menu, nav, time, mark, audio, video, details, canvas, summary { 
 	background: transparent;
@@ -16,30 +16,97 @@ hgroup, menu, nav, time, mark, audio, video, details, canvas, summary {
 	font-size: 100%;
 	}
 
+	li {
+		list-style-type: disc;
+	}
+
+	blockquote {
+		background-color: rgba(249,249,249,1) !important;
+    border-left: 5px solid rgba(233,233,233,1) !important;
+    color: rgba(0,0,0,1) !important;
+    margin-left: 20px !important;
+    padding: 15px !important;
+    display: block !important;
+	}
+	q {
+		display: block !important;
+		margin: 20px 0 !important;
+	}
+	q:before { content: open-quote !important; }
+	q:after { content: close-quote !important; }
+
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { display: block; }	
+footer,header,hgroup,menu,nav,section {
+	display: block;
+}	
 	
-table {  border-collapse: collapse; border-spacing: 0; }
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
 	
-fieldset,img,button {  border: 0 none; }
+fieldset,img,button { 
+	border: 0 none;
+	}
 	
-address,caption,cite,code,dfn,em,th,var,optgroup {  font-style:inherit; font-weight:inherit; }
+address,caption,cite,code,dfn,em,th,var,optgroup { 
+	font-style:inherit;
+	font-weight:inherit;
+	}
 
-del,ins { text-decoration:none; }
+del,ins { 
+	text-decoration:none;
+	}
 
-ol {  list-style:decimal; }
-	ol li {  list-style:decimal outside; }
-ul {  list-style:none; }
-	
-blockquote, q { quotes:none; }
+ol { 
+	list-style:decimal;
+	}
+	ol li { 
+		list-style:decimal outside;
+		}
+ul { 
+	list-style:none;
+	}
 
-caption,th {  text-align:left; }
+caption,th { 
+	text-align:left;
+	}
 
-h1,h2,h3,h4,h5,h6 {  font-size:100%; font-weight:normal; }
+h1,h2,h3,h4,h5,h6 { 
+	font-size:100%;
+	font-weight:normal;
+	}
 
 :focus { outline:0;}
 
-blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+strike {}
+
+/* Text Styles */
+h1,h2,h3,h4,h5 {
+	display: block;
+	font-weight: 500;
+	margin: 20px 0;
+}
+	h1 {
+    font-size: 32px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		color: #444444;
+		display: block;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	h4 {
+		font-size: 22px;
+	}
+	h5 {
+		font-size: 16px;
+	}
 
 abbr,acronym{ border:0 none;font-variant:normal;}
 sup{ vertical-align:text-top;}
@@ -54,4 +121,7 @@ input,button,textarea,select,optgroup,option {
 	vertical-align:middle;
 	}
 	
-input,textarea,select { background: #fff; border:1px solid #CCC; }
+input,textarea,select { 
+	background: #fff;
+	border:1px solid #CCC;
+	}

@@ -250,7 +250,7 @@ header {
 	    font-weight: 500;
 	    position: absolute;
 	    left: 60px;
-	    bottom: -10px;
+	    top: 37px;
 	}
 
 	header nav {
@@ -572,6 +572,8 @@ header {
 			float: left;
 			width: 245px;
 			margin-right: 110px;
+			list-style: none !important;
+			list-style-type: none !important;
 		}
 			.legal-topics .wrapper .topics li:nth-child(3n) {
 				margin-right: 0;
@@ -1611,11 +1613,14 @@ header {
 		    clear: both;
 		}
 		.lawyer-detail .left .image {
-			width: 306px;
-			height: 375px;
+			/*width: 306px;
+			height: 375px;*/
+			max-width: 306px;
+	    width: auto;
+	    height: auto;
 			background-color: #EFEFEF;
 			background-position: center center;
-    		background-repeat: no-repeat;
+    	background-repeat: no-repeat;
 			display: inline-block;
 			border-radius: 3px;
 		}
