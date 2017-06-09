@@ -237,4 +237,6 @@ ActiveRecord::Schema.define(version: 20170607022536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "articles", "law_categories"
+  add_foreign_key "attorneys", "firms"
 end
