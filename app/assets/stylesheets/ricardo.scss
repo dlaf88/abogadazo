@@ -566,6 +566,7 @@ header {
 		}
 		.legal-topics .wrapper .topics {
 			overflow: hidden;
+			padding: 0;
 			padding-bottom: 5px;
 		}
 		.legal-topics .wrapper .topics li {
@@ -1016,6 +1017,7 @@ header {
 			border-radius: 100px;
 			float: left;
 			margin-right: 10px;
+			overflow: hidden;
 		}
 		.post-content .wrapper .content-article .author .info {
 			float: left;
@@ -1400,6 +1402,7 @@ header {
 			font-size: 22px;
 			line-height: 40px;
 			float: left;
+			margin: 0;
 		}
 		footer .blue-bar span {
 			color: #fff;
@@ -1562,6 +1565,7 @@ header {
 		background-color: #EFEFEF;
 		border-radius: 3px;
 		display: inline-block;
+		overflow: hidden;
 	}
 		.lawyers .lawyer-list .lawyer .image img {
 			width: auto;
@@ -2004,6 +2008,7 @@ header {
 	}
 	.articles .wrapper .colum-thumbs .thumb.tag-system {
 		margin-bottom: 0;
+		height: auto;
 	}
 	.articles .wrapper .colum-thumbs .thumb {
 		width: 100%;
