@@ -6,6 +6,9 @@ class Attorney < ApplicationRecord
 	has_many :law_categories, through: :attorney_law_categories
 	accepts_nested_attributes_for :attorney_law_categories, :law_categories
 
+	def self_label
+		self.first_name + " " + self.last_name
+	end 
 
 
 	def to_param

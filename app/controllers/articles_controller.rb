@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
   end 
   private
   def articles_params
-    params.require(:article).permit(:title, :body, :author,:about,:image,:image_body_field,:video,:video_field,:law_category_id, :tag_list)
+    params.require(:article).permit(:title, :body, :attorney_id,:about,:image,:image_body_field,:video,:video_field,:law_category_id, :tag_list)
   end 
 
   def respond_with_article_or_redirect

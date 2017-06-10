@@ -20,6 +20,7 @@ class Article < ActiveRecord::Base
   	"#{self.id}-#{self.title}".parameterize
   end 
 
+  
 
   private 
 

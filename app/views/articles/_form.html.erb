@@ -6,6 +6,7 @@
   <%= f.association :law_category %>
 
   <%= f.input :video_field%>
+  <%= f.association :attorney, label_method: :self_label%>
   <%= f.trix_editor :body %> 
   <%= f.submit :class => ' btn btn-primary btn-block' %>
     <br>
