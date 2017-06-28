@@ -13,7 +13,9 @@
             <% @articles.each do |article| %>
                <article>
                
-                <%= image_tag article.image_body_field.url %>
+               <div class="img-search-result">
+                  <%= image_tag article.image_body_field.url %>
+                </div>
                   <p><%= truncate(strip_tags(article.body),length: 300) %></p>
                 <%= link_to "Ver mas", article_path(article), class: 'button blue' %>
               </article>

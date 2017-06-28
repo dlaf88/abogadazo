@@ -985,7 +985,7 @@ header {
 			}
 
 		.post-content .wrapper .content-article .terms p {
-			font-size: 12px;
+			font-size: 15px;
 			color: #777777;
 			font-style: italic;
 		}
@@ -1049,6 +1049,24 @@ header {
 				border-bottom: 1px solid #ccc;
 				padding-bottom: 50px;
 			}
+	
+	/* Post Format Text and Date */
+	.post-format-text {}
+	.post-format-text .post-date {
+		background: #e8e8e8;
+	    font-size: 12px;
+	    padding: 0 10px;
+	    line-height: 20px;
+	    display: inline-block;
+	    border-radius: 20px;
+	    font-weight: 500;
+	}
+	.post-format-text .text {
+		line-height: 30px;
+	}
+		.post-format-text .text ul > br {
+			display: none;
+		}
 
 	/* SIDEBAR POST */
 	.post-content .wrapper sidebar {
@@ -1758,6 +1776,13 @@ header {
 	}
 	.lawyersin-firm .lawyer-list .lawyer { margin-right: 70px !important; }
 	.lawyersin-firm .lawyer-list .lawyer:nth-child(4n) { margin-right: 0 !important; }
+	
+	
+	.img-search-result {
+		max-height: 320px;
+	    overflow: hidden;
+	    margin-bottom: 40px;
+	}
 
 
 /* ==================================== MEDIA QUERIES ==================================== */
@@ -1866,7 +1891,7 @@ header {
 		}
 
 	header .wrapper .sub-logo {
-		bottom: -5px;
+		top: 22px;
 		font-size: 10px;
 	}
 	.call-header {
@@ -2156,7 +2181,7 @@ header {
 	}
 	.post-content .wrapper .content-article article.cropped {
 		overflow: hidden;
-		max-height: 600px;
+		max-height: 650px;
 	}
 
 	.read-more-post {
@@ -2268,6 +2293,16 @@ header {
 			width: 100%;
 		}
 
+	.post-format-text .text {
+		padding: 0 20px;
+	}
+	.post-format-text .post-date {
+		margin-left: 20px;
+	}
+	
+	.read-more-post {
+		margin-bottom: 40px;
+	}
 
 }
 
