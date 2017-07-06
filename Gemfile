@@ -46,7 +46,7 @@ gem 'wysiwyg-rails', '~> 2.3', '>= 2.3.2'
 gem 'invisible_captcha'
 gem 'sidekiq'
 gem 'bourbon'
-gem 'trix'
+gem 'trix', '~> 0.10.1'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 

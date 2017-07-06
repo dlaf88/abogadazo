@@ -7,7 +7,7 @@
 html, body,div,dl,dt,dd,
 h1,h2,h3,h4,h5,h6,
 form,fieldset,legend,input,button,textarea,p,th,td,
-span, object, iframe, pre, abbr, address, article, section, header,
+span, object, iframe, abbr, address, article, section, header,
 hgroup, menu, nav, time, mark, audio, video, details, canvas, summary { 
 	background: transparent;
 	margin: 0;
@@ -22,11 +22,12 @@ hgroup, menu, nav, time, mark, audio, video, details, canvas, summary {
 
 	blockquote {
 		background-color: rgba(249,249,249,1) !important;
-    border-left: 5px solid rgba(233,233,233,1) !important;
-    color: rgba(0,0,0,1) !important;
-    margin-left: 20px !important;
-    padding: 15px !important;
-    display: block !important;
+	    border-left: 5px solid rgba(233,233,233,1) !important;
+	    color: rgba(0,0,0,1) !important;
+	    margin: 20px 0 !important;
+	    margin-left: 20px !important;
+	    padding: 15px !important;
+	    display: block !important;
 	}
 	q {
 		display: block !important;
@@ -52,10 +53,6 @@ fieldset,img,button {
 address,caption,cite,code,dfn,em,th,var,optgroup { 
 	font-style:inherit;
 	font-weight:inherit;
-	}
-
-del,ins { 
-	text-decoration:none;
 	}
 
 ol { 
@@ -125,3 +122,21 @@ input,textarea,select {
 	background: #fff;
 	border:1px solid #CCC;
 	}
+	
+
+/* FORMAT */
+mark {
+	background: #ced7dd !important;
+    color: #373d41 !important;
+}
+
+var,
+pre {
+	font-size: 1em !important;
+    line-height: 1.42857em !important;
+    font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif !important;
+}
+
+u, ins {
+	text-decoration: underline !important;
+}

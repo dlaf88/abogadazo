@@ -11,6 +11,9 @@
 	display: block;
 	clear: both;
 }
+s, strike, del {
+    text-decoration: line-through;
+}
 
 h3 {
 	font-weight: 600;
@@ -20,6 +23,7 @@ h3 {
 	margin-bottom: 20px;
 	margin-top: 10px;
 }
+
 
 p { margin-bottom:10px; }
 
@@ -1062,7 +1066,7 @@ header {
 	    font-weight: 500;
 	}
 	.post-format-text .text {
-		line-height: 30px;
+		/*line-height: 30px;*/
 	}
 		.post-format-text .text ul > br,
 		.post-format-text .text ol > br{
@@ -1791,6 +1795,13 @@ h2 br { display: none; }
 .post-format-text ul {
 	margin: 20px 0;
 }
+pre {
+	padding: 0 10px;
+    font-size: 13px;
+    display: block;
+    line-height: 27px;
+    margin: 10px 0;
+}
 
 /* ==================================== MEDIA QUERIES ==================================== */
 @media only screen and (max-width: 767px) and (min-width: 320px)  {
@@ -2186,13 +2197,14 @@ h2 br { display: none; }
 		padding-right: 0;
 		width: 100%;
 	}
-	.post-content .wrapper .content-article article.cropped {
+	/*.post-content .wrapper .content-article article.cropped {
 		overflow: hidden;
 		max-height: 650px;
-	}
+	}*/
 
 	.read-more-post {
 		position: relative;
+		display: none !important;
 	}
 	.read-more-post:after {
 		content: "";
@@ -2211,7 +2223,7 @@ h2 br { display: none; }
 	.read-more-post {
 		padding: 0 30px;
 		margin-top: 30px;
-		display: block;
+		display: none;
 	}
 		.read-more-post .more {
 			padding: 0 33px;

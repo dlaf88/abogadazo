@@ -472,7 +472,7 @@ DEPENDENCIES
   sidekiq
   simple_form
   spring (~> 1.3.6)
-  trix
+  trix (~> 0.10.1)
   turbolinks
   uglifier (>= 1.3.0)
   underscore-rails (~> 1.8.2)
@@ -482,4 +482,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.14.6
+   1.15.1
