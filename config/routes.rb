@@ -21,7 +21,6 @@ Rails.application.routes.draw do
     end 
   end 
   resources :questions
-  resources :attorneys
   resources :lawyer_profiles
   resources :law_categories do
     #collection {post :import}
